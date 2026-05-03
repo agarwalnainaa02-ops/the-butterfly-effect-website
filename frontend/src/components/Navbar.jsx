@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import Link from "next/link";
 
 const NAV_LINKS = [
   { label: "About", href: "#about" },
@@ -6,6 +7,7 @@ const NAV_LINKS = [
   { label: "What We Cover", href: "#areas" },
   { label: "Sessions", href: "#expect" },
   { label: "FAQ", href: "#faq" },
+  { label: "Blog", href: "/blog", external: false },
 ];
 
 const Navbar = ({ onBookClick, visible = true }) => {
@@ -53,24 +55,47 @@ const Navbar = ({ onBookClick, visible = true }) => {
         </a>
 
         <div className="hidden md:flex items-center gap-10">
-          {NAV_LINKS.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              data-testid={`nav-link-${link.label.toLowerCase()}`}
-              className="text-[13px] tracking-[0.28em] uppercase transition-colors duration-500"
-              style={{
-                fontFamily: "'EB Garamond', serif",
-                color: "var(--tbe-dark-brown)",
-                opacity: 0.72,
-                textDecoration: "none",
-              }}
-              onMouseEnter={(e) => (e.currentTarget.style.opacity = "1")}
-              onMouseLeave={(e) => (e.currentTarget.style.opacity = "0.72")}
-            >
-              {link.label}
-            </a>
-          ))}
+          {NAV_LINKS.map((link) => {
+            const linkStyle = {
+              fontFamily: "'EB Garamond', serif",
+              color: "var(--tbe-dark-brown)",
+              opacity: 0.72,
+              textDecoration: "none",
+            };
+            const className =
+              "text-[13px] tracking-[0.28em] uppercase transition-colors duration-500";
+            const handlers = {
+              onMouseEnter: (e) => (e.currentTarget.style.opacity = "1"),
+              onMouseLeave: (e) => (e.currentTarget.style.opacity = "0.72"),
+            };
+            // Page-level links (e.g. /blog) use Next.js Link; anchor links use <a>
+            if (link.href.startsWith("/")) {
+              return (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  data-testid={`nav-link-${link.label.toLowerCase()}`}
+                  className={className}
+                  style={linkStyle}
+                  {...handlers}
+                >
+                  {link.label}
+                </Link>
+              );
+            }
+            return (
+              <a
+                key={link.href}
+                href={link.href}
+                data-testid={`nav-link-${link.label.toLowerCase()}`}
+                className={className}
+                style={linkStyle}
+                {...handlers}
+              >
+                {link.label}
+              </a>
+            );
+          })}
         </div>
 
         <button

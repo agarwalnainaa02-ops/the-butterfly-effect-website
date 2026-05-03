@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import { Mail, Instagram } from "lucide-react";
 
 /* WhatsApp official mark as a minimal inline SVG */
@@ -143,6 +144,11 @@ const Footer = () => {
                 <a href="#faq" style={{ color: "rgba(243, 231, 209, 0.92)" }} className="hover:underline underline-offset-4">
                   FAQ
                 </a>
+              </li>
+              <li>
+                <Link href="/blog" style={{ color: "rgba(243, 231, 209, 0.92)" }} className="hover:underline underline-offset-4">
+                  Blog
+                </Link>
               </li>
             </ul>
           </div>
