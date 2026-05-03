@@ -1,0 +1,5 @@
+/* App-specific styles — global atmosphere lives in index.css */
+.App {
+  min-height: 100vh;
+  background-color: var(--tbe-cream);
+}

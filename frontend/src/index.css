@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Caveat:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ================================================================
+   The Butterfly Effect — global atmosphere
+================================================================ */
+
+:root {
+  --tbe-cream: #f3e7d1;
+  --tbe-warm-white: #fffefe;
+  --tbe-deep-maroon: #790208;
+  --tbe-dark-wine: #49050c;
+  --tbe-warm-brown: #702422;
+  --tbe-dark-brown: #2f2323;
+  --tbe-muted-sage: #6f8f88;
+  --tbe-dusty-coral: #dd9a89;
+  --tbe-muted-terracotta: #97493d;
+  --tbe-deep-blue-green: #2c4e56;
+  --tbe-dark-forest-blue: #1e3947;
+  --radius: 0.25rem;
+  --border: 0 13% 25% / 0.18;
+}
+
+* { border-color: rgba(47, 35, 35, 0.18); }
+
+html, body {
+  margin: 0;
+  background-color: var(--tbe-cream);
+  color: var(--tbe-dark-brown);
+  font-family: 'EB Garamond', Georgia, 'Times New Roman', serif;
+  font-size: 18px;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+}
+
+body {
+  background-image:
+    radial-gradient(ellipse 80% 60% at 20% 0%, rgba(221, 154, 137, 0.18), transparent 60%),
+    radial-gradient(ellipse 70% 50% at 100% 30%, rgba(111, 143, 136, 0.14), transparent 60%),
+    radial-gradient(ellipse 60% 40% at 0% 80%, rgba(221, 154, 137, 0.10), transparent 60%);
+  background-attachment: fixed;
+}
+
+/* Subtle paper grain overlay */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.35;
+  mix-blend-mode: multiply;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.18  0 0 0 0 0.14  0 0 0 0 0.14  0 0 0 0.06 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+}
+
+#root { position: relative; z-index: 0; }
+
+::selection {
+  background: rgba(121, 2, 8, 0.85);
+  color: var(--tbe-cream);
+}
+
+/* ================================================================
+   Typography utilities
+================================================================ */
+.font-display { font-family: 'Playfair Display', serif; font-weight: 400; letter-spacing: -0.01em; }
+.font-serif-body { font-family: 'EB Garamond', serif; }
+.font-hand { font-family: 'Caveat', cursive; font-style: italic; }
+
+.h-display {
+  font-family: 'Playfair Display', serif;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  line-height: 1.05;
+  color: var(--tbe-dark-wine);
+}
+
+.eyebrow {
+  font-family: 'EB Garamond', serif;
+  font-style: italic;
+  font-size: 0.85rem;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--tbe-warm-brown);
+  opacity: 0.75;
+}
+
+/* ================================================================
+   Atmospheric helpers
+================================================================ */
+.fade-mask-bottom {
+  -webkit-mask-image: linear-gradient(to bottom, black 0%, black 60%, transparent 100%);
+          mask-image: linear-gradient(to bottom, black 0%, black 60%, transparent 100%);
+}
+.fade-edges {
+  -webkit-mask-image:
+    linear-gradient(to right, transparent 0%, black 12%, black 88%, transparent 100%),
+    linear-gradient(to bottom, transparent 0%, black 18%, black 75%, transparent 100%);
+  -webkit-mask-composite: source-in;
+          mask-image:
+    linear-gradient(to right, transparent 0%, black 12%, black 88%, transparent 100%),
+    linear-gradient(to bottom, transparent 0%, black 18%, black 75%, transparent 100%);
+          mask-composite: intersect;
+}
+
+.painterly {
+  filter: saturate(0.78) contrast(0.92) brightness(1.02);
+}
+
+.divider-line {
+  height: 1px;
+  background: linear-gradient(to right, transparent, rgba(47, 35, 35, 0.25), transparent);
+}
+
+/* ================================================================
+   Animations
+================================================================ */
+@keyframes drift-across {
+  0% { transform: translate3d(-10vw, 0, 0) rotate(-6deg); opacity: 0; }
+  10%, 90% { opacity: 0.55; }
+  100% { transform: translate3d(110vw, -8vh, 0) rotate(8deg); opacity: 0; }
+}
+@keyframes wing-flutter {
+  0%, 100% { transform: scaleX(1) skewY(0deg); }
+  50% { transform: scaleX(0.78) skewY(-2deg); }
+}
+@keyframes breathe {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+@keyframes haze-drift {
+  0%, 100% { transform: translateX(0) translateY(0); }
+  50% { transform: translateX(20px) translateY(-10px); }
+}
+@keyframes fade-in-soft {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-haze { animation: haze-drift 22s ease-in-out infinite; }
+.animate-breathe { animation: breathe 9s ease-in-out infinite; }
+.animate-flutter { animation: wing-flutter 0.45s ease-in-out infinite; transform-origin: right center; }
+.animate-flutter-slow { animation: wing-flutter 0.85s ease-in-out infinite; transform-origin: right center; }
+.animate-fade-in-soft { animation: fade-in-soft 1.4s ease-out both; }
+
+/* ================================================================
+   Buttons
+================================================================ */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.85rem;
+  background: var(--tbe-deep-maroon);
+  color: var(--tbe-cream);
+  font-family: 'EB Garamond', serif;
+  font-size: 0.95rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  padding: 1rem 2.25rem;
+  border: none;
+  cursor: pointer;
+  transition: background 600ms ease, transform 600ms ease, letter-spacing 600ms ease;
+  border-radius: 0;
+}
+.btn-primary:hover {
+  background: var(--tbe-dark-wine);
+  letter-spacing: 0.28em;
+}
+.btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  color: var(--tbe-warm-brown);
+  font-family: 'EB Garamond', serif;
+  font-style: italic;
+  font-size: 1.05rem;
+  border-bottom: 1px solid rgba(112, 36, 34, 0.4);
+  padding-bottom: 4px;
+  cursor: pointer;
+  background: transparent;
+  text-decoration: none;
+  transition: color 400ms ease, border-color 400ms ease;
+}
+.btn-ghost:hover {
+  color: var(--tbe-deep-maroon);
+  border-color: var(--tbe-deep-maroon);
+}
+
+/* ================================================================
+   Form: airy underline inputs
+================================================================ */
+.input-underline {
+  width: 100%;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(47, 35, 35, 0.25);
+  padding: 0.75rem 0.25rem;
+  font-family: 'EB Garamond', serif;
+  font-size: 1.05rem;
+  color: var(--tbe-dark-brown);
+  outline: none;
+  transition: border-color 400ms ease;
+}
+.input-underline:focus { border-bottom-color: var(--tbe-deep-maroon); }
+.input-underline::placeholder { color: rgba(47, 35, 35, 0.45); font-style: italic; }
+
+html { scroll-behavior: smooth; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
