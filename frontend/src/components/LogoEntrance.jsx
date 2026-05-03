@@ -10,15 +10,20 @@ const STORAGE_KEY = "tbe-intro-played";
 // ─────────────────────────────────────────────────────────────────────────────
 
 const LogoEntrance = ({ onComplete }) => {
-  const alreadyPlayed = sessionStorage.getItem(STORAGE_KEY) === "1";
-  const [phase, setPhase] = useState(alreadyPlayed ? "done" : "visible");
+  // SSR-safe: never touch sessionStorage at render time.
+  // We always start as "visible" on the server; the useEffect below
+  // immediately flips to "done" on the client if already played.
+  const [phase, setPhase] = useState("visible");
 
-  // Stable ref so the effect never needs onComplete in its dep array
   const onCompleteRef = useRef(onComplete);
   useEffect(() => { onCompleteRef.current = onComplete; }, [onComplete]);
 
   useEffect(() => {
+    // Client-only — sessionStorage is not available on the server
+    const alreadyPlayed = sessionStorage.getItem(STORAGE_KEY) === "1";
+
     if (alreadyPlayed) {
+      setPhase("done");
       onCompleteRef.current?.();
       return;
     }
@@ -43,8 +48,6 @@ const LogoEntrance = ({ onComplete }) => {
       {phase !== "done" && (
         <motion.div
           data-testid="logo-entrance-overlay"
-          // Overlay: cream screen sits on top of everything.
-          // On exit it fades AND lifts upward to reveal the hero below.
           initial={{ opacity: 1, y: 0 }}
           animate={{
             opacity: exiting ? 0 : 1,
