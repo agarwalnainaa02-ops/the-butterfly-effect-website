@@ -41,7 +41,7 @@ export default function BlogPost({ postData }) {
         <meta name="twitter:description" content={postData.excerpt} />
       </Head>
 
-      <div style={{ minHeight: "100vh", backgroundColor: "var(--tbe-cream)" }}>
+      <div style={{ minHeight: "100vh", backgroundColor: "var(--tbe-cream)", overflowX: "hidden" }}>
         <Navbar onBookClick={handleBookClick} visible={true} />
 
         <article className="max-w-2xl mx-auto px-6 md:px-8 pt-40 pb-32">

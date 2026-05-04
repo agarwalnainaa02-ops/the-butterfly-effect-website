@@ -1,6 +1,6 @@
 ---
 title: "What Actually Happens in the First Session"
-date: "2025-05-09"
+date: "2026-05-09"
 excerpt: "A lot of people delay reaching out because they don't know what to expect. This is what the first session actually looks like — no script, no pressure."
 ---
 

@@ -20,9 +20,9 @@ const InstagramFeed = () => {
       "0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15)",
     margin: "1px",
     maxWidth: "540px",
-    minWidth: "326px",
+    minWidth: "0",
     padding: 0,
-    width: "99.375%",
+    width: "100%",
   };
 
   const innerDivStyle = { padding: "16px" };
@@ -47,7 +47,11 @@ const InstagramFeed = () => {
         <p className="eyebrow mb-8">From the archive</p>
         <h2
           className="h-display"
-          style={{ fontSize: "clamp(2rem, 4.4vw, 3.4rem)" }}
+          style={{
+            fontSize: "clamp(2rem, 4.4vw, 3.4rem)",
+            overflowWrap: "anywhere",
+            wordBreak: "break-word",
+          }}
           data-testid="instagram-headline"
         >
           <em style={{ color: "var(--tbe-warm-brown)" }}>

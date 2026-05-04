@@ -1,6 +1,6 @@
 ---
 title: "When Healing Feels Slow"
-date: "2025-04-18"
+date: "2026-04-18"
 excerpt: "Progress in therapy rarely looks like a straight line. Here's why that's not only normal — it might actually be the point."
 ---
 

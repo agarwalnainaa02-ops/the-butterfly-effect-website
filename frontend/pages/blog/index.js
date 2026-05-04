@@ -39,7 +39,7 @@ export default function BlogIndex({ allPostsData }) {
         <meta property="og:url" content="https://www.thebutterflyeffecttherapy.com/blog" />
       </Head>
 
-      <div style={{ minHeight: "100vh", backgroundColor: "var(--tbe-cream)" }}>
+      <div style={{ minHeight: "100vh", backgroundColor: "var(--tbe-cream)", overflowX: "hidden" }}>
         <Navbar onBookClick={handleBookClick} visible={true} />
 
         {/* Hero strip */}

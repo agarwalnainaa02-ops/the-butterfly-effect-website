@@ -1,6 +1,6 @@
 ---
 title: "On Carrying Things That Aren't Yours"
-date: "2025-03-27"
+date: "2026-03-27"
 excerpt: "Some of what we carry wasn't handed to us deliberately. It was absorbed — quietly, over years, through the people who raised us."
 ---
 

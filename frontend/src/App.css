@@ -2,4 +2,5 @@
 .App {
   min-height: 100vh;
   background-color: var(--tbe-cream);
+  overflow-x: hidden; /* prevent any child from causing horizontal scroll */
 }
