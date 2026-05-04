@@ -5,9 +5,12 @@ import { motion } from "framer-motion";
 import Navbar from "../../src/components/Navbar";
 import Footer from "../../src/components/Footer";
 import BookingDialog from "../../src/components/BookingDialog";
+import JsonLd from "../../src/components/JsonLd";
 import { getAllPostSlugs, getPostData } from "../../lib/posts";
 
-/** Format "2025-04-18" → "18 April 2025" */
+const SITE_URL = "https://www.thebutterflyeffecttherapy.com";
+
+/** Format "2026-04-18" → "18 April 2026" */
 function formatDate(dateStr) {
   const [year, month, day] = dateStr.split("-").map(Number);
   return new Date(year, month - 1, day).toLocaleDateString("en-GB", {
@@ -21,24 +24,60 @@ export default function BlogPost({ postData }) {
   const [bookingOpen, setBookingOpen] = useState(false);
   const handleBookClick = useCallback(() => setBookingOpen(true), []);
 
+  const postUrl = `${SITE_URL}/blog/${postData.slug}`;
+
+  const blogPostingSchema = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: postData.title,
+    description: postData.excerpt,
+    datePublished: postData.date,
+    dateModified: postData.date,
+    url: postUrl,
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": postUrl,
+    },
+    author: {
+      "@type": "Person",
+      name: "Naina Agarwal",
+      jobTitle: "Counselling Psychologist",
+      url: `${SITE_URL}/#about`,
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "The Butterfly Effect",
+      url: SITE_URL,
+      logo: {
+        "@type": "ImageObject",
+        url: `${SITE_URL}/logo.svg`,
+      },
+    },
+    inLanguage: "en-IN",
+  };
+
   return (
     <>
       <Head>
         <title>{postData.title} — The Butterfly Effect</title>
         <meta name="description" content={postData.excerpt} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link
-          rel="canonical"
-          href={`https://www.thebutterflyeffecttherapy.com/blog/${postData.slug}`}
-        />
+        <link rel="canonical" href={postUrl} />
+
+        {/* Open Graph — article */}
+        <meta property="og:type" content="article" />
         <meta property="og:title" content={`${postData.title} — The Butterfly Effect`} />
         <meta property="og:description" content={postData.excerpt} />
-        <meta
-          property="og:url"
-          content={`https://www.thebutterflyeffecttherapy.com/blog/${postData.slug}`}
-        />
+        <meta property="og:url" content={postUrl} />
+        <meta property="article:published_time" content={postData.date} />
+        <meta property="article:author" content="Naina Agarwal" />
+
+        {/* Twitter */}
         <meta name="twitter:title" content={`${postData.title} — The Butterfly Effect`} />
         <meta name="twitter:description" content={postData.excerpt} />
+
+        {/* JSON-LD */}
+        <JsonLd data={blogPostingSchema} />
       </Head>
 
       <div style={{ minHeight: "100vh", backgroundColor: "var(--tbe-cream)", overflowX: "hidden" }}>
@@ -86,7 +125,7 @@ export default function BlogPost({ postData }) {
             {formatDate(postData.date)}
           </motion.p>
 
-          {/* Title */}
+          {/* Title — h1 for SEO */}
           <motion.h1
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}

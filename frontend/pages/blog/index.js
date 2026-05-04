@@ -5,9 +5,12 @@ import { motion } from "framer-motion";
 import Navbar from "../../src/components/Navbar";
 import Footer from "../../src/components/Footer";
 import BookingDialog from "../../src/components/BookingDialog";
+import JsonLd from "../../src/components/JsonLd";
 import { getSortedPostsData } from "../../lib/posts";
 
-/** Format "2025-04-18" → "18 April 2025" */
+const SITE_URL = "https://www.thebutterflyeffecttherapy.com";
+
+/** Format "2026-04-18" → "18 April 2026" */
 function formatDate(dateStr) {
   const [year, month, day] = dateStr.split("-").map(Number);
   return new Date(year, month - 1, day).toLocaleDateString("en-GB", {
@@ -21,6 +24,31 @@ export default function BlogIndex({ allPostsData }) {
   const [bookingOpen, setBookingOpen] = useState(false);
   const handleBookClick = useCallback(() => setBookingOpen(true), []);
 
+  const blogSchema = {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    name: "Reflections — The Butterfly Effect",
+    description:
+      "Thoughts on therapy, patterns, and the quiet work of understanding yourself — by Naina Agarwal, Counselling Psychologist.",
+    url: `${SITE_URL}/blog`,
+    author: {
+      "@type": "Person",
+      name: "Naina Agarwal",
+      url: `${SITE_URL}/#about`,
+    },
+    blogPost: allPostsData.map((post) => ({
+      "@type": "BlogPosting",
+      headline: post.title,
+      description: post.excerpt,
+      datePublished: post.date,
+      url: `${SITE_URL}/blog/${post.slug}`,
+      author: {
+        "@type": "Person",
+        name: "Naina Agarwal",
+      },
+    })),
+  };
+
   return (
     <>
       <Head>
@@ -30,13 +58,26 @@ export default function BlogIndex({ allPostsData }) {
           content="Thoughts on therapy, patterns, and the quiet work of understanding yourself — by Naina Agarwal, Counselling Psychologist."
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="canonical" href="https://www.thebutterflyeffecttherapy.com/blog" />
+        <link rel="canonical" href={`${SITE_URL}/blog`} />
+
+        {/* Open Graph */}
         <meta property="og:title" content="Reflections — The Butterfly Effect" />
         <meta
           property="og:description"
           content="Thoughts on therapy, patterns, and the quiet work of understanding yourself."
         />
-        <meta property="og:url" content="https://www.thebutterflyeffecttherapy.com/blog" />
+        <meta property="og:url" content={`${SITE_URL}/blog`} />
+        <meta property="og:type" content="website" />
+
+        {/* Twitter */}
+        <meta name="twitter:title" content="Reflections — The Butterfly Effect" />
+        <meta
+          name="twitter:description"
+          content="Thoughts on therapy, patterns, and the quiet work of understanding yourself."
+        />
+
+        {/* JSON-LD */}
+        <JsonLd data={blogSchema} />
       </Head>
 
       <div style={{ minHeight: "100vh", backgroundColor: "var(--tbe-cream)", overflowX: "hidden" }}>
