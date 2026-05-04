@@ -18,7 +18,7 @@ const AboutNaina = () => {
         }}
       />
 
-      <div className="grid grid-cols-12 gap-12 md:gap-20 items-center">
+      <div className="grid grid-cols-12 gap-y-12 md:gap-20 items-center">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}

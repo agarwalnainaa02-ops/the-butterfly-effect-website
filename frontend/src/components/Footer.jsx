@@ -36,7 +36,7 @@ const Footer = () => {
       />
 
       <div className="relative max-w-7xl mx-auto px-6 md:px-12">
-        <div className="grid grid-cols-12 gap-12">
+        <div className="grid grid-cols-12 gap-y-12 md:gap-12">
           <div className="col-span-12 md:col-span-5">
             <div className="mb-6">
               <img

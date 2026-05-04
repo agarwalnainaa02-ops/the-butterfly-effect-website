@@ -25,7 +25,7 @@ const WhatToExpect = ({ onBookClick }) => {
       data-testid="what-to-expect-section"
       className="relative max-w-7xl mx-auto px-6 md:px-12 py-32 md:py-48"
     >
-      <div className="grid grid-cols-12 gap-12 md:gap-20">
+      <div className="grid grid-cols-12 gap-y-12 md:gap-20">
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
