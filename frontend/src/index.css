@@ -26,6 +26,35 @@
 
 * { border-color: rgba(47, 35, 35, 0.18); }
 
+/* ── Mobile safety: prevent any element from causing horizontal overflow ── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
+/* Allow layout containers to exceed max-width:100% constraint */
+html, body, #__next, .App,
+section, header, footer, nav, main, article, div {
+  max-width: revert;
+}
+
+img, video, iframe, embed, object, svg {
+  max-width: 100%;
+  height: auto;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+p, li, dt, dd, a, span {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
 html, body {
   margin: 0;
   background-color: var(--tbe-cream);
@@ -37,6 +66,7 @@ html, body {
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
   overflow-x: hidden;
+  max-width: 100vw;
 }
 
 body {

@@ -27,7 +27,11 @@ const HowIWork = () => {
         <p className="eyebrow mb-8">How I work</p>
         <h2
           className="h-display"
-          style={{ fontSize: "clamp(2rem, 4.6vw, 3.6rem)" }}
+          style={{
+            fontSize: "clamp(1.8rem, 4.6vw, 3.6rem)",
+            wordBreak: "break-word",
+            overflowWrap: "break-word",
+          }}
           data-testid="approach-headline"
         >
           I work integratively — which means I don't choose one framework

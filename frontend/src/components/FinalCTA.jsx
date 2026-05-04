@@ -41,7 +41,11 @@ const FinalCTA = ({ onBookClick }) => {
           viewport={{ once: true, amount: 0.4 }}
           transition={{ duration: 1.6 }}
           className="h-display"
-          style={{ fontSize: "clamp(2.4rem, 6vw, 5rem)" }}
+          style={{
+            fontSize: "clamp(1.9rem, 6vw, 5rem)",
+            wordBreak: "break-word",
+            overflowWrap: "break-word",
+          }}
           data-testid="final-cta-headline"
         >
           If you've been sitting with something

@@ -40,7 +40,7 @@ const Navbar = ({ onBookClick, visible = true }) => {
           href="#top"
           data-testid="nav-logo-link"
           className="flex items-center group"
-          style={{ textDecoration: "none" }}
+          style={{ textDecoration: "none", flexShrink: 0 }}
         >
           <img
             src="/logo.svg"
@@ -50,6 +50,7 @@ const Navbar = ({ onBookClick, visible = true }) => {
               width: "auto",
               display: "block",
               objectFit: "contain",
+              maxWidth: "200px",
             }}
           />
         </a>
@@ -108,6 +109,8 @@ const Navbar = ({ onBookClick, visible = true }) => {
             borderBottom: "1px solid rgba(121, 2, 8, 0.45)",
             background: "transparent",
             cursor: "pointer",
+            whiteSpace: "nowrap",
+            flexShrink: 0,
           }}
           onMouseEnter={(e) => (e.currentTarget.style.letterSpacing = "0.36em")}
           onMouseLeave={(e) => (e.currentTarget.style.letterSpacing = "0.3em")}

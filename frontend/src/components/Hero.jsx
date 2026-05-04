@@ -71,7 +71,11 @@ const Hero = ({ onBookClick }) => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.6, delay: 0.7, ease: [0.22, 0.61, 0.36, 1] }}
           className="h-display max-w-4xl"
-          style={{ fontSize: "clamp(2.6rem, 6.4vw, 5.5rem)" }}
+          style={{
+            fontSize: "clamp(2rem, 6.4vw, 5.5rem)",
+            wordBreak: "break-word",
+            overflowWrap: "break-word",
+          }}
           data-testid="hero-headline"
         >
           Therapy that follows you,

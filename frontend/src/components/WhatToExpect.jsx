@@ -57,6 +57,7 @@ const WhatToExpect = ({ onBookClick }) => {
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 1.2, delay: 0.2 }}
           className="col-span-12 md:col-span-7 relative list-none p-0 m-0"
+          style={{ overflow: "hidden" }}
         >
           <div
             className="absolute left-[8px] top-2 bottom-2 w-px"
