@@ -71,6 +71,14 @@ export default function BlogPost({ postData }) {
         <meta property="og:url" content={postUrl} />
         <meta property="article:published_time" content={postData.date} />
         <meta property="article:author" content="Naina Agarwal" />
+        <meta
+          property="og:image"
+          content={`${SITE_URL}/api/og?title=${encodeURIComponent(postData.title)}`}
+        />
+        <meta
+          name="twitter:image"
+          content={`${SITE_URL}/api/og?title=${encodeURIComponent(postData.title)}`}
+        />
 
         {/* Twitter */}
         <meta name="twitter:title" content={`${postData.title} — The Butterfly Effect`} />

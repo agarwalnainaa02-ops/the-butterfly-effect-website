@@ -21,8 +21,32 @@ const Navbar = ({ onBookClick, visible = true }) => {
   }, []);
 
   return (
+    <>
+    {/* Skip to main content — visible only on keyboard focus */}
+    <a
+      href="#top"
+      style={{
+        position: "fixed",
+        top: "-100%",
+        left: "1rem",
+        zIndex: 9999,
+        padding: "0.75rem 1.25rem",
+        backgroundColor: "var(--tbe-deep-maroon)",
+        color: "#f3e7d1",
+        fontFamily: "'EB Garamond', serif",
+        fontSize: "0.9rem",
+        letterSpacing: "0.1em",
+        textDecoration: "none",
+        transition: "top 0.2s",
+      }}
+      onFocus={(e) => (e.currentTarget.style.top = "1rem")}
+      onBlur={(e) => (e.currentTarget.style.top = "-100%")}
+    >
+      Skip to content
+    </a>
     <nav
       data-testid="primary-navbar"
+      aria-label="Main navigation"
       className="fixed top-0 left-0 right-0 z-40 transition-all duration-700"
       style={{
         backgroundColor: scrolled ? "rgba(243, 231, 209, 0.72)" : "transparent",
@@ -119,6 +143,7 @@ const Navbar = ({ onBookClick, visible = true }) => {
         </button>
       </div>
     </nav>
+    </>
   );
 };
 

@@ -68,6 +68,14 @@ export default function BlogIndex({ allPostsData }) {
         />
         <meta property="og:url" content={`${SITE_URL}/blog`} />
         <meta property="og:type" content="website" />
+        <meta
+          property="og:image"
+          content={`${SITE_URL}/api/og?title=Reflections&sub=Writing+by+Naina+Agarwal`}
+        />
+        <meta
+          name="twitter:image"
+          content={`${SITE_URL}/api/og?title=Reflections&sub=Writing+by+Naina+Agarwal`}
+        />
 
         {/* Twitter */}
         <meta name="twitter:title" content="Reflections — The Butterfly Effect" />

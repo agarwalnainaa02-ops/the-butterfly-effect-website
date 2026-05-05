@@ -19,14 +19,14 @@ export default function Document() {
         <meta property="og:site_name" content="The Butterfly Effect" />
         <meta property="og:type" content="website" />
         <meta property="og:locale" content="en_IN" />
-        <meta property="og:image" content="https://www.thebutterflyeffecttherapy.com/og-image.png" />
+        <meta property="og:image" content="https://www.thebutterflyeffecttherapy.com/api/og" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta property="og:image:alt" content="The Butterfly Effect — Therapy with Naina Agarwal" />
 
         {/* Twitter card defaults */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:image" content="https://www.thebutterflyeffecttherapy.com/og-image.png" />
+        <meta name="twitter:image" content="https://www.thebutterflyeffecttherapy.com/api/og" />
         <meta name="twitter:site" content="@thebutterflyeffect_with.nainaa" />
 
         {/* General */}

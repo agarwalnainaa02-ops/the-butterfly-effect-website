@@ -1,13 +1,33 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Butterfly from "./Butterfly";
 
 const BookingDialog = ({ open, onClose }) => {
+  const closeButtonRef = useRef(null);
+
+  // Close on Escape key
+  useEffect(() => {
+    if (!open) return;
+    const handleKey = (e) => { if (e.key === "Escape") onClose(); };
+    window.addEventListener("keydown", handleKey);
+    return () => window.removeEventListener("keydown", handleKey);
+  }, [open, onClose]);
+
+  // Move focus to close button when dialog opens
+  useEffect(() => {
+    if (open && closeButtonRef.current) {
+      closeButtonRef.current.focus();
+    }
+  }, [open]);
+
   return (
     <AnimatePresence>
       {open && (
         <motion.div
           data-testid="booking-dialog"
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="booking-dialog-title"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
@@ -29,8 +49,9 @@ const BookingDialog = ({ open, onClose }) => {
             onClick={(e) => e.stopPropagation()}
           >
             <button
+              ref={closeButtonRef}
               onClick={onClose}
-              aria-label="Close"
+              aria-label="Close booking dialog"
               data-testid="booking-dialog-close"
               style={{
                 position: "absolute",
@@ -52,6 +73,7 @@ const BookingDialog = ({ open, onClose }) => {
               <Butterfly size={24} color="var(--tbe-deep-maroon)" className="mb-8 animate-flutter-slow" />
 
               <h2
+                id="booking-dialog-title"
                 className="h-display mb-4"
                 style={{ fontSize: "clamp(1.8rem, 3.6vw, 2.4rem)" }}
                 data-testid="booking-modal-headline"

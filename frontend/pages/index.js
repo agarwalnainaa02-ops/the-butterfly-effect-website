@@ -98,6 +98,14 @@ export default function Home() {
         />
         <meta property="og:url" content={`${SITE_URL}/`} />
         <meta property="og:type" content="website" />
+        <meta
+          property="og:image"
+          content={`${SITE_URL}/api/og?title=Therapy+that+follows+you%2C+not+a+script.`}
+        />
+        <meta
+          name="twitter:image"
+          content={`${SITE_URL}/api/og?title=Therapy+that+follows+you%2C+not+a+script.`}
+        />
 
         {/* Twitter */}
         <meta name="twitter:title" content="The Butterfly Effect — Naina Agarwal, Counselling Psychologist" />

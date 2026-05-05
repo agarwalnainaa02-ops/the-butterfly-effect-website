@@ -39,6 +39,7 @@ const FaqItem = ({ q, a, index, open, onToggle }) => {
         onClick={onToggle}
         className="w-full text-left flex items-start justify-between gap-8 py-8 md:py-10"
         aria-expanded={open}
+        aria-controls={`faq-answer-${index}`}
         data-testid={`faq-toggle-${index}`}
         style={{ background: "transparent", border: "none", cursor: "pointer" }}
       >
@@ -65,6 +66,7 @@ const FaqItem = ({ q, a, index, open, onToggle }) => {
         {open && (
           <motion.div
             key="content"
+            id={`faq-answer-${index}`}
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
