@@ -150,6 +150,11 @@ const Footer = () => {
                   Blog
                 </Link>
               </li>
+              <li>
+                <Link href="/online-therapy-india" style={{ color: "rgba(243, 231, 209, 0.92)" }} className="hover:underline underline-offset-4">
+                  Online Therapy in India
+                </Link>
+              </li>
             </ul>
           </div>
         </div>
