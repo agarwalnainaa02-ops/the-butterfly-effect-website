@@ -7,13 +7,21 @@ export default function Document() {
         {/* Favicon */}
         <link rel="icon" href="/logo.svg" type="image/svg+xml" />
 
-        {/* Google Fonts */}
+        {/* Google Fonts — non-render-blocking */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link
+          rel="preload"
+          as="style"
           href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Caveat:wght@400;500&display=swap"
-          rel="stylesheet"
+          onLoad="this.onload=null;this.rel='stylesheet'"
         />
+        <noscript>
+          <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Caveat:wght@400;500&display=swap"
+          />
+        </noscript>
 
         {/* Open Graph global defaults (page-level <Head> overrides per-property) */}
         <meta property="og:site_name" content="The Butterfly Effect" />
