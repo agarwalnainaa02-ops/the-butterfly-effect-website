@@ -64,7 +64,7 @@ const InstagramFeed = () => {
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 items-start">
 
         {/* Post 1 */}
-        <div style={{ width: "100%", overflow: "hidden", borderRadius: "3px", aspectRatio: "1 / 1" }}>
+        <div aria-label="Instagram post by The Butterfly Effect" style={{ width: "100%", overflow: "hidden", borderRadius: "3px", aspectRatio: "1 / 1" }}>
           <blockquote
             className="instagram-media"
             data-instgrm-captioned
@@ -86,7 +86,7 @@ const InstagramFeed = () => {
         </div>
 
         {/* Post 2 */}
-        <div style={{ width: "100%", overflow: "hidden", borderRadius: "3px", aspectRatio: "1 / 1" }}>
+        <div aria-label="Instagram post by The Butterfly Effect" style={{ width: "100%", overflow: "hidden", borderRadius: "3px", aspectRatio: "1 / 1" }}>
           <blockquote
             className="instagram-media"
             data-instgrm-captioned
@@ -108,7 +108,7 @@ const InstagramFeed = () => {
         </div>
 
         {/* Post 3 */}
-        <div style={{ width: "100%", overflow: "hidden", borderRadius: "3px", aspectRatio: "1 / 1" }}>
+        <div aria-label="Instagram post by The Butterfly Effect" style={{ width: "100%", overflow: "hidden", borderRadius: "3px", aspectRatio: "1 / 1" }}>
           <blockquote
             className="instagram-media"
             data-instgrm-captioned
