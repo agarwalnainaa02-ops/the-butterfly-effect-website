@@ -15,7 +15,7 @@ const fees = [
   { k: "Format", v: "Online — all sessions held via video call" },
   { k: "Duration", v: "50–60 minutes" },
   { k: "Booking", v: "Via WhatsApp or email" },
-  { k: "Confidentiality", v: "A private, respectful space where your experiences are held with care. We'll go over how confidentiality works together in our first session." },
+  { k: "Confidentiality", v: "A private, respectful space. Limits of confidentiality explained in session one." },
 ];
 
 const WhatToExpect = ({ onBookClick }) => {
