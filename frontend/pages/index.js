@@ -89,7 +89,6 @@ export default function Home() {
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="canonical" href={`${SITE_URL}/`} />
-        <link rel="preload" as="image" href="/hero-bg.jpg" />
 
         {/* Open Graph */}
         <meta property="og:title" content="The Butterfly Effect — Naina Agarwal, Counselling Psychologist" />
