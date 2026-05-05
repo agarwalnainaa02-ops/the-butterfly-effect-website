@@ -44,12 +44,6 @@ const HowIWork = () => {
         >
           I work with what you bring. Session to session.
         </p>
-        <p
-          className="mt-6 font-hand text-2xl md:text-3xl"
-          style={{ color: "var(--tbe-warm-brown)", opacity: 0.85 }}
-        >
-          both matter — the therapist and the person.
-        </p>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-20 max-w-6xl mx-auto">
