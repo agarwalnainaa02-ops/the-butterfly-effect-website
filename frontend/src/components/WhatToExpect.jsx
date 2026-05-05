@@ -12,7 +12,7 @@ const expectations = [
 ];
 
 const fees = [
-  { k: "Format", v: "Online — all sessions held via video call" },
+  { k: "Format", v: "Online — all sessions held via video call", sub: "Available to clients across India. Based in Hyderabad." },
   { k: "Duration", v: "50–60 minutes" },
   { k: "Booking", v: "Via WhatsApp or email" },
   { k: "Confidentiality", v: "A private, respectful space where your experiences are held with care. We'll go over how confidentiality works together in our first session." },
@@ -127,11 +127,21 @@ const WhatToExpect = ({ onBookClick }) => {
               <dt className="col-span-12 md:col-span-4 eyebrow" style={{ opacity: 0.85 }}>
                 {f.k}
               </dt>
-              <dd
-                className="col-span-12 md:col-span-8 font-display text-xl md:text-2xl"
-                style={{ color: "var(--tbe-dark-wine)" }}
-              >
-                {f.v}
+              <dd className="col-span-12 md:col-span-8">
+                <span
+                  className="font-display text-xl md:text-2xl"
+                  style={{ color: "var(--tbe-dark-wine)" }}
+                >
+                  {f.v}
+                </span>
+                {f.sub && (
+                  <span
+                    className="block font-display text-base md:text-lg mt-1"
+                    style={{ color: "var(--tbe-dark-brown)", opacity: 0.6 }}
+                  >
+                    {f.sub}
+                  </span>
+                )}
               </dd>
             </div>
           ))}
