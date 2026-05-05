@@ -2,7 +2,7 @@ import React, { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Butterfly from "./Butterfly";
 
-const HERO_IMG = "https://images.pexels.com/photos/32550977/pexels-photo-32550977.jpeg";
+const HERO_IMG = "/hero-bg.jpg";
 
 const Hero = ({ onBookClick }) => {
   const ref = useRef(null);
