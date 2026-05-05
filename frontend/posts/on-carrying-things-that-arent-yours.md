@@ -32,6 +32,8 @@ When something moves from *"this is who I am"* to *"this is something I learned"
 
 That shift — from inherited pattern to conscious choice — is slow. It's not linear. And it's some of the most meaningful work there is.
 
+The pace of that shift is something [this piece on slow healing](/blog/when-healing-feels-slow) gets into. And if you're wondering what it actually looks like to begin — what the first conversation is and isn't — [it's described here](/blog/what-actually-happens-in-the-first-session).
+
 ---
 
 *If you find yourself returning to patterns you can't quite explain, that might be worth exploring. Reach out if you'd like to.*

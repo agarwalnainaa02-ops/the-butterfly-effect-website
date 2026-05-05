@@ -34,6 +34,8 @@ You might feel lighter. You might feel a little unsettled — like something has
 
 The first session doesn't have to end with a plan or a revelation. Sometimes it's just the beginning of being heard.
 
+What often comes up in early sessions is that what someone brought in isn't entirely theirs — it was absorbed, gradually, from people and places they didn't choose. [This piece on inherited patterns](/blog/on-carrying-things-that-arent-yours) goes into that. And if the question underneath all of this is whether change is even possible, [this is about what slow healing actually looks like](/blog/when-healing-feels-slow).
+
 ---
 
 *Reach out on WhatsApp or Instagram if you'd like to book a session — there's no formal intake process. Just a message, and we'll find a time.*

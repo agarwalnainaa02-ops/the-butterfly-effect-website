@@ -32,6 +32,8 @@ But you learned those patterns for a reason. They protected you once. Releasing 
 
 Healing slowly doesn't mean you're failing at healing. It means you're doing it in a way that might actually last.
 
+If some of what feels slow connects to things you didn't quite choose to carry — patterns that came from much earlier — [that's what this piece explores](/blog/on-carrying-things-that-arent-yours). And if you're not yet sure what it even looks like to start, [here's what the first session actually involves](/blog/what-actually-happens-in-the-first-session).
+
 ---
 
 *If you're wondering whether therapy might be helpful for you — even if you're not sure what you'd say — feel free to reach out. Sometimes starting is just sending a message.*
