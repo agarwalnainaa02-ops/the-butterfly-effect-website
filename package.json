@@ -1,7 +1,1 @@
-{
-  "name": "butterfly-effect-root",
-  "private": true,
-  "dependencies": {
-    "next": "^15.5.15"
-  }
-}
+{"name":"the-butterfly-effect-website","private":true,"dependencies":{"next":"^15.5.15"}}
