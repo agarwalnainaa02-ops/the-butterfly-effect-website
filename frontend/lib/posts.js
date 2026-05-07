@@ -4,7 +4,12 @@ import matter from "gray-matter";
 import { remark } from "remark";
 import html from "remark-html";
 
-const postsDirectory = path.join(process.cwd(), "posts");
+// process.cwd() is the Next.js project root (frontend/) in both
+// local dev and Vercel builds. Fallback handles any edge cases.
+const cwd = process.cwd();
+const postsDirectory = fs.existsSync(path.join(cwd, "posts"))
+  ? path.join(cwd, "posts")
+  : path.join(cwd, "frontend", "posts");
 
 /** Returns all posts sorted by date (newest first), with frontmatter only */
 export function getSortedPostsData() {

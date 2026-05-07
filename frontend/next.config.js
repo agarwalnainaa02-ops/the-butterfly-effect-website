@@ -2,6 +2,12 @@
 const nextConfig = {
   reactStrictMode: true,
 
+  // Ensure markdown post files are bundled into the serverless output
+  outputFileTracingIncludes: {
+    "/blog/[slug]": ["./posts/**/*.md"],
+    "/blog": ["./posts/**/*.md"],
+  },
+
   // Explicit: URLs should never have a trailing slash (canonical form)
   trailingSlash: false,
 
