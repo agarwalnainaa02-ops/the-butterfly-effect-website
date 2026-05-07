@@ -3,11 +3,11 @@ import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 
 const NAV_LINKS = [
-  { label: "About", href: "#about" },
-  { label: "How I Work", href: "#approach" },
-  { label: "What We Cover", href: "#areas" },
-  { label: "Sessions", href: "#expect" },
-  { label: "FAQ", href: "#faq" },
+  { label: "About", href: "/#about" },
+  { label: "How I Work", href: "/#approach" },
+  { label: "What We Cover", href: "/#areas" },
+  { label: "Sessions", href: "/#expect" },
+  { label: "FAQ", href: "/#faq" },
   { label: "Blog", href: "/blog" },
 ];
 
@@ -87,8 +87,8 @@ const Navbar = ({ onBookClick, visible = true }) => {
       >
         <div className="max-w-7xl mx-auto px-6 md:px-12 py-5 flex items-center justify-between">
           {/* Logo */}
-          <a
-            href="#top"
+          <Link
+            href="/"
             data-testid="nav-logo-link"
             onClick={handleNavClick}
             className="flex items-center group"
@@ -105,50 +105,28 @@ const Navbar = ({ onBookClick, visible = true }) => {
                 maxWidth: "200px",
               }}
             />
-          </a>
+          </Link>
 
           {/* Desktop nav links */}
           <div className="hidden md:flex items-center gap-10">
-            {NAV_LINKS.map((link) => {
-              const linkStyle = {
-                fontFamily: "'EB Garamond', serif",
-                color: "var(--tbe-dark-brown)",
-                opacity: 0.72,
-                textDecoration: "none",
-              };
-              const className =
-                "text-[13px] tracking-[0.28em] uppercase transition-colors duration-500";
-              const handlers = {
-                onMouseEnter: (e) => (e.currentTarget.style.opacity = "1"),
-                onMouseLeave: (e) => (e.currentTarget.style.opacity = "0.72"),
-              };
-              if (link.href.startsWith("/")) {
-                return (
-                  <Link
-                    key={link.href}
-                    href={link.href}
-                    data-testid={`nav-link-${link.label.toLowerCase()}`}
-                    className={className}
-                    style={linkStyle}
-                    {...handlers}
-                  >
-                    {link.label}
-                  </Link>
-                );
-              }
-              return (
-                <a
-                  key={link.href}
-                  href={link.href}
-                  data-testid={`nav-link-${link.label.toLowerCase()}`}
-                  className={className}
-                  style={linkStyle}
-                  {...handlers}
-                >
-                  {link.label}
-                </a>
-              );
-            })}
+            {NAV_LINKS.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                data-testid={`nav-link-${link.label.toLowerCase()}`}
+                className="text-[13px] tracking-[0.28em] uppercase transition-colors duration-500"
+                style={{
+                  fontFamily: "'EB Garamond', serif",
+                  color: "var(--tbe-dark-brown)",
+                  opacity: 0.72,
+                  textDecoration: "none",
+                }}
+                onMouseEnter={(e) => (e.currentTarget.style.opacity = "1")}
+                onMouseLeave={(e) => (e.currentTarget.style.opacity = "0.72")}
+              >
+                {link.label}
+              </Link>
+            ))}
           </div>
 
           {/* Right side: book button + hamburger */}
@@ -256,41 +234,22 @@ const Navbar = ({ onBookClick, visible = true }) => {
                     exit={{ opacity: 0, x: -16 }}
                     transition={{ duration: 0.5, delay: i * 0.07, ease: "easeOut" }}
                   >
-                    {link.href.startsWith("/") ? (
-                      <Link
-                        href={link.href}
-                        onClick={handleNavClick}
-                        style={{
-                          fontFamily: "'Playfair Display', serif",
-                          fontSize: "clamp(1.7rem, 7vw, 2.4rem)",
-                          color: "rgba(243, 231, 209, 0.88)",
-                          textDecoration: "none",
-                          display: "block",
-                          paddingBlock: "0.55rem",
-                          letterSpacing: "-0.01em",
-                          lineHeight: 1.1,
-                        }}
-                      >
-                        {link.label}
-                      </Link>
-                    ) : (
-                      <a
-                        href={link.href}
-                        onClick={handleNavClick}
-                        style={{
-                          fontFamily: "'Playfair Display', serif",
-                          fontSize: "clamp(1.7rem, 7vw, 2.4rem)",
-                          color: "rgba(243, 231, 209, 0.88)",
-                          textDecoration: "none",
-                          display: "block",
-                          paddingBlock: "0.55rem",
-                          letterSpacing: "-0.01em",
-                          lineHeight: 1.1,
-                        }}
-                      >
-                        {link.label}
-                      </a>
-                    )}
+                    <Link
+                      href={link.href}
+                      onClick={handleNavClick}
+                      style={{
+                        fontFamily: "'Playfair Display', serif",
+                        fontSize: "clamp(1.7rem, 7vw, 2.4rem)",
+                        color: "rgba(243, 231, 209, 0.88)",
+                        textDecoration: "none",
+                        display: "block",
+                        paddingBlock: "0.55rem",
+                        letterSpacing: "-0.01em",
+                        lineHeight: 1.1,
+                      }}
+                    >
+                      {link.label}
+                    </Link>
                   </motion.li>
                 ))}
               </ul>
