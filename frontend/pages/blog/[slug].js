@@ -223,7 +223,7 @@ export async function getStaticPaths() {
   const paths = getAllPostSlugs();
   return {
     paths,
-    fallback: false,
+    fallback: "blocking",
   };
 }
 
