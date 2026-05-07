@@ -112,11 +112,11 @@ body::before {
 }
 
 .eyebrow {
-  font-family: 'EB Garamond', serif;
-  font-style: italic;
-  font-size: 0.85rem;
-  letter-spacing: 0.32em;
-  text-transform: uppercase;
+  font-family: 'Caveat', cursive;
+  font-style: normal;
+  font-size: 1.05rem;
+  letter-spacing: 0.06em;
+  text-transform: none;
   color: var(--tbe-warm-brown);
   opacity: 0.75;
 }
