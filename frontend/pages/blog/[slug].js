@@ -229,6 +229,7 @@ const DEDICATED_SLUGS = [
   "why-do-i-get-attached-so-quickly",
   "parents-sacrifice-and-family-guilt",
   "why-do-i-keep-explaining-myself-to-my-parents",
+  "questions-to-ask-yourself-before-marriage",
 ];
 
 export async function getStaticPaths() {
