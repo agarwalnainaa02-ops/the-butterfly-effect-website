@@ -234,6 +234,7 @@ const DEDICATED_SLUGS = [
   "things-its-okay-to-want-in-marriage",
   "mental-health-and-marriage",
   "marriage-in-laws-family-boundaries",
+  "arranged-marriage-family-approval",
 ];
 
 export async function getStaticPaths() {
