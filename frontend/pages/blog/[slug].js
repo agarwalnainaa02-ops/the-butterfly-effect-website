@@ -232,6 +232,7 @@ const DEDICATED_SLUGS = [
   "questions-to-ask-yourself-before-marriage",
   "questions-to-ask-partner-before-marriage",
   "things-its-okay-to-want-in-marriage",
+  "mental-health-and-marriage",
 ];
 
 export async function getStaticPaths() {
