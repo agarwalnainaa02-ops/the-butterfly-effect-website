@@ -80,7 +80,7 @@ const AboutNaina = () => {
           >
             <p>
               I didn't come to psychology to help people. I came because I couldn't stop
-              trying to understand them — not in a clinical way. In a can't-stop-thinking-about-it way.
+              trying to understand them — not in a detached, analytical way. In a can't-stop-thinking-about-it way.
             </p>
             <p>
               I've also spent years on the other side of therapy, as a client — so I

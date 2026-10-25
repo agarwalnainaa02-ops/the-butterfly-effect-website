@@ -46,7 +46,7 @@ export default function OnlineTherapyIndia() {
   return (
     <>
       <Head>
-        <title>Online Therapy in India — The Butterfly Effect</title>
+        <title>Online Therapy in India | Naina Agarwal, Counsellor</title>
         <meta
           name="description"
           content="Online counselling in India with Naina Agarwal, Mental Health Practitioner. Video sessions for anxiety, overthinking, relationships, burnout, and identity — available across India."
@@ -56,7 +56,7 @@ export default function OnlineTherapyIndia() {
 
         {/* Open Graph */}
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="Online Therapy in India — The Butterfly Effect" />
+        <meta property="og:title" content="Online Therapy in India | Naina Agarwal, Counsellor" />
         <meta
           property="og:description"
           content="Online counselling in India with Naina Agarwal, Mental Health Practitioner. Video sessions for anxiety, overthinking, relationships, burnout, and identity."
@@ -68,7 +68,7 @@ export default function OnlineTherapyIndia() {
         />
 
         {/* Twitter */}
-        <meta name="twitter:title" content="Online Therapy in India — The Butterfly Effect" />
+        <meta name="twitter:title" content="Online Therapy in India | Naina Agarwal, Counsellor" />
         <meta
           name="twitter:description"
           content="Online counselling in India with Naina Agarwal, Mental Health Practitioner."
@@ -134,9 +134,9 @@ export default function OnlineTherapyIndia() {
                 lineHeight: 1.7,
               }}
             >
-              Wherever you are in India, therapy is available — without a waiting room,
-              a commute, or the particular anxiety of being seen walking into a clinic.
-              Just a video call, and a space to actually talk.
+              Wherever you are in India, online therapy and counselling is available —
+              without a waiting room, a commute, or the particular anxiety of being seen
+              walking into a clinic. Just a video call, and a space to actually talk.
             </motion.p>
           </motion.div>
         </section>

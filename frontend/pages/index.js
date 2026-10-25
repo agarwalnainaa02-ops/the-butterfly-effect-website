@@ -25,7 +25,7 @@ const websiteSchema = {
   name: "The Butterfly Effect",
   url: SITE_URL,
   description:
-    "Person-centred, integrative online counselling by Naina Agarwal, Mental Health Practitioner.",
+    "Online therapy and counselling in India by Naina Agarwal, Mental Health Practitioner.",
 };
 
 const localBusinessSchema = {
@@ -36,7 +36,7 @@ const localBusinessSchema = {
   logo: `${SITE_URL}/logo.svg`,
   image: `${SITE_URL}/og-image.png`,
   description:
-    "Integrative, person-centred online counselling. Working with anxiety, emotional patterns, relationships, self-worth, and identity. Sessions held via video call.",
+    "Online therapy and counselling in India. Working with anxiety, emotional patterns, relationships, self-worth, and identity. Sessions held via video call.",
   telephone: "+919989640090",
   email: "agarwalnainaa02@gmail.com",
   address: {
@@ -55,7 +55,7 @@ const localBusinessSchema = {
     name: "Naina Agarwal",
     jobTitle: "Mental Health Practitioner",
     description:
-      "Hyderabad-based mental health practitioner offering integrative, person-centred online counselling across India.",
+      "Hyderabad-based mental health practitioner offering online therapy and counselling across India.",
     url: `${SITE_URL}/#about`,
     sameAs: ["https://www.instagram.com/thebutterflyeffect_with.nainaa"],
   },
@@ -82,19 +82,19 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Online Counselling in India | Naina Agarwal, Mental Health Practitioner</title>
+        <title>Online Therapist in India | Naina Agarwal, Counsellor</title>
         <meta
           name="description"
-          content="Online counselling across India with Naina Agarwal, a Hyderabad-based mental health practitioner. Anxiety, overthinking, relationships, burnout. Book on WhatsApp."
+          content="Online therapist &amp; counsellor in India, based in Hyderabad. Support for anxiety, overthinking, relationships and burnout. Book on WhatsApp."
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="canonical" href={`${SITE_URL}/`} />
 
         {/* Open Graph */}
-        <meta property="og:title" content="Online Counselling in India | Naina Agarwal, Mental Health Practitioner" />
+        <meta property="og:title" content="Online Therapist in India | Naina Agarwal, Counsellor" />
         <meta
           property="og:description"
-          content="Online counselling across India with Naina Agarwal, a Hyderabad-based mental health practitioner. Anxiety, overthinking, relationships, burnout. Book on WhatsApp."
+          content="Online therapist &amp; counsellor in India, based in Hyderabad. Support for anxiety, overthinking, relationships and burnout. Book on WhatsApp."
         />
         <meta property="og:url" content={`${SITE_URL}/`} />
         <meta property="og:type" content="website" />
@@ -108,10 +108,10 @@ export default function Home() {
         />
 
         {/* Twitter */}
-        <meta name="twitter:title" content="Online Counselling in India | Naina Agarwal, Mental Health Practitioner" />
+        <meta name="twitter:title" content="Online Therapist in India | Naina Agarwal, Counsellor" />
         <meta
           name="twitter:description"
-          content="Online counselling across India with Naina Agarwal, a Hyderabad-based mental health practitioner. Anxiety, overthinking, relationships, burnout. Book on WhatsApp."
+          content="Online therapist &amp; counsellor in India, based in Hyderabad. Support for anxiety, overthinking, relationships and burnout. Book on WhatsApp."
         />
 
         {/* JSON-LD */}

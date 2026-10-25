@@ -12,7 +12,7 @@ Which makes complete sense. Walking into a room — or opening a call — with a
 
 The first session isn't an intake form read aloud, and it's not me asking you to excavate your childhood in the first forty-five minutes. It's a conversation — one where I'm genuinely trying to understand who you are, not just what you're presenting with.
 
-I'll ask questions. Some will be about what brought you here. Some will be about your life more broadly — your relationships, the way you tend to move through the world, what makes you feel most like yourself. Some questions I'll ask for clinical reasons. Some I'll ask because I'm curious about you as a person.
+I'll ask questions. Some will be about what brought you here. Some will be about your life more broadly — your relationships, the way you tend to move through the world, what makes you feel most like yourself. Some questions I'll ask to understand where you are right now. Some I'll ask because I'm curious about you as a person.
 
 You don't have to have answers to all of them. "I don't know" is a perfectly valid response, and honestly, sometimes the most interesting place to start.
 

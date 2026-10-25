@@ -108,7 +108,7 @@ const WhatToExpect = ({ onBookClick }) => {
       {/* Fees & practicalities */}
       <div id="fees" className="mt-32 md:mt-40 max-w-5xl mx-auto" data-testid="fees-block">
         <div className="text-center mb-14">
-          <p className="eyebrow mb-6">Sessions</p>
+          <p className="eyebrow mb-6">Online therapy and counselling sessions across India</p>
           <h3
             className="h-display"
             style={{ fontSize: "clamp(1.8rem, 3.6vw, 2.6rem)" }}
