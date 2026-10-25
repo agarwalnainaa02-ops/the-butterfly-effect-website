@@ -1,8 +1,9 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Butterfly from "./Butterfly";
+import { WA_URL, trackWhatsApp } from "../utils/booking";
 
-const FinalCTA = ({ onBookClick }) => {
+const FinalCTA = () => {
   return (
     <section
       id="cta"
@@ -71,15 +72,25 @@ const FinalCTA = ({ onBookClick }) => {
           transition={{ duration: 1.2, delay: 0.6 }}
           className="mt-14"
         >
-          <button
-            onClick={onBookClick}
+          <a
+            href={WA_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => trackWhatsApp("final_cta")}
             className="btn-primary"
             data-testid="final-cta-book-btn"
+            style={{ textDecoration: "none" }}
           >
-            Book a Session
-          </button>
+            Book a Session →
+          </a>
           <p
-            className="font-hand text-2xl md:text-3xl mt-10"
+            className="text-sm mt-4"
+            style={{ fontFamily: "'EB Garamond', serif", color: "var(--tbe-dark-brown)", opacity: 0.55, letterSpacing: "0.03em" }}
+          >
+            No pressure. Just a message to begin.
+          </p>
+          <p
+            className="font-hand text-2xl md:text-3xl mt-8"
             style={{ color: "var(--tbe-warm-brown)", opacity: 0.8 }}
           >
             you don't need the perfect words first.

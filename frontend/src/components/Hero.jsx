@@ -1,10 +1,11 @@
 import React, { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Butterfly from "./Butterfly";
+import { WA_URL, trackWhatsApp } from "../utils/booking";
 
 const HERO_IMG = "https://images.pexels.com/photos/32550977/pexels-photo-32550977.jpeg";
 
-const Hero = ({ onBookClick }) => {
+const Hero = () => {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -107,16 +108,30 @@ const Hero = ({ onBookClick }) => {
           transition={{ duration: 1.2, delay: 1.6 }}
           className="mt-14 flex items-center gap-10 flex-wrap"
         >
-          <button
-            onClick={onBookClick}
-            className="btn-primary"
-            data-testid="hero-book-session-btn"
-          >
-            Book a Session →
-          </button>
-          <a href="#about" className="btn-ghost" data-testid="hero-learn-more-link">
-            Read about Naina
-          </a>
+          <div className="flex flex-col gap-3">
+            <div className="flex items-center gap-10 flex-wrap">
+              <a
+                href={WA_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => trackWhatsApp("hero")}
+                className="btn-primary"
+                data-testid="hero-book-session-btn"
+                style={{ textDecoration: "none" }}
+              >
+                Book a Session →
+              </a>
+              <a href="#about" className="btn-ghost" data-testid="hero-learn-more-link">
+                Read about Naina
+              </a>
+            </div>
+            <p
+              className="text-sm"
+              style={{ fontFamily: "'EB Garamond', serif", color: "var(--tbe-dark-brown)", opacity: 0.55, letterSpacing: "0.03em" }}
+            >
+              No pressure. Just a message to begin.
+            </p>
+          </div>
         </motion.div>
 
         <motion.p

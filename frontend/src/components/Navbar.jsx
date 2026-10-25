@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
+import { WA_URL, trackWhatsApp } from "../utils/booking";
 
 const NAV_LINKS = [
   { label: "About", href: "/#about" },
@@ -11,7 +12,7 @@ const NAV_LINKS = [
   { label: "Blog", href: "/blog" },
 ];
 
-const Navbar = ({ onBookClick, visible = true }) => {
+const Navbar = ({ visible = true }) => {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -37,7 +38,6 @@ const Navbar = ({ onBookClick, visible = true }) => {
   }, [menuOpen]);
 
   const handleNavClick = () => setMenuOpen(false);
-  const handleBookClick = () => { setMenuOpen(false); onBookClick(); };
 
   return (
     <>
@@ -131,16 +131,18 @@ const Navbar = ({ onBookClick, visible = true }) => {
 
           {/* Right side: book button + hamburger */}
           <div className="flex items-center gap-5">
-            <button
-              onClick={onBookClick}
+            <a
+              href={WA_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => trackWhatsApp("navbar")}
               data-testid="nav-book-session-btn"
               className="text-[12px] tracking-[0.3em] uppercase pb-1 transition-all duration-500"
               style={{
                 fontFamily: "'EB Garamond', serif",
                 color: "var(--tbe-deep-maroon)",
                 borderBottom: "1px solid rgba(121, 2, 8, 0.45)",
-                background: "transparent",
-                cursor: "pointer",
+                textDecoration: "none",
                 whiteSpace: "nowrap",
                 flexShrink: 0,
               }}
@@ -148,7 +150,7 @@ const Navbar = ({ onBookClick, visible = true }) => {
               onMouseLeave={(e) => (e.currentTarget.style.letterSpacing = "0.3em")}
             >
               Book a Session
-            </button>
+            </a>
 
             {/* Hamburger — mobile only */}
             <button
@@ -262,13 +264,16 @@ const Navbar = ({ onBookClick, visible = true }) => {
                 transition={{ duration: 0.5, delay: 0.48 }}
                 className="pb-14"
               >
-                <button
-                  onClick={handleBookClick}
+                <a
+                  href={WA_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => { setMenuOpen(false); trackWhatsApp("navbar_mobile"); }}
                   className="btn-primary w-full justify-center"
-                  style={{ background: "var(--tbe-deep-maroon)" }}
+                  style={{ background: "var(--tbe-deep-maroon)", textDecoration: "none" }}
                 >
                   Book a Session →
-                </button>
+                </a>
                 <p
                   className="font-hand text-xl mt-6 text-center"
                   style={{ color: "rgba(243,231,209,0.55)" }}

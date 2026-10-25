@@ -1,11 +1,11 @@
 import Head from "next/head";
 import Link from "next/link";
-import { useState, useCallback } from "react";
 import { motion } from "framer-motion";
 import Navbar from "../src/components/Navbar";
 import Footer from "../src/components/Footer";
-import BookingDialog from "../src/components/BookingDialog";
+import StickyWhatsApp from "../src/components/StickyWhatsApp";
 import JsonLd from "../src/components/JsonLd";
+import { WA_URL, trackWhatsApp } from "../src/utils/booking";
 
 const SITE_URL = "https://www.thebutterflyeffecttherapy.com";
 
@@ -40,8 +40,6 @@ const fadeUp = {
 };
 
 export default function OnlineTherapyIndia() {
-  const [bookingOpen, setBookingOpen] = useState(false);
-  const handleBookClick = useCallback(() => setBookingOpen(true), []);
 
   return (
     <>
@@ -83,7 +81,7 @@ export default function OnlineTherapyIndia() {
       </Head>
 
       <div style={{ minHeight: "100vh", backgroundColor: "var(--tbe-cream)", overflowX: "hidden" }}>
-        <Navbar onBookClick={handleBookClick} visible={true} />
+        <Navbar visible={true} />
 
         {/* ── Hero ── */}
         <section
@@ -378,12 +376,19 @@ export default function OnlineTherapyIndia() {
               </Link>{" "}
               to learn more about how I work.
             </p>
-            <button
-              onClick={handleBookClick}
+            <a
+              href={WA_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => trackWhatsApp("online_therapy_india")}
               className="btn-primary"
+              style={{ textDecoration: "none" }}
             >
               Begin a Conversation →
-            </button>
+            </a>
+            <p className="text-sm mt-3" style={{ fontFamily: "'EB Garamond', serif", color: "var(--tbe-dark-brown)", opacity: 0.55, letterSpacing: "0.03em" }}>
+              No pressure. Just a message to begin.
+            </p>
             <p
               className="font-hand text-2xl mt-10"
               style={{ color: "var(--tbe-warm-brown)", opacity: 0.78 }}
@@ -394,7 +399,7 @@ export default function OnlineTherapyIndia() {
         </div>
 
         <Footer />
-        <BookingDialog open={bookingOpen} onClose={() => setBookingOpen(false)} />
+        <StickyWhatsApp />
       </div>
     </>
   );

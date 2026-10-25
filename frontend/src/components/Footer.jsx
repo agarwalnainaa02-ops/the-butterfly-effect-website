@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import { Mail, Instagram } from "lucide-react";
+import { WA_URL, trackWhatsApp } from "../utils/booking";
 
 /* WhatsApp official mark as a minimal inline SVG */
 const WhatsAppIcon = ({ size = 16, color = "currentColor" }) => (
@@ -87,9 +88,10 @@ const Footer = () => {
               </li>
               <li>
                 <a
-                  href="https://wa.me/919989640090"
+                  href={WA_URL}
                   target="_blank"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
+                  onClick={() => trackWhatsApp("footer")}
                   className="hover:underline underline-offset-4 transition-colors duration-500"
                   style={{ color: "rgba(243, 231, 209, 0.92)", display: "flex", alignItems: "center", gap: "0.55rem" }}
                   data-testid="footer-whatsapp-link"

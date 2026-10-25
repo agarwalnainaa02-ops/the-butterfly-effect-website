@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
+import { WA_URL, trackWhatsApp } from "../utils/booking";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 24 },
@@ -33,7 +34,7 @@ const Line = ({ line, index }) => (
   </li>
 );
 
-const WhoThisIsFor = ({ onBookClick }) => {
+const WhoThisIsFor = () => {
   const [expanded, setExpanded] = useState(false);
 
   return (
@@ -137,10 +138,21 @@ const WhoThisIsFor = ({ onBookClick }) => {
         you don't need to have it figured out before you reach out.
       </motion.p>
 
-      <div className="flex justify-center mt-10">
-        <button onClick={onBookClick} className="btn-primary" data-testid="who-book-btn">
+      <div className="flex flex-col items-center mt-10 gap-3">
+        <a
+          href={WA_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          onClick={() => trackWhatsApp("who_this_is_for")}
+          className="btn-primary"
+          data-testid="who-book-btn"
+          style={{ textDecoration: "none" }}
+        >
           Book a Session →
-        </button>
+        </a>
+        <p className="text-sm" style={{ fontFamily: "'EB Garamond', serif", color: "var(--tbe-dark-brown)", opacity: 0.55, letterSpacing: "0.03em" }}>
+          No pressure. Just a message to begin.
+        </p>
       </div>
     </section>
   );

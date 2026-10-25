@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
+import { WA_URL, trackWhatsApp } from "../utils/booking";
 
 const coreExpectations = [
   { label: "Sessions", text: "50–60 minutes, online. You bring what you bring that week." },
@@ -13,13 +14,19 @@ const whatCounts = {
 };
 
 const fees = [
-  { k: "Format", v: "Online — all sessions held via video call", sub: "Available to clients across India. Based in Hyderabad." },
+  { k: "Fee", v: "Starting from ₹1,000 per session" },
+  { k: "Intro call", v: "Free 15-minute intro call to see if we're a good fit" },
+  { k: "Languages", v: "Hindi and English" },
+  { k: "Format", v: "Online video call, across India" },
   { k: "Duration", v: "50–60 minutes" },
-  { k: "Booking", v: "Via WhatsApp or email" },
-  { k: "Confidentiality", v: "A private, respectful space where your experiences are held with care. We'll go over how confidentiality works together in our first session." },
+  { k: "Booking", v: "Message me on WhatsApp. After that, I'll share a short intake form." },
+  {
+    k: "Confidentiality",
+    v: "A private, respectful space where your experiences are held with care. We'll go over how confidentiality works together in our first session.",
+  },
 ];
 
-const WhatToExpect = ({ onBookClick }) => {
+const WhatToExpect = () => {
   const [countsOpen, setCountsOpen] = useState(false);
 
   return (
@@ -46,10 +53,7 @@ const WhatToExpect = ({ onBookClick }) => {
             <br />
             <em style={{ color: "var(--tbe-warm-brown)" }}>until it starts to make a little more sense.</em>
           </h2>
-          <p
-            className="text-lg"
-            style={{ color: "var(--tbe-dark-brown)", opacity: 0.75 }}
-          >
+          <p className="text-lg" style={{ color: "var(--tbe-dark-brown)", opacity: 0.75 }}>
             Both matter.
           </p>
         </motion.div>
@@ -62,15 +66,10 @@ const WhatToExpect = ({ onBookClick }) => {
           className="col-span-12 md:col-span-7"
         >
           {/* Core 3 items — always visible */}
-          <ol
-            className="relative list-none p-0 m-0"
-            style={{ overflow: "hidden" }}
-          >
+          <ol className="relative list-none p-0 m-0" style={{ overflow: "hidden" }}>
             <div
               className="absolute left-[8px] top-2 bottom-2 w-px"
-              style={{
-                background: "linear-gradient(to bottom, transparent, rgba(47,35,35,0.25), transparent)",
-              }}
+              style={{ background: "linear-gradient(to bottom, transparent, rgba(47,35,35,0.25), transparent)" }}
             />
             {coreExpectations.map((e, i) => (
               <motion.li
@@ -84,16 +83,10 @@ const WhatToExpect = ({ onBookClick }) => {
               >
                 <span
                   className="absolute left-0 top-[1.85rem] w-[18px] h-[18px] rounded-full"
-                  style={{
-                    background: "var(--tbe-cream)",
-                    border: "1px solid rgba(121, 2, 8, 0.55)",
-                  }}
+                  style={{ background: "var(--tbe-cream)", border: "1px solid rgba(121, 2, 8, 0.55)" }}
                 />
                 <p className="eyebrow mb-1">{e.label}</p>
-                <p
-                  className="font-display text-xl md:text-2xl leading-snug"
-                  style={{ color: "var(--tbe-dark-wine)" }}
-                >
+                <p className="font-display text-xl md:text-2xl leading-snug" style={{ color: "var(--tbe-dark-wine)" }}>
                   {e.text}
                 </p>
               </motion.li>
@@ -108,10 +101,7 @@ const WhatToExpect = ({ onBookClick }) => {
           >
             <span
               className="absolute left-0 top-[1.85rem] w-[18px] h-[18px] rounded-full"
-              style={{
-                background: "var(--tbe-cream)",
-                border: "1px solid rgba(121, 2, 8, 0.35)",
-              }}
+              style={{ background: "var(--tbe-cream)", border: "1px solid rgba(121, 2, 8, 0.35)" }}
             />
             <button
               onClick={() => setCountsOpen(!countsOpen)}
@@ -126,25 +116,17 @@ const WhatToExpect = ({ onBookClick }) => {
                 style={{ color: countsOpen ? "var(--tbe-deep-maroon)" : "var(--tbe-dark-wine)" }}
               >
                 The small moments no one else sees.{" "}
-                <span
-                  className="text-sm tracking-[0.2em] uppercase"
-                  style={{ color: "var(--tbe-warm-brown)", opacity: 0.65 }}
-                >
+                <span className="text-sm tracking-[0.2em] uppercase" style={{ color: "var(--tbe-warm-brown)", opacity: 0.65 }}>
                   {countsOpen ? "less ↑" : "more ↓"}
                 </span>
               </p>
             </button>
-
-            {/* Always in HTML (SSR), toggled visually */}
             <div
               id="what-counts-text"
               style={{ display: countsOpen ? "" : "none", marginTop: "0.75rem" }}
               aria-hidden={countsOpen ? undefined : "true"}
             >
-              <p
-                className="font-display text-lg leading-relaxed max-w-xl"
-                style={{ color: "var(--tbe-dark-brown)", opacity: 0.85 }}
-              >
+              <p className="font-display text-lg leading-relaxed max-w-xl" style={{ color: "var(--tbe-dark-brown)", opacity: 0.85 }}>
                 {whatCounts.text}
               </p>
             </div>
@@ -163,20 +145,28 @@ const WhatToExpect = ({ onBookClick }) => {
         real change is often slow, invisible, and quietly life-altering.
       </motion.p>
 
-      <div className="flex justify-start mt-8">
-        <button onClick={onBookClick} className="btn-primary" data-testid="expect-book-btn">
+      <div className="flex flex-col items-start mt-8 gap-3">
+        <a
+          href={WA_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          onClick={() => trackWhatsApp("what_to_expect")}
+          className="btn-primary"
+          data-testid="expect-book-btn"
+          style={{ textDecoration: "none" }}
+        >
           Book a Session →
-        </button>
+        </a>
+        <p className="text-sm" style={{ fontFamily: "'EB Garamond', serif", color: "var(--tbe-dark-brown)", opacity: 0.55, letterSpacing: "0.03em" }}>
+          No pressure. Just a message to begin.
+        </p>
       </div>
 
       {/* Fees & practicalities */}
       <div id="fees" className="mt-24 md:mt-32 max-w-5xl mx-auto" data-testid="fees-block">
         <div className="text-center mb-14">
           <p className="eyebrow mb-6">Online therapy and counselling sessions across India</p>
-          <h3
-            className="h-display"
-            style={{ fontSize: "clamp(1.8rem, 3.6vw, 2.6rem)" }}
-          >
+          <h3 className="h-display" style={{ fontSize: "clamp(1.8rem, 3.6vw, 2.6rem)" }}>
             Simple, transparent, no surprises.
           </h3>
         </div>
@@ -192,37 +182,37 @@ const WhatToExpect = ({ onBookClick }) => {
                 {f.k}
               </dt>
               <dd className="col-span-12 md:col-span-8">
-                <span
-                  className="font-display text-xl md:text-2xl"
-                  style={{ color: "var(--tbe-dark-wine)" }}
-                >
+                <span className="font-display text-xl md:text-2xl" style={{ color: "var(--tbe-dark-wine)" }}>
                   {f.v}
                 </span>
-                {f.sub && (
-                  <span
-                    className="block font-display text-base md:text-lg mt-1"
-                    style={{ color: "var(--tbe-dark-brown)", opacity: 0.6 }}
-                  >
-                    {f.sub}
-                  </span>
-                )}
               </dd>
             </div>
           ))}
         </dl>
 
-        <div className="text-center mt-16 flex flex-col items-center gap-6">
-          <button
-            onClick={onBookClick}
+        <p
+          className="mt-8 text-base md:text-lg"
+          style={{ color: "var(--tbe-dark-brown)", opacity: 0.7, fontFamily: "'EB Garamond', serif" }}
+        >
+          I work with mild to moderate concerns. If you need psychiatric or crisis support, I'll help you find the right service.
+        </p>
+
+        <div className="text-center mt-14 flex flex-col items-center gap-4">
+          <a
+            href={WA_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => trackWhatsApp("fees")}
             className="btn-primary"
             data-testid="fees-book-session-btn"
+            style={{ textDecoration: "none" }}
           >
-            Begin a Conversation
-          </button>
-          <p
-            className="font-hand text-2xl"
-            style={{ color: "var(--tbe-warm-brown)", opacity: 0.8 }}
-          >
+            Begin a Conversation →
+          </a>
+          <p className="text-sm" style={{ fontFamily: "'EB Garamond', serif", color: "var(--tbe-dark-brown)", opacity: 0.55, letterSpacing: "0.03em" }}>
+            No pressure. Just a message to begin.
+          </p>
+          <p className="font-hand text-2xl mt-2" style={{ color: "var(--tbe-warm-brown)", opacity: 0.8 }}>
             you don't need the perfect words first.
           </p>
         </div>

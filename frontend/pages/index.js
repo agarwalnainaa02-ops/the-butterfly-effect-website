@@ -14,7 +14,7 @@ import FAQs from "../src/components/FAQs";
 import InstagramFeed from "../src/components/InstagramFeed";
 import FinalCTA from "../src/components/FinalCTA";
 import Footer from "../src/components/Footer";
-import BookingDialog from "../src/components/BookingDialog";
+import StickyWhatsApp from "../src/components/StickyWhatsApp";
 import JsonLd from "../src/components/JsonLd";
 
 const SITE_URL = "https://www.thebutterflyeffecttherapy.com";
@@ -64,7 +64,6 @@ const localBusinessSchema = {
 export default function Home() {
   // Safe sessionStorage read — only runs on client
   const [introDone, setIntroDone] = useState(false);
-  const [bookingOpen, setBookingOpen] = useState(false);
 
   useEffect(() => {
     if (sessionStorage.getItem("tbe-intro-played") === "1") {
@@ -121,23 +120,23 @@ export default function Home() {
 
       <div className="App" data-testid="tbe-home">
         <LogoEntrance onComplete={handleIntroComplete} />
-        <Navbar onBookClick={() => setBookingOpen(true)} visible={introDone} />
+        <Navbar visible={introDone} />
         <ButterflyDrift />
 
         <main>
-          <Hero onBookClick={() => setBookingOpen(true)} />
-          <WhoThisIsFor onBookClick={() => setBookingOpen(true)} />
+          <Hero />
+          <WhoThisIsFor />
           <AboutNaina />
           <HowIWork />
-          <AreasOfWork onBookClick={() => setBookingOpen(true)} />
-          <WhatToExpect onBookClick={() => setBookingOpen(true)} />
+          <AreasOfWork />
+          <WhatToExpect />
           <FAQs />
           <InstagramFeed />
-          <FinalCTA onBookClick={() => setBookingOpen(true)} />
+          <FinalCTA />
         </main>
 
         <Footer />
-        <BookingDialog open={bookingOpen} onClose={() => setBookingOpen(false)} />
+        <StickyWhatsApp />
       </div>
     </>
   );

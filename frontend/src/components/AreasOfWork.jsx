@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
+import { WA_URL, trackWhatsApp } from "../utils/booking";
 
 const areas = [
   {
@@ -36,7 +37,7 @@ const areas = [
   },
 ];
 
-const AreasOfWork = ({ onBookClick }) => {
+const AreasOfWork = () => {
   const [openIdx, setOpenIdx] = useState(null);
 
   return (
@@ -147,10 +148,21 @@ const AreasOfWork = ({ onBookClick }) => {
           })}
         </div>
 
-        <div className="flex justify-center mt-14">
-          <button onClick={onBookClick} className="btn-primary" data-testid="areas-book-btn">
+        <div className="flex flex-col items-center mt-14 gap-3">
+          <a
+            href={WA_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => trackWhatsApp("areas_of_work")}
+            className="btn-primary"
+            data-testid="areas-book-btn"
+            style={{ textDecoration: "none" }}
+          >
             Book a Session →
-          </button>
+          </a>
+          <p className="text-sm" style={{ fontFamily: "'EB Garamond', serif", color: "var(--tbe-dark-brown)", opacity: 0.55, letterSpacing: "0.03em" }}>
+            No pressure. Just a message to begin.
+          </p>
         </div>
       </div>
     </section>

@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Butterfly from "./Butterfly";
+import { WA_URL, trackWhatsApp } from "../utils/booking";
 
 const BookingDialog = ({ open, onClose }) => {
   const closeButtonRef = useRef(null);
@@ -91,9 +92,10 @@ const BookingDialog = ({ open, onClose }) => {
 
               <div className="flex flex-col sm:flex-row gap-4 w-full">
                 <a
-                  href="https://wa.me/919989640090"
+                  href={WA_URL}
                   target="_blank"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
+                  onClick={() => trackWhatsApp("booking_dialog")}
                   className="btn-primary flex-1 justify-center"
                   data-testid="booking-whatsapp-btn"
                   style={{ textDecoration: "none" }}
