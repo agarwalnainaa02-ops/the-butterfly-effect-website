@@ -236,6 +236,7 @@ const DEDICATED_SLUGS = [
   "marriage-in-laws-family-boundaries",
   "arranged-marriage-family-approval",
   "good-wife-good-husband-expectations",
+  "partner-or-family-fit-arranged-marriage",
 ];
 
 export async function getStaticPaths() {
