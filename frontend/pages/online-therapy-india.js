@@ -330,10 +330,9 @@ export default function OnlineTherapyIndia() {
                 Some are more focused. Most are somewhere in between.
               </p>
               <p>
-                Online therapy works. Research consistently shows that outcomes in online
-                counselling are comparable to in-person therapy for most presenting
-                concerns. And practically, it removes several real barriers: travel time,
-                physical accessibility, the visibility of entering a mental health clinic.
+                Sessions happen over video, from wherever you have a private space.
+                It removes several real barriers: travel time, physical accessibility,
+                the visibility of entering a mental health clinic.
               </p>
               <p>
                 Booking is via WhatsApp or email. There's no formal intake form. Just a
