@@ -9,6 +9,15 @@ import { WA_URL, trackWhatsApp } from "../src/utils/booking";
 
 const SITE_URL = "https://www.thebutterflyeffecttherapy.com";
 
+const breadcrumb = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL },
+    { "@type": "ListItem", position: 2, name: "Online Therapy in India", item: `${SITE_URL}/online-therapy-india` },
+  ],
+};
+
 const pageSchema = {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
@@ -47,7 +56,7 @@ export default function OnlineTherapyIndia() {
         <title>Online Therapy in India | Naina Agarwal, Counsellor</title>
         <meta
           name="description"
-          content="Online counselling in India with Naina Agarwal, Mental Health Practitioner. Video sessions for anxiety, overthinking, relationships, burnout, and identity — available across India."
+          content="Online counselling in India with Naina Agarwal, Mental Health Practitioner. Video sessions for anxiety, overthinking, relationships, burnout and identity."
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="canonical" href={`${SITE_URL}/online-therapy-india`} />
@@ -57,7 +66,7 @@ export default function OnlineTherapyIndia() {
         <meta property="og:title" content="Online Therapy in India | Naina Agarwal, Counsellor" />
         <meta
           property="og:description"
-          content="Online counselling in India with Naina Agarwal, Mental Health Practitioner. Video sessions for anxiety, overthinking, relationships, burnout, and identity."
+          content="Online counselling in India with Naina Agarwal, Mental Health Practitioner. Video sessions for anxiety, overthinking, relationships, burnout and identity."
         />
         <meta property="og:url" content={`${SITE_URL}/online-therapy-india`} />
         <meta
@@ -69,7 +78,7 @@ export default function OnlineTherapyIndia() {
         <meta name="twitter:title" content="Online Therapy in India | Naina Agarwal, Counsellor" />
         <meta
           name="twitter:description"
-          content="Online counselling in India with Naina Agarwal, Mental Health Practitioner."
+          content="Online counselling in India with Naina Agarwal, Mental Health Practitioner. Video sessions for anxiety, overthinking, relationships, burnout and identity."
         />
         <meta
           name="twitter:image"
@@ -77,12 +86,14 @@ export default function OnlineTherapyIndia() {
         />
 
         {/* JSON-LD */}
+        <JsonLd data={breadcrumb} />
         <JsonLd data={pageSchema} />
       </Head>
 
       <div style={{ minHeight: "100vh", backgroundColor: "var(--tbe-cream)", overflowX: "hidden" }}>
         <Navbar visible={true} />
 
+        <main id="main-content">
         {/* ── Hero ── */}
         <section
           className="relative pt-44 pb-24 px-6 md:px-12 overflow-hidden"
@@ -363,18 +374,25 @@ export default function OnlineTherapyIndia() {
                 fontFamily: "'EB Garamond', serif",
                 color: "var(--tbe-dark-brown)",
                 opacity: 0.75,
-                maxWidth: "28rem",
+                maxWidth: "32rem",
                 margin: "0 auto 2.5rem",
               }}
             >
-              Or go back to{" "}
+              Read more:{" "}
               <Link
-                href="/"
+                href="/how-i-work"
                 style={{ color: "var(--tbe-warm-brown)", textUnderlineOffset: "4px" }}
               >
-                the main site
-              </Link>{" "}
-              to learn more about how I work.
+                how I work
+              </Link>
+              {" "}and{" "}
+              <Link
+                href="/fees-and-booking"
+                style={{ color: "var(--tbe-warm-brown)", textUnderlineOffset: "4px" }}
+              >
+                fees and booking
+              </Link>
+              .
             </p>
             <a
               href={WA_URL}
@@ -397,6 +415,7 @@ export default function OnlineTherapyIndia() {
             </p>
           </motion.div>
         </div>
+        </main>
 
         <Footer />
         <StickyWhatsApp />

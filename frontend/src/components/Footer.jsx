@@ -128,24 +128,24 @@ const Footer = () => {
               style={{ fontFamily: "'EB Garamond', serif" }}
             >
               <li>
-                <a href="#about" style={{ color: "rgba(243, 231, 209, 0.92)" }} className="hover:underline underline-offset-4">
+                <Link href="/about" style={{ color: "rgba(243, 231, 209, 0.92)" }} className="hover:underline underline-offset-4">
                   About Naina
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#approach" style={{ color: "rgba(243, 231, 209, 0.92)" }} className="hover:underline underline-offset-4">
+                <Link href="/how-i-work" style={{ color: "rgba(243, 231, 209, 0.92)" }} className="hover:underline underline-offset-4">
                   How I Work
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#areas" style={{ color: "rgba(243, 231, 209, 0.92)" }} className="hover:underline underline-offset-4">
-                  Areas of Work
-                </a>
+                <Link href="/fees-and-booking" style={{ color: "rgba(243, 231, 209, 0.92)" }} className="hover:underline underline-offset-4">
+                  Fees &amp; Booking
+                </Link>
               </li>
               <li>
-                <a href="#faq" style={{ color: "rgba(243, 231, 209, 0.92)" }} className="hover:underline underline-offset-4">
+                <Link href="/faq" style={{ color: "rgba(243, 231, 209, 0.92)" }} className="hover:underline underline-offset-4">
                   FAQ
-                </a>
+                </Link>
               </li>
               <li>
                 <Link href="/blog" style={{ color: "rgba(243, 231, 209, 0.92)" }} className="hover:underline underline-offset-4">
@@ -155,6 +155,11 @@ const Footer = () => {
               <li>
                 <Link href="/online-therapy-india" style={{ color: "rgba(243, 231, 209, 0.92)" }} className="hover:underline underline-offset-4">
                   Online Therapy in India
+                </Link>
+              </li>
+              <li>
+                <Link href="/anxiety-overthinking-therapy-india" style={{ color: "rgba(243, 231, 209, 0.92)" }} className="hover:underline underline-offset-4">
+                  Anxiety &amp; Overthinking Therapy
                 </Link>
               </li>
             </ul>

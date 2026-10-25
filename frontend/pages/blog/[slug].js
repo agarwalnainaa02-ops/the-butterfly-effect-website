@@ -42,7 +42,7 @@ export default function BlogPost({ postData }) {
       "@type": "Person",
       name: "Naina Agarwal",
       jobTitle: "Mental Health Practitioner",
-      url: `${SITE_URL}/#about`,
+      url: `${SITE_URL}/about`,
     },
     publisher: {
       "@type": "Organization",

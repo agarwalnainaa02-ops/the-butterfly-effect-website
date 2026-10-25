@@ -4,11 +4,10 @@ import { motion, AnimatePresence } from "framer-motion";
 import { WA_URL, trackWhatsApp } from "../utils/booking";
 
 const NAV_LINKS = [
-  { label: "About", href: "/#about" },
-  { label: "How I Work", href: "/#approach" },
-  { label: "What We Cover", href: "/#areas" },
-  { label: "Sessions", href: "/#expect" },
-  { label: "FAQ", href: "/#faq" },
+  { label: "About", href: "/about" },
+  { label: "How I Work", href: "/how-i-work" },
+  { label: "Fees & Booking", href: "/fees-and-booking" },
+  { label: "FAQ", href: "/faq" },
   { label: "Blog", href: "/blog" },
 ];
 
@@ -43,7 +42,7 @@ const Navbar = ({ visible = true }) => {
     <>
       {/* Skip to main content — visible only on keyboard focus */}
       <a
-        href="#top"
+        href="#main-content"
         style={{
           position: "fixed",
           top: "-100%",

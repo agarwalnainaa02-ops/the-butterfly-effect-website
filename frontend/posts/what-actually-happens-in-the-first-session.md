@@ -38,4 +38,4 @@ What often comes up in early sessions is that what someone brought in isn't enti
 
 ---
 
-*Reach out on WhatsApp or Instagram if you'd like to book a session — there's no formal intake process. Just a message, and we'll find a time.*
+*Reach out on WhatsApp or Instagram if you'd like to book a session — there's no formal intake process. Just a message, and we'll find a time. More about [how I work](/how-i-work) and [fees and booking](/fees-and-booking).*

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Link from "next/link";
 import { motion } from "framer-motion";
 import { WA_URL, trackWhatsApp } from "../utils/booking";
 
@@ -142,6 +143,15 @@ const AreasOfWork = () => {
                   >
                     {a.body}
                   </p>
+                  {i === 0 && (
+                    <Link
+                      href="/anxiety-overthinking-therapy-india"
+                      className="text-sm mt-3 inline-block transition-colors duration-300"
+                      style={{ color: "var(--tbe-warm-brown)", textUnderlineOffset: "3px" }}
+                    >
+                      Read more →
+                    </Link>
+                  )}
                 </div>
               </motion.div>
             );

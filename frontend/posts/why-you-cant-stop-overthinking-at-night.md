@@ -1,7 +1,7 @@
 ---
-title: "Why You Can't Stop Overthinking at Night (and What It's Actually Telling You)"
+title: "Why You Can't Stop Overthinking at Night"
 date: "2026-05-15"
-excerpt: "The 3am spirals, the replaying of conversations, the what-ifs that only get louder when everything goes quiet. Overthinking at night isn't a quirk — it's information."
+excerpt: "Find out why your thoughts feel louder at night, how worry and rumination affect sleep, and what may help you break the cycle."
 ---
 
 There's something particular about the way the mind behaves when it's late and the day is technically over.
@@ -45,3 +45,5 @@ If the loops you're running at night feel like they're connected to older patter
 ---
 
 *If the 3am version of you is the one that's been thinking about reaching out — that version is welcome too. [Online therapy is available across India](/) if that's where you are.*
+
+*If what keeps you up at night sounds like anxiety and overthinking, [there's a page on working with exactly that](/anxiety-overthinking-therapy-india).*

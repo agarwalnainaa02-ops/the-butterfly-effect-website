@@ -89,6 +89,7 @@ export default function BurntOutOrJustTired() {
       >
         <Navbar visible={true} />
 
+        <main id="main-content">
         <article className="max-w-2xl mx-auto px-6 md:px-8 pt-40 pb-32">
           {/* Back link */}
           <motion.div
@@ -531,6 +532,7 @@ export default function BurntOutOrJustTired() {
             assessment or medical advice.
           </p>
         </div>
+        </main>
 
         <Footer />
       </div>

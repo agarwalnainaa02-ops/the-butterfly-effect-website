@@ -23,19 +23,16 @@ export default function Document() {
           />
         </noscript>
 
-        {/* Open Graph global defaults (page-level <Head> overrides per-property) */}
+        {/* Open Graph global defaults — og:type and og:image are set per-page */}
         <meta property="og:site_name" content="The Butterfly Effect" />
-        <meta property="og:type" content="website" />
         <meta property="og:locale" content="en_IN" />
-        <meta property="og:image" content="https://www.thebutterflyeffecttherapy.com/og-image.jpg" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta property="og:image:type" content="image/jpeg" />
         <meta property="og:image:alt" content="The Butterfly Effect — Therapy with Naina Agarwal" />
 
-        {/* Twitter card defaults */}
+        {/* Twitter card defaults — twitter:image is set per-page */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:image" content="https://www.thebutterflyeffecttherapy.com/og-image.jpg" />
         <meta name="twitter:site" content="@thebutterflyeffect_with.nainaa" />
 
         {/* General */}

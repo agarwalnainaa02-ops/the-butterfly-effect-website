@@ -24,6 +24,15 @@ export default function BlogIndex({ allPostsData }) {
   const [bookingOpen, setBookingOpen] = useState(false);
   const handleBookClick = useCallback(() => setBookingOpen(true), []);
 
+  const breadcrumb = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL },
+      { "@type": "ListItem", position: 2, name: "Blog", item: `${SITE_URL}/blog` },
+    ],
+  };
+
   const blogSchema = {
     "@context": "https://schema.org",
     "@type": "Blog",
@@ -34,7 +43,7 @@ export default function BlogIndex({ allPostsData }) {
     author: {
       "@type": "Person",
       name: "Naina Agarwal",
-      url: `${SITE_URL}/#about`,
+      url: `${SITE_URL}/about`,
     },
     blogPost: allPostsData.map((post) => ({
       "@type": "BlogPosting",
@@ -85,6 +94,7 @@ export default function BlogIndex({ allPostsData }) {
         />
 
         {/* JSON-LD */}
+        <JsonLd data={breadcrumb} />
         <JsonLd data={blogSchema} />
       </Head>
 
