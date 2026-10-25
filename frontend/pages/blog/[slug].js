@@ -219,8 +219,17 @@ export default function BlogPost({ postData }) {
   );
 }
 
+// Slugs with dedicated page files take routing priority over this dynamic route.
+// Exclude them here to avoid build conflicts.
+const DEDICATED_SLUGS = [
+  "why-you-cant-stop-overthinking-at-night",
+  "am-i-burnt-out-or-just-tired",
+];
+
 export async function getStaticPaths() {
-  const paths = getAllPostSlugs();
+  const paths = getAllPostSlugs().filter(
+    ({ params }) => !DEDICATED_SLUGS.includes(params.slug)
+  );
   return {
     paths,
     fallback: "blocking",

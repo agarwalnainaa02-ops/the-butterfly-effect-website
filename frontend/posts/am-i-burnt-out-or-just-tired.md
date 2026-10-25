@@ -1,7 +1,7 @@
 ---
-title: "Am I Burnt Out or Just Tired? How to Tell the Difference"
+title: "Am I Burnt Out or Just Tired?"
 date: "2026-04-28"
-excerpt: "Tired gets better with sleep. Burnout doesn't. Here's how to tell which one you're dealing with — and why the distinction matters."
+excerpt: "Feeling exhausted all the time? Understand the difference between everyday tiredness, work-related burnout and other reasons you may not feel like yourself."
 ---
 
 You take a weekend off. You sleep for nine hours. You come back on Monday and the depletion is still there — unchanged, untouched by the rest. That's when most people start to suspect that what they're dealing with is something other than tiredness.
