@@ -63,7 +63,7 @@ const Hero = ({ onBookClick }) => {
           className="eyebrow mb-10"
           data-testid="hero-eyebrow"
         >
-          Counselling Psychologist — Naina Agarwal
+          Mental Health Practitioner — Naina Agarwal
         </motion.p>
 
         <motion.h1

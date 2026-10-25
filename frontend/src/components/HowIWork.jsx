@@ -8,7 +8,7 @@ const principles = [
   },
   {
     title: "Integrative, not fixed",
-    body: "My work is primarily informed by CBT, DBT, and somatic approaches — while continuing to learn from other modalities too.",
+    body: "My approach is eclectic. I draw on CBT, DBT, ACT and IFS-informed work, and I keep learning so I can support the people I work with better.",
   },
   {
     title: "Person-centred at the core",

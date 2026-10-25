@@ -83,10 +83,9 @@ const AboutNaina = () => {
               trying to understand them — not in a clinical way. In a can't-stop-thinking-about-it way.
             </p>
             <p>
-              I have an MSc in Counselling Psychology. I've also spent years on the other
-              side of therapy, as a client — so I know how vulnerable it can feel to sit
-              across from someone and try to explain what's happening inside you. I know
-              how intimidating starting can be.
+              I've also spent years on the other side of therapy, as a client — so I
+              know how vulnerable it can feel to sit across from someone and try to
+              explain what's happening inside you. I know how intimidating starting can be.
             </p>
             <p>
               Outside of sessions, I'm probably at the gym, experiencing post-coffee
@@ -95,11 +94,14 @@ const AboutNaina = () => {
             </p>
           </div>
 
-          <div className="mt-12 flex flex-wrap gap-x-12 gap-y-4 items-center">
+          <div className="mt-12 flex flex-wrap gap-x-12 gap-y-4 items-start">
             <div>
               <p className="eyebrow mb-2">Education</p>
+              <p className="font-display text-lg" style={{ color: "var(--tbe-dark-wine)", marginBottom: "0.35rem" }}>
+                BA Psychology, St. Francis College for Women
+              </p>
               <p className="font-display text-lg" style={{ color: "var(--tbe-dark-wine)" }}>
-                MSc Counselling Psychology
+                MSc Psychology, Jain University
               </p>
             </div>
           </div>

@@ -7,7 +7,7 @@ export default function handler(req) {
   const title =
     searchParams.get("title") || "Therapy that follows you, not a script.";
   const sub =
-    searchParams.get("sub") || "Naina Agarwal · Counselling Psychologist";
+    searchParams.get("sub") || "Naina Agarwal · Mental Health Practitioner";
 
   // Scale title font down for longer strings
   const titleSize = title.length > 55 ? 46 : title.length > 38 ? 56 : 66;

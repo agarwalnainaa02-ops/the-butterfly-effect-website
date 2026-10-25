@@ -25,18 +25,18 @@ const websiteSchema = {
   name: "The Butterfly Effect",
   url: SITE_URL,
   description:
-    "Person-centred, integrative online therapy by Naina Agarwal, Counselling Psychologist.",
+    "Person-centred, integrative online counselling by Naina Agarwal, Mental Health Practitioner.",
 };
 
 const localBusinessSchema = {
   "@context": "https://schema.org",
-  "@type": ["LocalBusiness", "MedicalBusiness"],
+  "@type": "ProfessionalService",
   name: "The Butterfly Effect",
   url: SITE_URL,
   logo: `${SITE_URL}/logo.svg`,
   image: `${SITE_URL}/og-image.png`,
   description:
-    "Integrative, person-centred online therapy. Working with anxiety, emotional patterns, relationships, self-worth, and identity. Sessions held via video call.",
+    "Integrative, person-centred online counselling. Working with anxiety, emotional patterns, relationships, self-worth, and identity. Sessions held via video call.",
   telephone: "+919989640090",
   email: "agarwalnainaa02@gmail.com",
   address: {
@@ -47,15 +47,15 @@ const localBusinessSchema = {
     "@type": "Country",
     name: "India",
   },
-  serviceType: "Counselling Psychology",
+  serviceType: "Online Counselling",
   priceRange: "₹₹",
   sameAs: ["https://www.instagram.com/thebutterflyeffect_with.nainaa"],
   founder: {
     "@type": "Person",
     name: "Naina Agarwal",
-    jobTitle: "Counselling Psychologist",
+    jobTitle: "Mental Health Practitioner",
     description:
-      "MSc Counselling Psychology. Offering integrative, person-centred therapy online across India.",
+      "Hyderabad-based mental health practitioner offering integrative, person-centred online counselling across India.",
     url: `${SITE_URL}/#about`,
     sameAs: ["https://www.instagram.com/thebutterflyeffect_with.nainaa"],
   },
@@ -82,19 +82,19 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>The Butterfly Effect — Naina Agarwal, Counselling Psychologist</title>
+        <title>Online Counselling in India | Naina Agarwal, Mental Health Practitioner</title>
         <meta
           name="description"
-          content="Therapy that follows you, not a script. Naina Agarwal is a Counselling Psychologist offering integrative, person-centred online therapy in India. Book a session via WhatsApp or Instagram."
+          content="Online counselling across India with Naina Agarwal, a Hyderabad-based mental health practitioner. Anxiety, overthinking, relationships, burnout. Book on WhatsApp."
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="canonical" href={`${SITE_URL}/`} />
 
         {/* Open Graph */}
-        <meta property="og:title" content="The Butterfly Effect — Naina Agarwal, Counselling Psychologist" />
+        <meta property="og:title" content="Online Counselling in India | Naina Agarwal, Mental Health Practitioner" />
         <meta
           property="og:description"
-          content="Therapy that follows you, not a script. Person-centred, integrative online therapy by Naina Agarwal."
+          content="Online counselling across India with Naina Agarwal, a Hyderabad-based mental health practitioner. Anxiety, overthinking, relationships, burnout. Book on WhatsApp."
         />
         <meta property="og:url" content={`${SITE_URL}/`} />
         <meta property="og:type" content="website" />
@@ -108,10 +108,10 @@ export default function Home() {
         />
 
         {/* Twitter */}
-        <meta name="twitter:title" content="The Butterfly Effect — Naina Agarwal, Counselling Psychologist" />
+        <meta name="twitter:title" content="Online Counselling in India | Naina Agarwal, Mental Health Practitioner" />
         <meta
           name="twitter:description"
-          content="Therapy that follows you, not a script. Integrative, person-centred online therapy by Naina Agarwal."
+          content="Online counselling across India with Naina Agarwal, a Hyderabad-based mental health practitioner. Anxiety, overthinking, relationships, burnout. Book on WhatsApp."
         />
 
         {/* JSON-LD */}

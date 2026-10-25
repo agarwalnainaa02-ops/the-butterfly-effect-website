@@ -11,10 +11,10 @@ const SITE_URL = "https://www.thebutterflyeffecttherapy.com";
 
 const pageSchema = {
   "@context": "https://schema.org",
-  "@type": "MedicalBusiness",
+  "@type": "ProfessionalService",
   name: "The Butterfly Effect",
   description:
-    "Online therapy and counselling in India with Naina Agarwal, Counselling Psychologist. Working with anxiety, overthinking, relationships, burnout, and identity via video call.",
+    "Online counselling in India with Naina Agarwal, Mental Health Practitioner. Working with anxiety, overthinking, relationships, burnout, and identity via video call.",
   url: `${SITE_URL}/online-therapy-india`,
   telephone: "+919989640090",
   email: "agarwalnainaa02@gmail.com",
@@ -22,7 +22,7 @@ const pageSchema = {
   serviceType: [
     "Online Therapy",
     "Online Counselling",
-    "Counselling Psychology",
+    "Mental Health Support",
     "Anxiety Therapy",
     "Relationship Counselling",
     "Burnout Support",
@@ -49,7 +49,7 @@ export default function OnlineTherapyIndia() {
         <title>Online Therapy in India — The Butterfly Effect</title>
         <meta
           name="description"
-          content="Online therapy and counselling in India with Naina Agarwal, Counselling Psychologist. Video sessions for anxiety, overthinking, relationships, burnout, and identity — available across India."
+          content="Online counselling in India with Naina Agarwal, Mental Health Practitioner. Video sessions for anxiety, overthinking, relationships, burnout, and identity — available across India."
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="canonical" href={`${SITE_URL}/online-therapy-india`} />
@@ -59,23 +59,23 @@ export default function OnlineTherapyIndia() {
         <meta property="og:title" content="Online Therapy in India — The Butterfly Effect" />
         <meta
           property="og:description"
-          content="Online therapy and counselling in India with Naina Agarwal, Counselling Psychologist. Video sessions for anxiety, overthinking, relationships, burnout, and identity."
+          content="Online counselling in India with Naina Agarwal, Mental Health Practitioner. Video sessions for anxiety, overthinking, relationships, burnout, and identity."
         />
         <meta property="og:url" content={`${SITE_URL}/online-therapy-india`} />
         <meta
           property="og:image"
-          content={`${SITE_URL}/api/og?title=Online+therapy+in+India&sub=Naina+Agarwal+%C2%B7+Counselling+Psychologist`}
+          content={`${SITE_URL}/api/og?title=Online+therapy+in+India&sub=Naina+Agarwal+%C2%B7+Mental+Health+Practitioner`}
         />
 
         {/* Twitter */}
         <meta name="twitter:title" content="Online Therapy in India — The Butterfly Effect" />
         <meta
           name="twitter:description"
-          content="Online therapy and counselling in India with Naina Agarwal, Counselling Psychologist."
+          content="Online counselling in India with Naina Agarwal, Mental Health Practitioner."
         />
         <meta
           name="twitter:image"
-          content={`${SITE_URL}/api/og?title=Online+therapy+in+India&sub=Naina+Agarwal+%C2%B7+Counselling+Psychologist`}
+          content={`${SITE_URL}/api/og?title=Online+therapy+in+India&sub=Naina+Agarwal+%C2%B7+Mental+Health+Practitioner`}
         />
 
         {/* JSON-LD */}
@@ -202,8 +202,8 @@ export default function OnlineTherapyIndia() {
                 but aren't sure where to start.
               </p>
               <p>
-                It also works for people in cities where English-speaking, psychologically
-                trained therapists aren't easy to find — or for people who simply prefer
+                It also works for people in cities where English-speaking mental health
+                professionals aren't easy to find — or for people who simply prefer
                 the privacy of their own space.
               </p>
             </motion.div>
@@ -314,10 +314,11 @@ export default function OnlineTherapyIndia() {
                 A phone works. A laptop works. The location is yours.
               </p>
               <p>
-                I work integratively — drawing from CBT, DBT, and somatic approaches —
-                but the frame is always person-centred. Meaning: the work follows what
-                you bring, not a predetermined structure. Some sessions are more
-                exploratory. Some are more focused. Most are somewhere in between.
+                My approach is eclectic. I draw on CBT, DBT, ACT and IFS-informed work,
+                and I keep learning so I can support the people I work with better.
+                The frame is always person-centred — the work follows what you bring,
+                not a predetermined structure. Some sessions are more exploratory.
+                Some are more focused. Most are somewhere in between.
               </p>
               <p>
                 Online therapy works. Research consistently shows that outcomes in online

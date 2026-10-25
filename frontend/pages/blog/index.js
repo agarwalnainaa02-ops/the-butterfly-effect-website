@@ -29,7 +29,7 @@ export default function BlogIndex({ allPostsData }) {
     "@type": "Blog",
     name: "Reflections — The Butterfly Effect",
     description:
-      "Thoughts on therapy, patterns, and the quiet work of understanding yourself — by Naina Agarwal, Counselling Psychologist.",
+      "Thoughts on therapy, patterns, and the quiet work of understanding yourself — by Naina Agarwal, Mental Health Practitioner.",
     url: `${SITE_URL}/blog`,
     author: {
       "@type": "Person",
@@ -55,7 +55,7 @@ export default function BlogIndex({ allPostsData }) {
         <title>Reflections — The Butterfly Effect</title>
         <meta
           name="description"
-          content="Thoughts on therapy, patterns, and the quiet work of understanding yourself — by Naina Agarwal, Counselling Psychologist."
+          content="Thoughts on therapy, patterns, and the quiet work of understanding yourself — by Naina Agarwal, Mental Health Practitioner."
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="canonical" href={`${SITE_URL}/blog`} />
