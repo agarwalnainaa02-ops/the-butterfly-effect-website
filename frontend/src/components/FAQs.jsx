@@ -8,23 +8,23 @@ const faqs = [
   },
   {
     q: "What if I don't know what to talk about?",
-    a: "That's more common than you'd think. A lot of people arrive with a feeling rather than a topic. Finding language together is part of the work — 'I don't know where to start' is genuinely a fine place to begin.",
+    a: "That's more common than you'd think. We can start with what brought you here, or just how your week has been. You don't need a topic or the right words. We'll find where to begin together.",
   },
   {
     q: "Is everything confidential?",
-    a: "Yes. I'll explain the limits of confidentiality clearly in our first conversation so there are no surprises.",
+    a: "Yes. Details of your sessions are confidential, and the few limits to that, such as serious risk of harm or a legal requirement, are explained in the consent form you'll receive before we begin. We'll go through it together.",
   },
   {
     q: "How often should we meet?",
-    a: "Weekly tends to work best, especially early on — it keeps continuity. But we'll figure out what actually fits your life.",
+    a: "We decide together based on what you need and what's manageable. Many people start weekly or every two weeks, then adjust.",
   },
   {
     q: "What if things feel more intense in therapy?",
-    a: "Feelings rising is part of the process, not a sign something's going wrong. We pace gently and never push past what feels manageable for you.",
+    a: "Sometimes they do. Looking at hard things can stir them up before they settle. We go at your pace, and you can always ask to slow down or pause. Counselling isn't an emergency service, so if you're ever in immediate danger, call 112 or a crisis helpline.",
   },
   {
     q: "What if it's not the right fit?",
-    a: "Please bring it into the room. We can reshape the work — or part well, if that's what's needed. You're always in choice.",
+    a: "That's okay. The free 15-minute intro call is there for exactly this. You can also pause or end at any point, ideally after talking it through, and I'm happy to point you to other support.",
   },
 ];
 
