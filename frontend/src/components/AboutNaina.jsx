@@ -1,14 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 
 const ABOUT_IMG = "https://images.pexels.com/photos/14714578/pexels-photo-14714578.jpeg";
 
 const AboutNaina = () => {
+  const [expanded, setExpanded] = useState(false);
+
   return (
     <section
       id="about"
       data-testid="about-naina-section"
-      className="relative max-w-7xl mx-auto px-6 md:px-12 py-32 md:py-48"
+      className="relative max-w-7xl mx-auto px-6 md:px-12 py-24 md:py-36"
     >
       <div
         className="pointer-events-none absolute -top-40 left-0 right-0 h-80 -z-10"
@@ -82,17 +84,48 @@ const AboutNaina = () => {
               I didn't come to psychology to help people. I came because I couldn't stop
               trying to understand them — not in a detached, analytical way. In a can't-stop-thinking-about-it way.
             </p>
-            <p>
-              I've also spent years on the other side of therapy, as a client — so I
-              know how vulnerable it can feel to sit across from someone and try to
-              explain what's happening inside you. I know how intimidating starting can be.
-            </p>
-            <p>
-              Outside of sessions, I'm probably at the gym, experiencing post-coffee
-              jitters, laughing during emotional conversations, or waving at random dogs
-              on the street. I'm more person than profile.
-            </p>
           </div>
+
+          {/* Always in HTML (SSR), toggled visually */}
+          <div
+            id="about-more-text"
+            style={{ display: expanded ? "" : "none" }}
+            aria-hidden={expanded ? undefined : "true"}
+          >
+            <div
+              className="space-y-7 text-lg md:text-xl leading-relaxed mt-7"
+              style={{ color: "var(--tbe-dark-brown)", opacity: 0.92 }}
+            >
+              <p>
+                I've also spent years on the other side of therapy, as a client — so I
+                know how vulnerable it can feel to sit across from someone and try to
+                explain what's happening inside you. I know how intimidating starting can be.
+              </p>
+              <p>
+                Outside of sessions, I'm probably at the gym, experiencing post-coffee
+                jitters, laughing during emotional conversations, or waving at random dogs
+                on the street. I'm more person than profile.
+              </p>
+            </div>
+          </div>
+
+          <button
+            onClick={() => setExpanded(!expanded)}
+            aria-expanded={expanded}
+            aria-controls="about-more-text"
+            className="mt-8 text-sm tracking-[0.28em] uppercase transition-all duration-500"
+            style={{
+              fontFamily: "'EB Garamond', serif",
+              color: "var(--tbe-warm-brown)",
+              background: "transparent",
+              border: "none",
+              borderBottom: "1px solid rgba(121, 2, 8, 0.35)",
+              paddingBottom: "2px",
+              cursor: "pointer",
+            }}
+          >
+            {expanded ? "Read less ↑" : "Read more ↓"}
+          </button>
 
           <div className="mt-12 flex flex-wrap gap-x-12 gap-y-4 items-start">
             <div>

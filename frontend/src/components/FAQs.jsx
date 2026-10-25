@@ -94,7 +94,7 @@ const FAQs = () => {
     <section
       id="faq"
       data-testid="faqs-section"
-      className="relative max-w-5xl mx-auto px-6 md:px-12 py-32 md:py-48"
+      className="relative max-w-5xl mx-auto px-6 md:px-12 py-24 md:py-36"
     >
       <div className="text-center mb-16 md:mb-20">
         <p className="eyebrow mb-6">Quiet questions</p>

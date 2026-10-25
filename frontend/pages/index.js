@@ -126,10 +126,10 @@ export default function Home() {
 
         <main>
           <Hero onBookClick={() => setBookingOpen(true)} />
-          <WhoThisIsFor />
+          <WhoThisIsFor onBookClick={() => setBookingOpen(true)} />
           <AboutNaina />
           <HowIWork />
-          <AreasOfWork />
+          <AreasOfWork onBookClick={() => setBookingOpen(true)} />
           <WhatToExpect onBookClick={() => setBookingOpen(true)} />
           <FAQs />
           <InstagramFeed />

@@ -1,15 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 
-const expectations = [
+const coreExpectations = [
   { label: "Sessions", text: "50–60 minutes, online. You bring what you bring that week." },
   { label: "Pace", text: "We don't rush. Change is usually quieter than people expect." },
   { label: "Atmosphere", text: "No fixed script. No pressure to perform healing or arrive with tidy sentences." },
-  {
-    label: "What counts",
-    text: "The first time you notice the urge before you act on it. Saying something honest and not immediately taking it back. Choosing rest without running a quiet justification in your head. That pause matters.",
-  },
 ];
+
+const whatCounts = {
+  label: "What counts",
+  text: "The first time you notice the urge before you act on it. Saying something honest and not immediately taking it back. Choosing rest without running a quiet justification in your head. That pause matters.",
+};
 
 const fees = [
   { k: "Format", v: "Online — all sessions held via video call", sub: "Available to clients across India. Based in Hyderabad." },
@@ -19,11 +20,13 @@ const fees = [
 ];
 
 const WhatToExpect = ({ onBookClick }) => {
+  const [countsOpen, setCountsOpen] = useState(false);
+
   return (
     <section
       id="expect"
       data-testid="what-to-expect-section"
-      className="relative max-w-7xl mx-auto px-6 md:px-12 py-32 md:py-48"
+      className="relative max-w-7xl mx-auto px-6 md:px-12 py-24 md:py-36"
     >
       <div className="grid grid-cols-12 gap-y-12 md:gap-20">
         <motion.div
@@ -51,47 +54,102 @@ const WhatToExpect = ({ onBookClick }) => {
           </p>
         </motion.div>
 
-        <motion.ol
+        <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 1.2, delay: 0.2 }}
-          className="col-span-12 md:col-span-7 relative list-none p-0 m-0"
-          style={{ overflow: "hidden" }}
+          className="col-span-12 md:col-span-7"
         >
-          <div
-            className="absolute left-[8px] top-2 bottom-2 w-px"
-            style={{
-              background: "linear-gradient(to bottom, transparent, rgba(47,35,35,0.25), transparent)",
-            }}
-          />
-          {expectations.map((e, i) => (
-            <motion.li
-              key={e.label}
-              initial={{ opacity: 0, y: 16 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.4 }}
-              transition={{ duration: 1.0, delay: i * 0.12 }}
-              className="relative pl-12 py-7"
-              data-testid={`expect-item-${i}`}
-            >
-              <span
-                className="absolute left-0 top-9 w-[18px] h-[18px] rounded-full"
-                style={{
-                  background: "var(--tbe-cream)",
-                  border: "1px solid rgba(121, 2, 8, 0.55)",
-                }}
-              />
-              <p className="eyebrow mb-2">{e.label}</p>
-              <p
-                className="font-display text-xl md:text-2xl leading-snug"
-                style={{ color: "var(--tbe-dark-wine)" }}
+          {/* Core 3 items — always visible */}
+          <ol
+            className="relative list-none p-0 m-0"
+            style={{ overflow: "hidden" }}
+          >
+            <div
+              className="absolute left-[8px] top-2 bottom-2 w-px"
+              style={{
+                background: "linear-gradient(to bottom, transparent, rgba(47,35,35,0.25), transparent)",
+              }}
+            />
+            {coreExpectations.map((e, i) => (
+              <motion.li
+                key={e.label}
+                initial={{ opacity: 0, y: 16 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.4 }}
+                transition={{ duration: 1.0, delay: i * 0.12 }}
+                className="relative pl-12 py-6"
+                data-testid={`expect-item-${i}`}
               >
-                {e.text}
+                <span
+                  className="absolute left-0 top-[1.85rem] w-[18px] h-[18px] rounded-full"
+                  style={{
+                    background: "var(--tbe-cream)",
+                    border: "1px solid rgba(121, 2, 8, 0.55)",
+                  }}
+                />
+                <p className="eyebrow mb-1">{e.label}</p>
+                <p
+                  className="font-display text-xl md:text-2xl leading-snug"
+                  style={{ color: "var(--tbe-dark-wine)" }}
+                >
+                  {e.text}
+                </p>
+              </motion.li>
+            ))}
+          </ol>
+
+          {/* What counts — expandable */}
+          <div
+            className="relative pl-12"
+            style={{ borderTop: "1px solid rgba(47,35,35,0.1)", paddingTop: "1.5rem" }}
+            data-testid="expect-item-3"
+          >
+            <span
+              className="absolute left-0 top-[1.85rem] w-[18px] h-[18px] rounded-full"
+              style={{
+                background: "var(--tbe-cream)",
+                border: "1px solid rgba(121, 2, 8, 0.35)",
+              }}
+            />
+            <button
+              onClick={() => setCountsOpen(!countsOpen)}
+              aria-expanded={countsOpen}
+              aria-controls="what-counts-text"
+              className="text-left w-full"
+              style={{ background: "transparent", border: "none", cursor: "pointer", padding: 0 }}
+            >
+              <p className="eyebrow mb-1">{whatCounts.label}</p>
+              <p
+                className="font-display text-xl md:text-2xl leading-snug transition-colors duration-500"
+                style={{ color: countsOpen ? "var(--tbe-deep-maroon)" : "var(--tbe-dark-wine)" }}
+              >
+                The small moments no one else sees.{" "}
+                <span
+                  className="text-sm tracking-[0.2em] uppercase"
+                  style={{ color: "var(--tbe-warm-brown)", opacity: 0.65 }}
+                >
+                  {countsOpen ? "less ↑" : "more ↓"}
+                </span>
               </p>
-            </motion.li>
-          ))}
-        </motion.ol>
+            </button>
+
+            {/* Always in HTML (SSR), toggled visually */}
+            <div
+              id="what-counts-text"
+              style={{ display: countsOpen ? "" : "none", marginTop: "0.75rem" }}
+              aria-hidden={countsOpen ? undefined : "true"}
+            >
+              <p
+                className="font-display text-lg leading-relaxed max-w-xl"
+                style={{ color: "var(--tbe-dark-brown)", opacity: 0.85 }}
+              >
+                {whatCounts.text}
+              </p>
+            </div>
+          </div>
+        </motion.div>
       </div>
 
       <motion.p
@@ -99,14 +157,20 @@ const WhatToExpect = ({ onBookClick }) => {
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 1.4, delay: 0.3 }}
-        className="font-hand text-2xl md:text-3xl mt-20 max-w-xl"
+        className="font-hand text-2xl md:text-3xl mt-16 max-w-xl"
         style={{ color: "var(--tbe-warm-brown)", opacity: 0.85 }}
       >
         real change is often slow, invisible, and quietly life-altering.
       </motion.p>
 
+      <div className="flex justify-start mt-8">
+        <button onClick={onBookClick} className="btn-primary" data-testid="expect-book-btn">
+          Book a Session →
+        </button>
+      </div>
+
       {/* Fees & practicalities */}
-      <div id="fees" className="mt-32 md:mt-40 max-w-5xl mx-auto" data-testid="fees-block">
+      <div id="fees" className="mt-24 md:mt-32 max-w-5xl mx-auto" data-testid="fees-block">
         <div className="text-center mb-14">
           <p className="eyebrow mb-6">Online therapy and counselling sessions across India</p>
           <h3

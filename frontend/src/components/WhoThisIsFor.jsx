@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 
 const fadeUp = {
@@ -16,12 +16,31 @@ const lines = [
   "you've been meaning to talk to someone for a while now",
 ];
 
-const WhoThisIsFor = () => {
+const Line = ({ line, index }) => (
+  <li className="flex items-start gap-6 group" data-testid={`who-line-${index}`}>
+    <span
+      className="font-display italic mt-1 select-none"
+      style={{ color: "var(--tbe-dusty-coral)", fontSize: "1.5rem", minWidth: "2.5rem" }}
+    >
+      {String(index + 1).padStart(2, "0")}
+    </span>
+    <p
+      className="text-lg md:text-2xl leading-snug font-display"
+      style={{ color: "var(--tbe-dark-brown)" }}
+    >
+      {line}
+    </p>
+  </li>
+);
+
+const WhoThisIsFor = ({ onBookClick }) => {
+  const [expanded, setExpanded] = useState(false);
+
   return (
     <section
       id="who"
       data-testid="who-this-is-for-section"
-      className="relative max-w-7xl mx-auto px-6 md:px-12 py-32 md:py-48"
+      className="relative max-w-7xl mx-auto px-6 md:px-12 py-24 md:py-36"
     >
       <div className="grid grid-cols-12 gap-y-12 md:gap-x-16">
         <motion.div
@@ -49,42 +68,62 @@ const WhoThisIsFor = () => {
           </p>
         </motion.div>
 
-        <motion.ul
-          className="col-span-12 md:col-span-7 md:col-start-6 space-y-8 list-none p-0"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.2 }}
-          variants={{
-            hidden: {},
-            visible: { transition: { staggerChildren: 0.18 } },
-          }}
-        >
-          {lines.map((line, i) => (
-            <motion.li
-              key={i}
-              variants={fadeUp}
-              className="flex items-start gap-6 group"
-              data-testid={`who-line-${i}`}
-            >
-              <span
-                className="font-display italic mt-1 select-none"
-                style={{
-                  color: "var(--tbe-dusty-coral)",
-                  fontSize: "1.5rem",
-                  minWidth: "2.5rem",
-                }}
-              >
-                {String(i + 1).padStart(2, "0")}
-              </span>
-              <p
-                className="text-lg md:text-2xl leading-snug font-display"
-                style={{ color: "var(--tbe-dark-brown)" }}
-              >
-                {line}
-              </p>
-            </motion.li>
-          ))}
-        </motion.ul>
+        <div className="col-span-12 md:col-span-7 md:col-start-6">
+          <motion.ul
+            className="space-y-8 list-none p-0"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
+            variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.18 } } }}
+          >
+            {lines.slice(0, 4).map((line, i) => (
+              <motion.li key={i} variants={fadeUp} className="flex items-start gap-6 group" data-testid={`who-line-${i}`}>
+                <span
+                  className="font-display italic mt-1 select-none"
+                  style={{ color: "var(--tbe-dusty-coral)", fontSize: "1.5rem", minWidth: "2.5rem" }}
+                >
+                  {String(i + 1).padStart(2, "0")}
+                </span>
+                <p
+                  className="text-lg md:text-2xl leading-snug font-display"
+                  style={{ color: "var(--tbe-dark-brown)" }}
+                >
+                  {line}
+                </p>
+              </motion.li>
+            ))}
+          </motion.ul>
+
+          {/* Always in HTML (SSR), toggled visually */}
+          <ul
+            id="who-more-items"
+            className="space-y-8 list-none p-0"
+            style={{ marginTop: expanded ? "2rem" : 0, display: expanded ? "" : "none" }}
+            aria-hidden={expanded ? undefined : "true"}
+          >
+            {lines.slice(4).map((line, i) => (
+              <Line key={i + 4} line={line} index={i + 4} />
+            ))}
+          </ul>
+
+          <button
+            onClick={() => setExpanded(!expanded)}
+            aria-expanded={expanded}
+            aria-controls="who-more-items"
+            className="mt-8 text-sm tracking-[0.28em] uppercase transition-all duration-500"
+            style={{
+              fontFamily: "'EB Garamond', serif",
+              color: "var(--tbe-warm-brown)",
+              background: "transparent",
+              border: "none",
+              borderBottom: "1px solid rgba(121, 2, 8, 0.35)",
+              paddingBottom: "2px",
+              cursor: "pointer",
+            }}
+          >
+            {expanded ? "See less ↑" : "See more ↓"}
+          </button>
+        </div>
       </div>
 
       <motion.p
@@ -92,11 +131,17 @@ const WhoThisIsFor = () => {
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 1.6, delay: 0.4 }}
-        className="font-hand text-3xl md:text-4xl mt-24 md:mt-32 max-w-2xl mx-auto text-center"
+        className="font-hand text-3xl md:text-4xl mt-16 md:mt-20 max-w-2xl mx-auto text-center"
         style={{ color: "var(--tbe-warm-brown)", opacity: 0.85 }}
       >
         you don't need to have it figured out before you reach out.
       </motion.p>
+
+      <div className="flex justify-center mt-10">
+        <button onClick={onBookClick} className="btn-primary" data-testid="who-book-btn">
+          Book a Session →
+        </button>
+      </div>
     </section>
   );
 };

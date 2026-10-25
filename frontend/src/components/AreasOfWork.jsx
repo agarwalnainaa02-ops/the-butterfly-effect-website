@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 
 const areas = [
@@ -36,12 +36,14 @@ const areas = [
   },
 ];
 
-const AreasOfWork = () => {
+const AreasOfWork = ({ onBookClick }) => {
+  const [openIdx, setOpenIdx] = useState(null);
+
   return (
     <section
       id="areas"
       data-testid="areas-of-work-section"
-      className="relative py-32 md:py-48"
+      className="relative py-24 md:py-36"
     >
       <div
         className="pointer-events-none absolute inset-0 -z-10"
@@ -51,7 +53,7 @@ const AreasOfWork = () => {
         }}
       />
       <div className="max-w-7xl mx-auto px-6 md:px-12">
-        <div className="grid grid-cols-12 gap-y-12 mb-20 md:mb-28">
+        <div className="grid grid-cols-12 gap-y-12 mb-16 md:mb-20">
           <div className="col-span-12 md:col-span-5">
             <p className="eyebrow mb-8">Therapy and counselling for anxiety, overthinking, relationships and burnout</p>
             <h2
@@ -76,44 +78,79 @@ const AreasOfWork = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-20 gap-y-2">
-          {areas.map((a, i) => (
-            <motion.article
-              key={a.title}
-              initial={{ opacity: 0, y: 24 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.25 }}
-              transition={{ duration: 1.0, delay: (i % 2) * 0.12, ease: "easeOut" }}
-              className="py-10 md:py-12 group"
-              style={{ borderTop: "1px solid rgba(47, 35, 35, 0.14)" }}
-              data-testid={`area-of-work-${i}`}
-            >
-              <div className="flex items-start gap-8">
-                <span
-                  className="font-display italic mt-2"
-                  style={{ color: "var(--tbe-dusty-coral)", fontSize: "1.1rem" }}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
+          {areas.map((a, i) => {
+            const isOpen = openIdx === i;
+            return (
+              <motion.div
+                key={a.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.2 }}
+                transition={{ duration: 0.9, delay: (i % 4) * 0.08, ease: "easeOut" }}
+                data-testid={`area-of-work-${i}`}
+              >
+                <button
+                  onClick={() => setOpenIdx(isOpen ? null : i)}
+                  aria-expanded={isOpen}
+                  aria-controls={`area-desc-${i}`}
+                  className="w-full text-left p-5 md:p-6 transition-all duration-500"
+                  style={{
+                    background: isOpen ? "rgba(243,231,209,0.7)" : "rgba(243,231,209,0.35)",
+                    border: "1px solid rgba(47,35,35,0.12)",
+                    cursor: "pointer",
+                    display: "block",
+                  }}
                 >
-                  {String(i + 1).padStart(2, "0")}
-                </span>
-                <div className="flex-1">
+                  <span
+                    className="font-display italic"
+                    style={{ color: "var(--tbe-dusty-coral)", fontSize: "1rem" }}
+                  >
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
                   <h3
-                    className="font-display text-2xl md:text-3xl mb-4 transition-colors duration-500"
-                    style={{ color: "var(--tbe-dark-wine)" }}
-                    onMouseEnter={(e) => (e.currentTarget.style.color = "var(--tbe-deep-maroon)")}
-                    onMouseLeave={(e) => (e.currentTarget.style.color = "var(--tbe-dark-wine)")}
+                    className="font-display text-lg md:text-xl mt-2 mb-1 transition-colors duration-500"
+                    style={{ color: isOpen ? "var(--tbe-deep-maroon)" : "var(--tbe-dark-wine)" }}
                   >
                     {a.title}
                   </h3>
+                  <span
+                    className="text-xs tracking-[0.2em] uppercase transition-colors duration-300"
+                    style={{ color: "var(--tbe-warm-brown)", opacity: 0.65 }}
+                  >
+                    {isOpen ? "less ↑" : "more ↓"}
+                  </span>
+                </button>
+
+                {/* Always in HTML (SSR), toggled visually */}
+                <div
+                  id={`area-desc-${i}`}
+                  style={{
+                    display: isOpen ? "" : "none",
+                    padding: "0.75rem 1.25rem 1.25rem",
+                    background: "rgba(243,231,209,0.45)",
+                    borderLeft: "1px solid rgba(47,35,35,0.12)",
+                    borderRight: "1px solid rgba(47,35,35,0.12)",
+                    borderBottom: "1px solid rgba(47,35,35,0.12)",
+                  }}
+                  aria-hidden={isOpen ? undefined : "true"}
+                >
                   <p
-                    className="text-base md:text-lg leading-relaxed max-w-md"
-                    style={{ color: "var(--tbe-dark-brown)", opacity: 0.82 }}
+                    className="text-base leading-relaxed"
+                    style={{ color: "var(--tbe-dark-brown)", opacity: 0.85 }}
                   >
                     {a.body}
                   </p>
                 </div>
-              </div>
-            </motion.article>
-          ))}
+              </motion.div>
+            );
+          })}
+        </div>
+
+        <div className="flex justify-center mt-14">
+          <button onClick={onBookClick} className="btn-primary" data-testid="areas-book-btn">
+            Book a Session →
+          </button>
         </div>
       </div>
     </section>
