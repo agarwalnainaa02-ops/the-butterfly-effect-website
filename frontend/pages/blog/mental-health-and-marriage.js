@@ -14,8 +14,9 @@ const blogPostingSchema = {
   "@type": "BlogPosting",
   headline: "Mental Health and Marriage: What Do You Actually Need to Discuss?",
   description:
-    "Considering marriage? Here's how to approach conversations about mental health, therapy, medication, emotional needs and privacy without shame or pressure.",
+    "What should you discuss about mental health before marriage? Therapy, medication, emotional needs, privacy and family expectations, without shame.",
   datePublished: "2026-10-26",
+  dateModified: "2026-10-26",
   url: POST_URL,
   mainEntityOfPage: { "@type": "WebPage", "@id": POST_URL },
   author: {
@@ -54,7 +55,7 @@ export default function MentalHealthAndMarriage() {
         <title>Mental Health and Marriage: What to Discuss</title>
         <meta
           name="description"
-          content="Considering marriage? Here's how to approach conversations about mental health, therapy, medication, emotional needs and privacy without shame or pressure."
+          content="What should you discuss about mental health before marriage? Therapy, medication, emotional needs, privacy and family expectations, without shame."
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="canonical" href={POST_URL} />
@@ -66,7 +67,7 @@ export default function MentalHealthAndMarriage() {
         />
         <meta
           property="og:description"
-          content="Considering marriage? Here's how to approach conversations about mental health, therapy, medication, emotional needs and privacy without shame or pressure."
+          content="What should you discuss about mental health before marriage? Therapy, medication, emotional needs, privacy and family expectations, without shame."
         />
         <meta property="og:url" content={POST_URL} />
         <meta property="article:published_time" content="2026-10-26" />
@@ -83,7 +84,7 @@ export default function MentalHealthAndMarriage() {
         />
         <meta
           name="twitter:description"
-          content="Considering marriage? Here's how to approach conversations about mental health, therapy, medication, emotional needs and privacy without shame or pressure."
+          content="What should you discuss about mental health before marriage? Therapy, medication, emotional needs, privacy and family expectations, without shame."
         />
         <meta
           name="twitter:image"
@@ -201,16 +202,18 @@ export default function MentalHealthAndMarriage() {
             className="blog-body"
           >
             <p>
-              There are a few questions that come up in the process of getting married.
+              There are certain questions that come up when you&rsquo;re considering
+              marriage.
             </p>
             <p>
               What do you do for a living?<br />
               Do you want children?<br />
-              Will you live with your parents or separately?<br />
-              What are your expectations from marriage?
+              Where do you see yourself living in five years?<br />
+              How involved do you expect our families to be?
             </p>
             <p>
-              And then there are the questions people often find much harder to ask.
+              And then there are the questions that make everyone suddenly very interested
+              in their chai.
             </p>
             <p>
               Have you ever been to therapy?<br />
@@ -219,455 +222,494 @@ export default function MentalHealthAndMarriage() {
               What happens when you&rsquo;re not doing okay?
             </p>
             <p>
-              In some families, even mentioning therapy can change how a marriage proposal is
-              viewed. Research from India, including a qualitative study in Kerala, has
-              documented how mental health stigma can affect marriage prospects and lead people
-              and families to conceal mental health difficulties. That stigma is part of the
-              problem, not proof that someone is unsuitable for marriage.
+              In some families, mentioning mental health difficulties can change how a
+              marriage proposal is viewed. Suddenly, something that deserves care and
+              understanding becomes something to hide, explain away or defend.
             </p>
             <p>
-              So, if you&rsquo;re considering marriage, what do you actually need to discuss?
+              But here&rsquo;s the thing: mental health is relevant to relationships. It is
+              not a measure of someone&rsquo;s worth or automatic suitability for marriage.
             </p>
-            <p>Let&rsquo;s start here.</p>
-            {/* TODO: once the marriage posts are live, add one-line contextual links to /blog/questions-to-ask-partner-before-marriage and /blog/things-its-okay-to-want-in-marriage. Also link the relationships service page once live. */}
+            <p>So, what should you actually discuss with a potential partner?</p>
+            {/* TODO: once the marriage posts are live, add one-line contextual links to the other marriage posts. Also link the relationships service page once live. */}
 
             <h2>
-              1. You are not your diagnosis. But your experiences may matter in a
-              relationship.
+              1. Having a mental health condition doesn&rsquo;t tell someone everything
+              about you
             </h2>
 
+            <p>A diagnosis is not a complete description of a person.</p>
             <p>
-              Having experienced depression, anxiety, trauma or another mental health
-              difficulty does not automatically make someone a bad partner.
+              It doesn&rsquo;t tell someone how you treat people, whether you can
+              communicate, how you handle responsibility, what you value or what kind of
+              partner you might be.
             </p>
             <p>
-              Nor does having no diagnosis guarantee that someone will be emotionally
-              available, kind or capable of handling conflict.
+              Likewise, not having a diagnosis doesn&rsquo;t automatically make someone
+              emotionally available, self-aware or good at navigating conflict.
             </p>
             <p>
-              A diagnosis tells you something about a person&rsquo;s experiences. It does not
-              tell you everything about their personality, their capacity for intimacy, or how
-              they will treat you.
-            </p>
-            <p>What matters is understanding the person beyond the label.</p>
-            <p>
-              If you have experienced mental health difficulties, you might consider sharing
-              what feels relevant to the relationship: how it has affected your life, what
-              support you currently use, what you have learned about yourself, and whether
-              there are needs or circumstances a partner should understand.
-            </p>
-            <p>You do not have to present your history as a confession.</p>
-            <p>You are having a conversation about the life you may build together.</p>
-
-            <h2>2. Talk about what mental health looks like in everyday life.</h2>
-
-            <p>
-              Sometimes, people talk about mental health as though it exists separately from
-              ordinary life.
-            </p>
-            <p>But its effects, when present, can show up in very ordinary places.</p>
-            <p>
-              Getting through a difficult week.<br />
-              Managing responsibilities when you feel overwhelmed.<br />
-              Asking for space after an argument.<br />
-              Recognising when you need help.<br />
-              Trying to communicate when you do not have the words yet.
+              Two people with the same diagnosis may have very different experiences, support
+              needs and ways of managing their lives.
             </p>
             <p>
-              If you have experienced mental health difficulties, it may help to discuss what
-              support looks like for you.
+              So, if you or your potential partner has experienced mental health difficulties,
+              try to move beyond the label.
+            </p>
+            <p>
+              Instead of asking only, &ldquo;Do you have a mental health condition?&rdquo;,
+              consider what you actually need to understand about each other&rsquo;s lives.
             </p>
             <p>For example:</p>
             <ul>
+              <li>How has this experience affected your everyday life, if at all?</li>
+              <li>Is it something you currently manage or receive support for?</li>
               <li>
-                When you are struggling, do you prefer company, practical help or some time
-                alone?
+                Are there particular circumstances in which you need additional support?
               </li>
               <li>
-                Are there particular signs that tell you that you need additional support?
-              </li>
-              <li>Do you have an existing support system or professional care?</li>
-              <li>
-                Are there ways a partner can support you without becoming responsible for
-                managing your mental health?
-              </li>
-              <li>
-                Are there recurring difficulties that could affect shared responsibilities or
-                your relationship?
+                Is there anything you would want a partner to understand about your
+                experience?
               </li>
             </ul>
-            <p>You do not need to predict every future difficulty. Nobody can.</p>
-            <p>
-              The point is to understand each other better, not to negotiate a contract
-              guaranteeing that neither person will ever struggle.
-            </p>
+            <p>You don&rsquo;t need to turn a conversation into a clinical assessment.</p>
+            <p>You&rsquo;re getting to know a person, not evaluating a case history.</p>
 
-            <h2>3. Can you talk about therapy and medication without shame?</h2>
+            <h2>2. What role does mental health care play in your life?</h2>
 
             <p>
-              If either person is in therapy, takes medication, or has sought psychiatric care,
-              the conversation should not automatically become an interrogation.
+              Therapy, psychiatric care and medication can be important parts of
+              someone&rsquo;s life. They can also be private matters.
             </p>
             <p>
-              Questions such as &ldquo;Why do you need medication?&rdquo; or &ldquo;Will you
-              ever be normal?&rdquo; can turn a conversation about support into a judgement
-              about someone&rsquo;s worth.
+              If either of you is receiving treatment, it may be useful to discuss the
+              practical aspects that could affect your shared life.
             </p>
-            <p>A more useful conversation might sound like:</p>
+            <p>You might ask:</p>
             <ul>
+              <li>Is professional support currently part of your routine?</li>
               <li>
-                Is mental health care something you currently use or may need in the future?
+                Are there ongoing needs or responsibilities that could affect our plans
+                together?
               </li>
-              <li>How do you feel about seeking professional help?</li>
-              <li>What are your beliefs about psychiatric medication?</li>
-              <li>If one of us needed additional support, how would we approach that?</li>
+              <li>How do you feel about seeking help when you need it?</li>
+              <li>What are your beliefs about therapy and psychiatric medication?</li>
               <li>
-                Would either of us feel pressured to stop treatment because of family
-                opinions?
+                How would we respond if one of us needed additional support in the future?
               </li>
             </ul>
             <p>
-              People can have genuine concerns about the practical implications of a
-              partner&rsquo;s health needs. Those concerns can be discussed respectfully,
-              without treating mental health care itself as a character flaw.
+              You don&rsquo;t need to exchange private therapy notes or disclose every
+              detail of a treatment history.
             </p>
             <p>
-              The question is not whether someone has ever needed help. It is whether both
-              people can talk honestly about their needs and make informed decisions about
-              their shared life.
+              The aim is to understand what is relevant to the life you&rsquo;re considering
+              building together.
+            </p>
+            <p>
+              And if your potential partner takes medication, that fact alone does not tell
+              you whether the treatment is necessary, effective or likely to affect your
+              relationship. Those questions depend on the individual and, where appropriate,
+              their treating clinician.
+            </p>
+            <p>
+              Needing professional support is not a character flaw. Being able to discuss
+              support needs is a useful part of understanding each other.
             </p>
 
-            <h2>4. What does emotional support mean to each of you?</h2>
+            <h2>3. What happens when one of you is struggling?</h2>
 
             <p>
-              &ldquo;I want someone emotionally available&rdquo; sounds straightforward until
-              two people realise they have completely different ideas of what emotional
-              availability looks like.
+              It&rsquo;s easy to imagine how a relationship will work when both people are
+              feeling well, work is manageable and life is relatively predictable.
             </p>
             <p>
-              For one person, it might mean talking things through immediately. For another,
-              it might mean having time to process before speaking.
+              It&rsquo;s harder to know what will happen when one person is overwhelmed,
+              unwell or having a difficult period.
             </p>
             <p>
-              One person may want reassurance during conflict. Another may find it difficult to
-              respond when emotions are intense.
+              You don&rsquo;t need to predict every future situation. But you can discuss
+              how you generally approach difficult times.
             </p>
-            <p>
-              Neither difference automatically makes a relationship unhealthy. What matters is
-              whether both people can understand those differences and work out ways of
-              responding to them.
-            </p>
-            <p>You could ask each other:</p>
+            <p>Ask each other:</p>
             <ul>
-              <li>What helps you feel supported when you are upset?</li>
-              <li>How do you usually respond when someone you love is struggling?</li>
+              <li>When you&rsquo;re struggling, what kind of support helps you?</li>
               <li>
-                What happens when you need emotional support but the other person is
-                overwhelmed too?
+                Do you prefer talking, practical help, reassurance or some time to yourself?
               </li>
+              <li>How do you usually communicate when you&rsquo;re overwhelmed?</li>
+              <li>How would you tell your partner that you need help?</li>
               <li>
-                How comfortable are you apologising, repairing conflict and asking for help?
-              </li>
-              <li>
-                What would you do if we found ourselves stuck in the same argument
-                repeatedly?
+                What would you do if both of us were struggling at the same time?
               </li>
             </ul>
-            <p>You are not looking for someone who always knows what to say.</p>
+            <p>There are no universally correct answers.</p>
             <p>
-              You are looking for someone who is willing to listen, learn and take
-              responsibility for their part in the relationship.
+              One person might want to talk immediately. Another might need time to process
+              before having a conversation. One might appreciate practical help, while
+              another might prefer to handle certain things independently.
             </p>
             <p>
-              And, importantly, someone who expects the same willingness from you.
+              The goal is to understand these differences before assuming that your partner
+              should instinctively know what to do.
+            </p>
+            <p>
+              And remember: supporting a partner does not mean becoming responsible for
+              managing their entire mental health.
+            </p>
+            <p>
+              A relationship can provide care, reassurance and companionship. It cannot
+              replace appropriate professional treatment or a wider support system when those
+              are needed.
+            </p>
+
+            <h2>4. Can you disagree without making each other feel unsafe?</h2>
+
+            <p>Conflict is not automatically a sign that a relationship is unhealthy.</p>
+            <p>
+              People disagree. They misunderstand each other. They sometimes react poorly
+              and need to repair the interaction.
+            </p>
+            <p>What matters is how those moments are handled.</p>
+            <p>Consider discussing:</p>
+            <ul>
+              <li>What happens when you feel hurt or misunderstood?</li>
+              <li>
+                Do you prefer to resolve disagreements immediately or take time to cool
+                down?
+              </li>
+              <li>How do you usually apologise?</li>
+              <li>What helps you feel heard during a disagreement?</li>
+              <li>What behaviour would be unacceptable during an argument?</li>
+            </ul>
+            <p>
+              You might have different conflict styles. That&rsquo;s something you can learn
+              about and work through.
+            </p>
+            <p>
+              But repeated humiliation, intimidation, threats, coercion or controlling
+              behaviour should not be dismissed as a communication style or explained away
+              by a mental health condition.
+            </p>
+            <p>
+              A diagnosis does not excuse mistreating a partner. Nor does a
+              partner&rsquo;s distress give someone else permission to control, threaten or
+              humiliate them.
+            </p>
+            <p>
+              You can have compassion for someone&rsquo;s difficulties while maintaining
+              boundaries around how you are treated.
             </p>
 
             <h2>5. How much privacy will you have from each other&rsquo;s families?</h2>
 
             <p>
-              In an arranged-marriage context, a conversation between two people can quickly
-              become a conversation involving two families.
+              In an arranged-marriage context, a personal conversation can quickly become a
+              family conversation.
             </p>
             <p>
-              That makes privacy worth discussing before marriage, particularly when it comes
-              to health information.
+              Something you shared privately with your potential partner might be discussed
+              with their parents, siblings or relatives before you&rsquo;ve even agreed to
+              the marriage.
             </p>
-            <p>Consider questions such as:</p>
+            <p>
+              If mental health is a sensitive subject in either family, this is worth
+              discussing explicitly.
+            </p>
+            <p>You might ask:</p>
+            <ul>
+              <li>What do you consider private information in a relationship?</li>
+              <li>Would you share my mental health history with your family?</li>
+              <li>
+                If your parents had concerns about therapy or medication, how would you
+                respond?
+              </li>
+              <li>
+                How would we handle a family member making dismissive comments about mental
+                health?
+              </li>
+              <li>Who would we involve if one of us needed additional support?</li>
+            </ul>
+            <p>
+              Couples can seek support from trusted people without making every personal
+              detail available to everyone.
+            </p>
+            <p>
+              It is reasonable to expect respect for your privacy. There may be situations
+              involving immediate safety where outside support is necessary, but that is
+              different from routinely sharing private information without permission.
+            </p>
+            <p>
+              Marriage does not mean your personal history becomes public property.
+            </p>
+
+            <h2>6. What if your family doesn&rsquo;t understand mental health?</h2>
+
+            <p>
+              Your potential partner may have a supportive attitude towards mental health,
+              while their family holds very different beliefs.
+            </p>
+            <p>
+              Or perhaps your own family believes therapy is unnecessary, medication is
+              shameful or emotional difficulties should simply be endured.
+            </p>
+            <p>You cannot control what every relative believes.</p>
+            <p>But you can discuss how the two of you would respond to those beliefs.</p>
+            <p>For example:</p>
             <ul>
               <li>
-                If one of us is struggling emotionally, who gets to know about it?
+                Would you feel comfortable continuing treatment if your family disapproved?
               </li>
               <li>
-                Would you discuss our private disagreements or personal information with your
-                parents?
+                Would you expect your spouse to conceal their treatment to protect the
+                family&rsquo;s reputation?
               </li>
               <li>
-                What happens if your family has strong opinions about therapy or medication?
+                How would we handle pressure to stop medication or avoid therapy?
               </li>
               <li>
-                If one of us shares something vulnerable, can we expect it to remain private?
-              </li>
-              <li>
-                What information do we believe is ours to share as a couple, and what should
-                remain personal?
+                Could we make decisions about our health without requiring extended family
+                approval?
               </li>
             </ul>
             <p>
-              Being married does not mean that every private detail of your partner&rsquo;s
-              life becomes family information.
+              A partner doesn&rsquo;t have to agree with every choice you make to respect
+              your right to seek appropriate care.
             </p>
             <p>
-              You can involve family in decisions that affect them without giving them
-              unrestricted access to your partner&rsquo;s personal history.
+              If someone expects you to abandon treatment solely because it makes them
+              uncomfortable, that deserves serious discussion.
             </p>
             <p>
-              A partner who cares about you should be able to distinguish between seeking
-              support and sharing your private information without your permission.
-            </p>
-            <p>
-              There may be situations in which involving someone else is necessary for safety.
-              But ordinary vulnerability should not automatically become family news.
+              You should not have to choose between being accepted into a family and being
+              allowed to look after your health.
             </p>
 
-            <h2>
-              6. What happens when your mental health needs conflict with family expectations?
-            </h2>
+            <h2>7. What are you expected to disclose before marriage?</h2>
 
+            <p>This is often the most complicated question.</p>
             <p>
-              Imagine one partner is experiencing significant distress and needs time to
-              recover, attend appointments or adjust their responsibilities.
+              Some people fear that sharing a mental health history will lead to rejection.
+              Others worry that not sharing enough will be interpreted as dishonesty later.
             </p>
             <p>
-              The family expects them to attend every function, fulfil every obligation and
-              behave as though nothing is happening.
+              There isn&rsquo;t one universal disclosure script that works for every person
+              and situation.
             </p>
-            <p>What happens next?</p>
             <p>
-              Does the couple discuss what is manageable? Does the partner offer support in
-              navigating family expectations? Or is the person struggling expected to hide
-              everything and carry on?
+              You are entitled to privacy. You do not need to disclose every thought, past
+              experience, therapy conversation or personal detail to someone you have only
+              recently met.
             </p>
-            <p>You might discuss:</p>
+            <p>
+              As the relationship progresses towards marriage, however, it is important to
+              discuss information that is materially relevant to your shared life.
+            </p>
+            <p>
+              Depending on the circumstances, that might include ongoing support needs,
+              significant treatment commitments or health-related considerations that could
+              affect shared responsibilities and decisions.
+            </p>
+            <p>You might reflect on:</p>
             <ul>
-              <li>How would we handle family pressure during a difficult period?</li>
               <li>
-                Would we be able to say no to an obligation if one of us genuinely needed rest
-                or support?
+                Is this information relevant to our current plans or future
+                responsibilities?
               </li>
               <li>
-                How would we respond if a family member dismissed mental health difficulties
-                as laziness or overreaction?
+                Is there something my partner reasonably needs to understand to make an
+                informed decision?
               </li>
               <li>
-                What happens if one person&rsquo;s needs conflict with a family tradition or
-                expectation?
+                Am I choosing privacy because I am not ready to share, or am I concealing
+                something because I fear the consequences?
               </li>
-              <li>
-                Can we make decisions together, even when our families disagree?
-              </li>
+              <li>What would I want to understand if our positions were reversed?</li>
             </ul>
             <p>
-              These questions are not only about mental health. They are also about boundaries,
-              shared responsibility and how the two of you will navigate competing
-              expectations.
+              You can share information gradually as trust develops. You can also seek
+              professional advice if you are unsure how to navigate a complex health or
+              disclosure question.
             </p>
-            <p>You cannot predict every situation before marriage.</p>
             <p>
-              But you can begin to understand whether you and your potential partner are
-              willing to approach difficult situations as a team.
+              The aim is not to create a rule that everyone must disclose everything by a
+              particular meeting.
+            </p>
+            <p>
+              It is to approach a significant shared decision with appropriate honesty,
+              respect and consideration for both people&rsquo;s ability to choose.
             </p>
 
-            <h2>7. What should you disclose before marriage?</h2>
+            <h2>8. What if your potential partner has a mental health condition?</h2>
 
+            <p>The same principles apply in the other direction.</p>
             <p>
-              This is often the most uncomfortable question, especially when there is a fear
-              that sharing something personal could end a marriage proposal.
+              You are allowed to ask respectful questions. You are allowed to understand
+              what a condition means in that person&rsquo;s life. You are allowed to
+              consider whether your needs, expectations and capacities are compatible.
             </p>
             <p>
-              There is no single script that works for every person or every relationship.
-              Disclosure depends on the information, the context, the level of trust and the
-              potential implications for shared life.
+              You do not have to pretend that practical considerations don&rsquo;t matter.
             </p>
             <p>
-              A systematic review of research on mental health disclosure found that the
-              effects of disclosure vary across contexts. People may also choose selective
-              disclosure rather than sharing everything with everyone.
-            </p>
-            <p>That matters because privacy and honesty are not opposites.</p>
-            <p>
-              You are allowed to take time before sharing deeply personal experiences. You are
-              allowed to decide who has earned your trust. You are allowed to keep details of
-              your therapy sessions private.
-            </p>
-            <p>
-              At the same time, as a relationship moves towards marriage, it is important to
-              discuss information that is materially relevant to the life you are planning
-              together. This may include ongoing health needs, significant treatment or support
-              requirements, and circumstances that could substantially affect shared
+              For example, you might need to understand how a person&rsquo;s ongoing support
+              needs fit alongside work, finances, caregiving or other shared
               responsibilities.
             </p>
-            <p>A useful starting point is to ask yourself:</p>
-            <ul>
-              <li>Is this something that affects my current life in a meaningful way?</li>
-              <li>
-                Could it affect a shared decision or responsibility we are making?
-              </li>
-              <li>
-                Am I withholding this because I need more time and safety, or because I am
-                afraid the other person will reject me?
-              </li>
-              <li>
-                What would I reasonably want to understand if our positions were reversed?
-              </li>
-            </ul>
             <p>
-              You do not have to share everything in one conversation. You can have these
-              discussions gradually as trust develops.
+              But avoid treating a diagnosis as a prediction of everything that will happen
+              in the relationship.
             </p>
             <p>
-              If you are uncertain about what information is relevant to disclose, particularly
-              where complex health or legal questions are involved, seek appropriate
-              professional guidance rather than relying on a blanket rule.
-            </p>
-            <p>
-              And remember: another person&rsquo;s response to your vulnerability can tell you
-              something important about their attitudes. It does not determine your worth.
-            </p>
-
-            <h2>8. What if the other person has a mental health history?</h2>
-
-            <p>Everything above applies to both people.</p>
-            <p>
-              If your potential partner tells you that they have experienced depression, take
-              medication, attend therapy or have another mental health condition, you are
-              allowed to have questions.
-            </p>
-            <p>
-              You are allowed to want to understand how it affects their life. You are allowed
-              to discuss the practical, emotional and financial implications of ongoing care.
-              You are allowed to consider your own capacity, needs and boundaries when deciding
-              whether to marry.
-            </p>
-            <p>
-              What is not helpful is assuming that a diagnosis tells you everything you need to
-              know.
-            </p>
-            <p>
-              Instead of asking, &ldquo;Can I marry someone with a mental health
-              condition?&rdquo; try asking:
+              Instead of asking, &ldquo;Can I marry someone with this diagnosis?&rdquo;,
+              consider asking:
             </p>
             <ul>
-              <li>What does this experience look like in their life currently?</li>
+              <li>What is their experience of this condition?</li>
               <li>How do they understand and manage it?</li>
               <li>What support do they have?</li>
               <li>What might they need from a partner?</li>
-              <li>
-                What would I be comfortable offering, and what would be beyond my capacity?
-              </li>
-              <li>
-                Can we talk about this without either person feeling shamed or pressured?
-              </li>
+              <li>What support would I feel comfortable providing?</li>
+              <li>Are we able to discuss these questions without shame or pressure?</li>
             </ul>
             <p>
-              You are not required to become someone&rsquo;s therapist. Your partner is not
-              required to be yours.
+              You are not obligated to become someone&rsquo;s therapist, and you are not
+              required to ignore your own limits.
             </p>
             <p>
-              A relationship can include mutual care while recognising that professional
-              support, personal responsibility and a wider support system may also be
-              necessary.
+              Equally, someone is not automatically unsuitable for marriage because they
+              have needed mental health care.
+            </p>
+            <p>
+              The decision deserves to be based on the person, the relationship, the
+              circumstances and the choices available to both people&mdash;not a label alone.
             </p>
 
-            <h2>9. Pay attention to how the conversation feels.</h2>
+            <h2>9. What if one of you struggles after marriage?</h2>
 
             <p>
-              You can prepare thoughtful questions. You can research mental health. You can
-              discuss treatment, expectations and future needs.
+              This is worth considering because mental health can change over time.
             </p>
             <p>
-              But also pay attention to what happens when the conversation becomes
-              uncomfortable.
+              Someone who is doing well now may experience difficulties in the future.
+              Someone who has struggled in the past may be doing well for a long time.
+            </p>
+            <p>No premarital conversation can guarantee what will happen.</p>
+            <p>
+              What you can discuss is how you would approach unexpected difficulties.
             </p>
             <p>
-              Does the other person ask questions because they want to understand, or because
-              they want to catch you out?
-            </p>
-            <p>Can they acknowledge what they do not know?</p>
-            <p>
-              Do they treat your experiences with respect, even when they have concerns?
+              Would you be willing to seek professional support if necessary? Could you talk
+              about changing needs? How would you handle responsibilities if one person
+              temporarily needed more help? What would happen if the situation became
+              difficult for both of you?
             </p>
             <p>
-              Can you disagree without being threatened, mocked or pressured into sharing more
-              than you are ready to share?
-            </p>
-            <p>And are you extending the same respect to them?</p>
-            <p>
-              One awkward conversation does not tell you everything about a person. People may
-              need time to process unfamiliar information. What matters is the broader pattern:
-              whether there is room for honesty, curiosity, boundaries and repair.
+              These questions are not about predicting illness or making someone promise
+              that they will never struggle.
             </p>
             <p>
-              You are not looking for a person who responds perfectly to every difficult
+              They are about understanding how each of you approaches uncertainty,
+              responsibility and support.
+            </p>
+            <p>A useful question is:</p>
+            <p>
+              When life becomes more difficult than either of us expected, can we talk about
+              what is happening and work out what support is needed?
+            </p>
+            <p>You don&rsquo;t need to have every answer today.</p>
+            <p>
+              You do need to know whether the other person is willing to have the
               conversation.
             </p>
+
+            <h2>10. Pay attention to how they respond, not just what they say.</h2>
+
+            <p>Someone may tell you that they are supportive of mental health care.</p>
+            <p>That is a useful starting point. It is not the whole picture.</p>
             <p>
-              You are trying to understand whether difficult conversations can happen safely
-              and honestly in this relationship.
+              Notice how they respond when you express a preference they don&rsquo;t share.
+              What happens when you ask for privacy? How do they talk about people who seek
+              therapy? Can they acknowledge something they don&rsquo;t understand without
+              immediately judging it?
+            </p>
+            <p>Also notice your own responses.</p>
+            <p>
+              Can you listen to their concerns without assuming that every question is an
+              attack? Can you communicate your needs without expecting them to read your
+              mind? Can you respect their privacy while asking for information relevant to
+              your shared future?
+            </p>
+            <p>
+              You don&rsquo;t need to evaluate someone based on a single imperfect
+              conversation. People may need time to understand something unfamiliar.
+            </p>
+            <p>
+              Look for the broader pattern: curiosity, respect, accountability, boundaries
+              and a willingness to learn.
+            </p>
+            <p>
+              Those qualities matter far more than whether someone knows exactly what to say
+              in every conversation about mental health.
             </p>
 
-            <h2>10. A few things worth remembering</h2>
+            <h2>Before you say yes, ask yourself:</h2>
 
             <ul>
               <li>
-                Having a mental health condition does not automatically make someone unsuitable
-                for marriage.
+                Can we talk about mental health without treating it as a source of shame?
               </li>
+              <li>Do we understand each other&rsquo;s relevant needs and expectations?</li>
               <li>
-                A diagnosis alone does not tell you how someone will behave as a partner.
+                Can we discuss therapy, medication and professional support respectfully?
               </li>
+              <li>Do we agree about privacy and family involvement?</li>
+              <li>Can we disagree without threats, humiliation or coercion?</li>
+              <li>Are we both willing to seek appropriate support if we need it?</li>
               <li>
-                You can protect your privacy while having honest conversations about
-                information relevant to your shared future.
-              </li>
-              <li>
-                You are allowed to ask practical questions about treatment, support and
-                responsibilities.
-              </li>
-              <li>
-                You are not responsible for becoming your partner&rsquo;s therapist.
-              </li>
-              <li>
-                Your partner&rsquo;s family is not automatically entitled to your private
-                health information.
-              </li>
-              <li>
-                You should not be pressured to stop treatment to make yourself more acceptable
-                to a potential partner or their family.
-              </li>
-              <li>
-                You can take time to decide what you are comfortable sharing and whom you
-                trust with it.
-              </li>
-              <li>
-                If you feel unsafe, threatened or coerced, prioritise your safety and seek
-                support from someone you trust.
+                Can we recognise each other&rsquo;s limits without treating those limits as
+                a lack of love?
               </li>
             </ul>
             <p>
-              Most importantly, mental health should not become another box on a marriage
-              checklist, where a person is judged as either acceptable or unacceptable.
-            </p>
-            <p>The goal is not to find someone who has never struggled.</p>
-            <p>
-              It is to understand the person you are considering building a life with,
-              including how you might navigate difficulty together.
+              You do not need to turn these questions into a formal interview. They are
+              conversations to have over time, as trust develops and the relationship becomes
+              more serious.
             </p>
             <p>
-              Because marriage will involve uncertainty, change and moments when neither of you
-              knows exactly what to do.
+              And you do not need to have identical experiences or beliefs about every aspect
+              of mental health.
             </p>
-            <p>You deserve a relationship in which those moments can be discussed without shame.</p>
-            <p>And so does the person you marry.</p>
+            <p>
+              What matters is whether you can approach differences with honesty, respect and
+              a willingness to understand.
+            </p>
+
+            <h2>A final thought</h2>
+
+            <p>You don&rsquo;t need to find someone who has never struggled.</p>
+            <p>
+              You don&rsquo;t need to disclose every private experience to prove that you
+              are honest.
+            </p>
+            <p>
+              And you don&rsquo;t need to accept every difficulty without question to prove
+              that you are compassionate.
+            </p>
+            <p>
+              Mental health is one part of a person&rsquo;s life. It can affect a
+              relationship, sometimes significantly, but it does not tell the whole story of
+              who someone is or what kind of partner they can be.
+            </p>
+            <p>The goal isn&rsquo;t to find a person who will never need support.</p>
+            <p>
+              It is to understand each other well enough to make an informed decision about
+              the life you want to build together.
+            </p>
+            <p>
+              You deserve to discuss mental health without being reduced to it. And so does
+              the person you marry.
+            </p>
 
             <hr
               style={{
@@ -677,16 +719,15 @@ export default function MentalHealthAndMarriage() {
               }}
             />
 
-            <h2>A note on the research</h2>
+            <h2>Research note</h2>
 
             <p>
-              Research on mental health disclosure suggests that decisions about sharing
-              personal information are shaped by context, stigma and the anticipated response
-              of others. Indian research has also documented how mental health stigma can
-              affect marriage prospects and encourage concealment. These findings help explain
-              why disclosure can feel particularly high-stakes in some marriage settings; they
-              do not establish a universal rule about exactly what everyone must disclose or
-              when.
+              Mental health stigma can influence disclosure and help-seeking, while
+              autonomy, privacy and respectful communication are relevant to relationship
+              decisions. However, there is no universal checklist establishing exactly what
+              every person must disclose before marriage. Disclosure should be considered in
+              context, with attention to privacy, informed decision-making and any needs
+              relevant to shared responsibilities.
             </p>
           </motion.div>
 
@@ -702,9 +743,10 @@ export default function MentalHealthAndMarriage() {
                 fontStyle: "italic",
               }}
             >
-              If you&rsquo;re struggling right now, please reach out to someone you trust or a
-              mental health professional. If you&rsquo;re in immediate danger in India, call
-              112.
+              If you&rsquo;re struggling right now, please reach out to someone you trust
+              or a mental health professional. If you take prescribed medication, please
+              speak to your prescriber before changing it. If you&rsquo;re in immediate
+              danger in India, call 112.
             </p>
           </div>
 
@@ -713,22 +755,20 @@ export default function MentalHealthAndMarriage() {
             <h2>Sources for further reading</h2>
             <ul>
               <li>
-                Gnainsky, M., Roe, D., Negri-Schwartz, O., Cohen-Chazani, Y., Lavidor, M.,
-                &amp; Hasson-Ohayon, I. (2025). To disclose or not to disclose: A systematic
-                review of factors associated with disclosure and concealment of mental
-                illnesses. <em>Clinical Psychology Review</em>, 122, 102660.{" "}
+                World Health Organization (2023). Mental health: Promoting and protecting
+                human rights.{" "}
                 <a
-                  href="https://cris.haifa.ac.il/en/publications/to-disclose-or-not-to-disclose-a-systematic-review-of-factors-ass/"
+                  href="https://www.who.int/news-room/q-a-detail/mental-health-promoting-and-protecting-human-rights"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  https://cris.haifa.ac.il/en/publications/to-disclose-or-not-to-disclose-a-systematic-review-of-factors-ass/
+                  https://www.who.int/news-room/q-a-detail/mental-health-promoting-and-protecting-human-rights
                 </a>
               </li>
               <li>
-                Raghavan, R., Brown, B., Horne, F., &amp; Kumar, S. (2023). Stigma and mental
-                health problems in an Indian context: Perceptions of people with mental
-                disorders in urban, rural and tribal areas of Kerala.{" "}
+                Raghavan, R., Brown, B., Horne, F., &amp; Kumar, S. (2023). Stigma and
+                mental health problems in an Indian context: Perceptions of people with
+                mental disorders in urban, rural and tribal areas of Kerala.{" "}
                 <em>International Journal of Social Psychiatry</em>, 69(2), 362&ndash;369.{" "}
                 <a
                   href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9983047"
@@ -739,14 +779,16 @@ export default function MentalHealthAndMarriage() {
                 </a>
               </li>
               <li>
-                World Health Organization (2023). Mental health: Promoting and protecting
-                human rights.{" "}
+                Gnainsky, M., Roe, D., Negri-Schwartz, O., Cohen-Chazani, Y., Lavidor, M.,
+                &amp; Hasson-Ohayon, I. (2025). To disclose or not to disclose: A
+                systematic review of factors associated with disclosure and concealment of
+                mental illnesses. <em>Clinical Psychology Review</em>, 122, 102660.{" "}
                 <a
-                  href="https://www.who.int/news-room/q-a-detail/mental-health-promoting-and-protecting-human-rights"
+                  href="https://cris.haifa.ac.il/en/publications/to-disclose-or-not-to-disclose-a-systematic-review-of-factors-ass/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  https://www.who.int/news-room/q-a-detail/mental-health-promoting-and-protecting-human-rights
+                  https://cris.haifa.ac.il/en/publications/to-disclose-or-not-to-disclose-a-systematic-review-of-factors-ass/
                 </a>
               </li>
             </ul>
@@ -801,9 +843,9 @@ export default function MentalHealthAndMarriage() {
               >
                 Naina Agarwal
               </Link>{" "}
-              is a mental health practitioner based in Hyderabad, offering online therapy and
-              counselling across India. BA Psychology, St. Francis College for Women; MSc
-              Psychology, Jain University.
+              is a mental health practitioner based in Hyderabad, offering online therapy
+              and counselling across India. BA Psychology, St. Francis College for Women;
+              MSc Psychology, Jain University.
             </p>
           </div>
         </article>
