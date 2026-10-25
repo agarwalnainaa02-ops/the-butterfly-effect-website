@@ -230,6 +230,7 @@ const DEDICATED_SLUGS = [
   "parents-sacrifice-and-family-guilt",
   "why-do-i-keep-explaining-myself-to-my-parents",
   "questions-to-ask-yourself-before-marriage",
+  "questions-to-ask-partner-before-marriage",
 ];
 
 export async function getStaticPaths() {
