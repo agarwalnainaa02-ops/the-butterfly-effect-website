@@ -227,6 +227,7 @@ const DEDICATED_SLUGS = [
   "does-your-course-teach-you-family-values",
   "family-pressure-and-identity",
   "why-do-i-get-attached-so-quickly",
+  "parents-sacrifice-and-family-guilt",
 ];
 
 export async function getStaticPaths() {
