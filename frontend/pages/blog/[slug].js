@@ -225,6 +225,7 @@ const DEDICATED_SLUGS = [
   "why-you-cant-stop-overthinking-at-night",
   "am-i-burnt-out-or-just-tired",
   "does-your-course-teach-you-family-values",
+  "family-pressure-and-identity",
 ];
 
 export async function getStaticPaths() {
