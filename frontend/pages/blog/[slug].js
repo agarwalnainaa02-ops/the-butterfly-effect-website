@@ -221,6 +221,36 @@ export default function BlogPost({ postData }) {
               Book a Session →
             </button>
           </motion.div>
+
+          {/* Author box */}
+          <div
+            style={{
+              borderTop: "1px solid rgba(47,35,35,0.14)",
+              paddingTop: "1.5rem",
+              marginBottom: "1.5rem",
+            }}
+          >
+            <p
+              style={{
+                fontFamily: "'EB Garamond', serif",
+                fontSize: "0.85rem",
+                color: "var(--tbe-dark-brown)",
+                opacity: 0.7,
+                lineHeight: 1.7,
+              }}
+            >
+              <strong>About the author:</strong>{" "}
+              <Link
+                href="/about"
+                style={{ color: "var(--tbe-warm-brown)", textUnderlineOffset: "3px" }}
+              >
+                Naina Agarwal
+              </Link>{" "}
+              is a mental health practitioner based in Hyderabad, offering online therapy and
+              counselling across India. BA Psychology, St. Francis College for Women; MSc
+              Psychology, Jain University.
+            </p>
+          </div>
         </article>
 
         <Footer />
