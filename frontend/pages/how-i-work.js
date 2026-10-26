@@ -68,9 +68,8 @@ export default function HowIWorkPage() {
               Mental Health Practitioner — Naina Agarwal
             </motion.p>
             <motion.h1
-              initial={{ opacity: 0, y: 24 }}
+              initial={false}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1.4, delay: 0.55, ease: [0.22, 0.61, 0.36, 1] }}
               className="h-display"
               style={{ fontSize: "clamp(2.2rem, 5vw, 4rem)" }}
             >

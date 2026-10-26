@@ -1,4 +1,4 @@
-import Head from "next/head";
+﻿import Head from "next/head";
 import Link from "next/link";
 import { useState, useCallback } from "react";
 import { motion } from "framer-motion";
@@ -118,7 +118,6 @@ export default function BlogPost({ postData }) {
                 letterSpacing: "0.28em",
                 textTransform: "uppercase",
                 color: "var(--tbe-warm-brown)",
-                opacity: 0.72,
                 textDecoration: "none",
               }}
             >
@@ -137,7 +136,6 @@ export default function BlogPost({ postData }) {
               letterSpacing: "0.3em",
               textTransform: "uppercase",
               color: "var(--tbe-warm-brown)",
-              opacity: 0.72,
               marginBottom: "1rem",
             }}
           >
@@ -146,9 +144,8 @@ export default function BlogPost({ postData }) {
 
           {/* Title — h1 for SEO */}
           <motion.h1
-            initial={{ opacity: 0, y: 24 }}
+            initial={false}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1.3, delay: 0.2, ease: [0.22, 0.61, 0.36, 1] }}
             className="font-display"
             style={{
               fontSize: "clamp(2rem, 5vw, 3.2rem)",

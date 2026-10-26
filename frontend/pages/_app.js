@@ -3,13 +3,10 @@ import "../src/App.css";
 import Script from "next/script";
 import { ebGaramond } from "../lib/fonts";
 
-// GA4 — replace "GA_MEASUREMENT_ID" with your real Measurement ID (format: G-XXXXXXXXXX).
-// Find it: Google Analytics → Admin → Data Streams → your web stream → Measurement ID.
-// Tracking fires on every WhatsApp click once the real ID is in place.
-const GA_ID = "GA_MEASUREMENT_ID"; // ← your ID here
+const GA_ID = "G-TTV9EE7V1G";
 
 export default function App({ Component, pageProps }) {
-  const gaEnabled = GA_ID !== "GA_MEASUREMENT_ID";
+  const gaEnabled = process.env.NODE_ENV === "production";
   return (
     <>
       {gaEnabled && (

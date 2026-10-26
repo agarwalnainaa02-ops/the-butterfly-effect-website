@@ -296,7 +296,9 @@ html { scroll-behavior: smooth; }
 }
 .blog-body a {
   color: var(--tbe-deep-maroon);
-  text-underline-offset: 4px;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
 }
 .blog-body a:hover {
   color: var(--tbe-dark-wine);

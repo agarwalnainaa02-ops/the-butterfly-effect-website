@@ -5,41 +5,39 @@ const STORAGE_KEY = "tbe-intro-played";
 
 // ─── Timing ───────────────────────────────────────────────────────────────────
 //  t = 0 ms   : logo + text start fading/scaling in  (1 200 ms)
-//  t = 2 500 ms: start exit — overlay fades out + slides upward  (700 ms)
-//  t = 3 200 ms: phase → "done", node removed from DOM
+//  t = 1 200 ms: start exit — overlay fades out + slides upward  (600 ms)
+//  t = 1 800 ms: phase → "done", node removed from DOM
+//  Skipped entirely on second+ visit (sessionStorage) or prefers-reduced-motion
 // ─────────────────────────────────────────────────────────────────────────────
 
 const LogoEntrance = ({ onComplete }) => {
-  // SSR-safe: never touch sessionStorage at render time.
-  // We always start as "visible" on the server; the useEffect below
-  // immediately flips to "done" on the client if already played.
   const [phase, setPhase] = useState("visible");
 
   const onCompleteRef = useRef(onComplete);
   useEffect(() => { onCompleteRef.current = onComplete; }, [onComplete]);
 
   useEffect(() => {
-    // Client-only — sessionStorage is not available on the server
+    const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     const alreadyPlayed = sessionStorage.getItem(STORAGE_KEY) === "1";
 
-    if (alreadyPlayed) {
+    if (alreadyPlayed || reduced) {
       setPhase("done");
       onCompleteRef.current?.();
       return;
     }
 
-    const tExit = setTimeout(() => setPhase("exit"), 2500);
+    const tExit = setTimeout(() => setPhase("exit"), 1200);
     const tDone = setTimeout(() => {
       setPhase("done");
       sessionStorage.setItem(STORAGE_KEY, "1");
       onCompleteRef.current?.();
-    }, 3200);
+    }, 1800);
 
     return () => {
       clearTimeout(tExit);
       clearTimeout(tDone);
     };
-  }, []); // empty — fires once on mount, never again
+  }, []);
 
   const exiting = phase === "exit";
 
@@ -53,7 +51,7 @@ const LogoEntrance = ({ onComplete }) => {
             opacity: exiting ? 0 : 1,
             y: exiting ? "-6%" : "0%",
           }}
-          transition={{ duration: 0.7, ease: [0.4, 0, 0.2, 1] }}
+          transition={{ duration: 0.6, ease: [0.4, 0, 0.2, 1] }}
           style={{
             position: "fixed",
             inset: 0,

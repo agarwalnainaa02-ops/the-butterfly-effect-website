@@ -1,22 +1,24 @@
 import Head from "next/head";
 import Link from "next/link";
+import dynamic from "next/dynamic";
 import { useCallback, useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import { motion } from "framer-motion";
 
 import LogoEntrance from "../src/components/LogoEntrance";
 import Navbar from "../src/components/Navbar";
-import ButterflyDrift from "../src/components/ButterflyDrift";
 import Hero from "../src/components/Hero";
 import WhoThisIsFor from "../src/components/WhoThisIsFor";
 import AreasOfWork from "../src/components/AreasOfWork";
-import InstagramFeed from "../src/components/InstagramFeed";
 import FinalCTA from "../src/components/FinalCTA";
 import Footer from "../src/components/Footer";
 import StickyWhatsApp from "../src/components/StickyWhatsApp";
 import JsonLd from "../src/components/JsonLd";
 import { WA_URL, trackWhatsApp } from "../src/utils/booking";
 import { getSortedPostsData } from "../lib/posts";
+
+const ButterflyDrift = dynamic(() => import("../src/components/ButterflyDrift"), { ssr: false });
+const InstagramFeed = dynamic(() => import("../src/components/InstagramFeed"), { ssr: false });
 
 const SITE_URL = "https://www.thebutterflyeffecttherapy.com";
 

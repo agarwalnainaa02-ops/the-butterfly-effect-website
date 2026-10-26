@@ -68,9 +68,8 @@ const Hero = () => {
         </motion.p>
 
         <motion.h1
-          initial={{ opacity: 0, y: 30 }}
+          initial={false}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1.6, delay: 0.7, ease: [0.22, 0.61, 0.36, 1] }}
           className="h-display max-w-4xl"
           style={{
             fontSize: "clamp(2rem, 6.4vw, 5.5rem)",
@@ -127,7 +126,7 @@ const Hero = () => {
             </div>
             <p
               className="text-sm"
-              style={{ fontFamily: "'EB Garamond', serif", color: "var(--tbe-dark-brown)", opacity: 0.55, letterSpacing: "0.03em" }}
+              style={{ fontFamily: "'EB Garamond', serif", color: "var(--tbe-warm-brown)", letterSpacing: "0.03em" }}
             >
               No pressure. Just a message to begin.
             </p>

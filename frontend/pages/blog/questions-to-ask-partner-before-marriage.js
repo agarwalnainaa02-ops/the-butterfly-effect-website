@@ -120,7 +120,6 @@ export default function QuestionsToAskPartnerBeforeMarriage() {
                 letterSpacing: "0.28em",
                 textTransform: "uppercase",
                 color: "var(--tbe-warm-brown)",
-                opacity: 0.72,
                 textDecoration: "none",
               }}
             >
@@ -139,7 +138,6 @@ export default function QuestionsToAskPartnerBeforeMarriage() {
               letterSpacing: "0.3em",
               textTransform: "uppercase",
               color: "var(--tbe-warm-brown)",
-              opacity: 0.72,
               marginBottom: "1rem",
             }}
           >
@@ -148,9 +146,8 @@ export default function QuestionsToAskPartnerBeforeMarriage() {
 
           {/* H1 */}
           <motion.h1
-            initial={{ opacity: 0, y: 24 }}
+            initial={false}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1.3, delay: 0.2, ease: [0.22, 0.61, 0.36, 1] }}
             className="font-display"
             style={{
               fontSize: "clamp(2rem, 5vw, 3.2rem)",
@@ -173,7 +170,6 @@ export default function QuestionsToAskPartnerBeforeMarriage() {
               fontSize: "0.82rem",
               letterSpacing: "0.18em",
               color: "var(--tbe-warm-brown)",
-              opacity: 0.65,
               marginBottom: "2.5rem",
             }}
           >
@@ -189,7 +185,6 @@ export default function QuestionsToAskPartnerBeforeMarriage() {
                 fontSize: "0.78rem",
                 letterSpacing: "0.18em",
                 color: "var(--tbe-warm-brown)",
-                opacity: 0.72,
                 textDecoration: "none",
                 borderBottom: "1px solid rgba(121,2,8,0.3)",
                 paddingBottom: "1px",

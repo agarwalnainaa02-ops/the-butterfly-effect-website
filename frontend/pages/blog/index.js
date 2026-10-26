@@ -227,8 +227,7 @@ export default function BlogIndex({ allPostsData, topicsWithPosts }) {
                         style={{
                           fontFamily: "'EB Garamond', serif",
                           fontSize: "1rem",
-                          color: "var(--tbe-dark-brown)",
-                          opacity: 0.62,
+                          color: "var(--tbe-warm-brown)",
                           lineHeight: 1.55,
                           margin: 0,
                         }}
@@ -254,7 +253,6 @@ export default function BlogIndex({ allPostsData, topicsWithPosts }) {
               letterSpacing: "0.28em",
               textTransform: "uppercase",
               color: "var(--tbe-dark-brown)",
-              opacity: 0.5,
               marginBottom: "2.5rem",
             }}
           >
