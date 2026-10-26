@@ -1,5 +1,5 @@
-/* Fonts self-hosted via next/font/google — no CDN requests at runtime */
-/* CSS variables --font-body and --font-script are applied to <html> by _document.js */
+/* EB Garamond self-hosted via next/font/google — no CDN requests at runtime */
+/* CSS variable --font-body is applied to <html> by _document.js */
 
 @tailwind base;
 @tailwind components;
@@ -112,13 +112,15 @@ body::before {
   color: var(--tbe-dark-wine);
 }
 
-/* Script / handwritten labels above headings — Oooh Baby */
+/* Small section labels — EB Garamond italic */
 .eyebrow,
-.script-label {
-  font-family: var(--font-script), 'Oooh Baby', cursive;
-  font-style: normal;
-  font-size: 1.45rem;
-  letter-spacing: 0;
+.script-label,
+.eyebrow-body {
+  font-family: var(--font-body), 'EB Garamond', serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 1.2rem;
+  letter-spacing: 0.02em;
   text-transform: none;
   line-height: 1.2;
   color: var(--tbe-deep-maroon);
@@ -126,19 +128,10 @@ body::before {
 
 @media (max-width: 390px) {
   .eyebrow,
-  .script-label {
-    font-size: 1.4rem;
+  .script-label,
+  .eyebrow-body {
+    font-size: 1.1rem;
   }
-}
-
-.eyebrow-body {
-  font-family: var(--font-body), 'EB Garamond', serif;
-  font-style: italic;
-  font-weight: 400;
-  font-size: 1.28rem;
-  letter-spacing: 0.04em;
-  color: var(--tbe-warm-brown);
-  opacity: 0.75;
 }
 
 /* ================================================================
