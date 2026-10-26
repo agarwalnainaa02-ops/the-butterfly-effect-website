@@ -89,7 +89,7 @@ const LogoEntrance = ({ onComplete }) => {
             transition={{ duration: 1, delay: 0.7, ease: "easeOut" }}
             style={{
               marginTop: "1.5rem",
-              fontFamily: "'Playfair Display', serif",
+              fontFamily: "var(--font-body), 'EB Garamond', serif",
               fontSize: "14px",
               letterSpacing: "0.22em",
               textTransform: "uppercase",

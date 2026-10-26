@@ -240,7 +240,7 @@ const Navbar = ({ visible = true }) => {
                       href={link.href}
                       onClick={handleNavClick}
                       style={{
-                        fontFamily: "'Playfair Display', serif",
+                        fontFamily: "var(--font-body), 'EB Garamond', serif",
                         fontSize: "clamp(1.7rem, 7vw, 2.4rem)",
                         color: "rgba(243, 231, 209, 0.88)",
                         textDecoration: "none",

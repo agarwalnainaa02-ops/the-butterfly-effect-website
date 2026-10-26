@@ -1,4 +1,5 @@
-/* Fonts loaded via <link> in _document.js — no @import needed here */
+/* Fonts self-hosted via next/font/google — no CDN requests at runtime */
+/* CSS variables --font-body and --font-script are applied to <html> by _document.js */
 
 @tailwind base;
 @tailwind components;
@@ -59,7 +60,7 @@ html, body {
   margin: 0;
   background-color: var(--tbe-cream);
   color: var(--tbe-dark-brown);
-  font-family: 'EB Garamond', Georgia, 'Times New Roman', serif;
+  font-family: var(--font-body), 'EB Garamond', 'Noto Serif Devanagari', Georgia, serif;
   font-size: 18px;
   line-height: 1.7;
   -webkit-font-smoothing: antialiased;
@@ -99,22 +100,24 @@ body::before {
 /* ================================================================
    Typography utilities
 ================================================================ */
-.font-display { font-family: 'Playfair Display', serif; font-weight: 400; letter-spacing: -0.01em; }
-.font-serif-body { font-family: 'EB Garamond', serif; }
-.font-hand { font-family: 'Caveat', cursive; font-style: italic; }
+.font-display { font-family: var(--font-body), 'EB Garamond', 'Noto Serif Devanagari', serif; font-weight: 400; letter-spacing: -0.01em; }
+.font-serif-body { font-family: var(--font-body), 'EB Garamond', serif; }
+.font-hand { font-family: var(--font-script), 'Caveat', cursive; font-style: italic; }
 
 .h-display {
-  font-family: 'Playfair Display', serif;
+  font-family: var(--font-body), 'EB Garamond', 'Noto Serif Devanagari', serif;
   font-weight: 400;
   letter-spacing: -0.02em;
   line-height: 1.05;
   color: var(--tbe-dark-wine);
 }
 
-.eyebrow {
-  font-family: 'Caveat', cursive;
+/* Script / handwritten labels above headings — Caveat at +22% size for legibility */
+.eyebrow,
+.script-label {
+  font-family: var(--font-script), 'Caveat', cursive;
   font-style: normal;
-  font-size: 1.05rem;
+  font-size: 1.28rem;
   letter-spacing: 0.06em;
   text-transform: none;
   color: var(--tbe-warm-brown);
@@ -255,8 +258,8 @@ html { scroll-behavior: smooth; }
   margin-bottom: 1.6rem;
 }
 .blog-body h2 {
-  font-family: 'Playfair Display', serif;
-  font-weight: 400;
+  font-family: var(--font-body), 'EB Garamond', serif;
+  font-weight: 500;
   font-size: clamp(1.3rem, 2.8vw, 1.7rem);
   letter-spacing: -0.01em;
   line-height: 1.2;
@@ -265,7 +268,7 @@ html { scroll-behavior: smooth; }
   margin-bottom: 1rem;
 }
 .blog-body h3 {
-  font-family: 'Playfair Display', serif;
+  font-family: var(--font-body), 'EB Garamond', serif;
   font-weight: 400;
   font-style: italic;
   font-size: 1.2rem;
