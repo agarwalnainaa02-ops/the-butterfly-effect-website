@@ -22,6 +22,11 @@ const nextConfig = {
         destination: "https://www.thebutterflyeffecttherapy.com/:path*",
         permanent: true,
       },
+      {
+        source: "/topics/:slug*",
+        destination: "/blog/topics/:slug*",
+        permanent: true,
+      },
     ];
   },
 

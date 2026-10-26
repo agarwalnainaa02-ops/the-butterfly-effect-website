@@ -7,6 +7,7 @@ import Footer from "../../src/components/Footer";
 import BookingDialog from "../../src/components/BookingDialog";
 import JsonLd from "../../src/components/JsonLd";
 import { getSortedPostsData } from "../../lib/posts";
+import { topics } from "../../data/topics";
 
 const SITE_URL = "https://www.thebutterflyeffecttherapy.com";
 
@@ -20,7 +21,7 @@ function formatDate(dateStr) {
   });
 }
 
-export default function BlogIndex({ allPostsData }) {
+export default function BlogIndex({ allPostsData, topicsWithPosts }) {
   const [bookingOpen, setBookingOpen] = useState(false);
   const handleBookClick = useCallback(() => setBookingOpen(true), []);
 
@@ -166,9 +167,9 @@ export default function BlogIndex({ allPostsData }) {
             style={{ height: "1px", background: "rgba(47,35,35,0.14)" }}
           />
 
-          {/* Browse by topic chip row */}
-          <div className="mb-10 flex flex-wrap items-center gap-3">
-            <span
+          {/* Browse by topic */}
+          <div className="mb-14">
+            <p
               style={{
                 fontFamily: "'EB Garamond', serif",
                 fontSize: "0.75rem",
@@ -176,41 +177,89 @@ export default function BlogIndex({ allPostsData }) {
                 textTransform: "uppercase",
                 color: "var(--tbe-dark-brown)",
                 opacity: 0.5,
+                marginBottom: "1.5rem",
               }}
             >
               Browse by topic
-            </span>
-            <Link
-              href="/topics/getting-married"
-              style={{
-                fontFamily: "'EB Garamond', serif",
-                fontSize: "0.82rem",
-                letterSpacing: "0.14em",
-                color: "var(--tbe-deep-maroon)",
-                border: "1px solid rgba(121, 2, 8, 0.35)",
-                borderRadius: "999px",
-                padding: "0.3rem 0.9rem",
-                textDecoration: "none",
-                whiteSpace: "nowrap",
-                transition: "background-color 0.3s, border-color 0.3s",
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.backgroundColor = "rgba(121,2,8,0.06)";
-                e.currentTarget.style.borderColor = "rgba(121,2,8,0.6)";
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.backgroundColor = "transparent";
-                e.currentTarget.style.borderColor = "rgba(121,2,8,0.35)";
-              }}
-            >
-              Getting married?
-            </Link>
+            </p>
+            <div className="flex flex-col gap-4">
+              {topicsWithPosts.map((topic) => (
+                <Link
+                  key={topic.slug}
+                  href={`/blog/topics/${topic.slug}`}
+                  style={{ textDecoration: "none" }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.querySelector(".topic-card-inner").style.borderColor =
+                      "rgba(121,2,8,0.4)";
+                    e.currentTarget.querySelector(".topic-card-inner").style.backgroundColor =
+                      "rgba(121,2,8,0.03)";
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.querySelector(".topic-card-inner").style.borderColor =
+                      "rgba(47,35,35,0.14)";
+                    e.currentTarget.querySelector(".topic-card-inner").style.backgroundColor =
+                      "transparent";
+                  }}
+                >
+                  <div
+                    className="topic-card-inner"
+                    style={{
+                      border: "1px solid rgba(47,35,35,0.14)",
+                      borderRadius: "4px",
+                      padding: "1.25rem 1.5rem",
+                      transition: "border-color 0.3s, background-color 0.3s",
+                    }}
+                  >
+                    <p
+                      style={{
+                        fontFamily: "var(--font-body), 'EB Garamond', serif",
+                        fontSize: "clamp(1.2rem, 2.5vw, 1.45rem)",
+                        color: "var(--tbe-dark-brown)",
+                        letterSpacing: "-0.01em",
+                        lineHeight: 1.2,
+                        marginBottom: topic.cardDescription ? "0.4rem" : 0,
+                      }}
+                    >
+                      {topic.navLabel}
+                    </p>
+                    {topic.cardDescription && (
+                      <p
+                        style={{
+                          fontFamily: "'EB Garamond', serif",
+                          fontSize: "1rem",
+                          color: "var(--tbe-dark-brown)",
+                          opacity: 0.62,
+                          lineHeight: 1.55,
+                          margin: 0,
+                        }}
+                      >
+                        {topic.cardDescription}
+                      </p>
+                    )}
+                  </div>
+                </Link>
+              ))}
+            </div>
           </div>
 
           <div
-            className="w-full mb-16"
-            style={{ height: "1px", background: "rgba(47,35,35,0.08)" }}
+            className="w-full mb-12"
+            style={{ height: "1px", background: "rgba(47,35,35,0.12)" }}
           />
+
+          <h2
+            style={{
+              fontFamily: "'EB Garamond', serif",
+              fontSize: "0.75rem",
+              letterSpacing: "0.28em",
+              textTransform: "uppercase",
+              color: "var(--tbe-dark-brown)",
+              opacity: 0.5,
+              marginBottom: "2.5rem",
+            }}
+          >
+            All reflections
+          </h2>
 
           <ul className="space-y-16 list-none p-0">
             {allPostsData.map((post, i) => (
@@ -298,7 +347,10 @@ export default function BlogIndex({ allPostsData }) {
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
+  const topicsWithPosts = topics.filter(
+    (t) => t.groups.flatMap((g) => g.posts).length > 0
+  );
   return {
-    props: { allPostsData },
+    props: { allPostsData, topicsWithPosts },
   };
 }

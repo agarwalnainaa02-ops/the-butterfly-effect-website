@@ -1,4 +1,4 @@
-import Head from "next/head";
+﻿import Head from "next/head";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import Navbar from "../../src/components/Navbar";
@@ -183,7 +183,7 @@ export default function QuestionsToAskBeforeMarriage() {
           {/* Topic hub tag */}
           <p style={{ marginBottom: "2rem", marginTop: "-1.5rem" }}>
             <Link
-              href="/topics/getting-married"
+              href="/blog/topics/getting-married"
               style={{
                 fontFamily: "'EB Garamond', serif",
                 fontSize: "0.78rem",

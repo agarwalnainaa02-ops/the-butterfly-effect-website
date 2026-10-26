@@ -16,6 +16,7 @@ export interface Topic {
   pageTitle: string;
   seoTitle: string;
   metaDescription: string;
+  cardDescription?: string;
   canonical: string;
   introParagraphs: string[];
   groups: PostGroup[];
@@ -32,7 +33,8 @@ export const topics: Topic[] = [
       "Getting Married? Arranged Marriage, Family & Relationship Questions | The Butterfly Effect",
     metaDescription:
       "Thinking about marriage, in an arranged or love marriage? Reflections on what you want, what to talk about, and how family expectations fit in.",
-    canonical: `${SITE_URL}/topics/getting-married`,
+    cardDescription: "Arranged marriage, family expectations, and what you actually want.",
+    canonical: `${SITE_URL}/blog/topics/getting-married`,
     introParagraphs: [
       "Whether it’s an arranged match, a love marriage or something your family is still figuring out, marriage rarely involves just two people. These are the pieces I’ve written for the questions people often carry quietly: What do I actually want? What should we talk about? What do I do when my family’s expectations and mine don’t match? Start wherever feels closest to where you are.",
     ],
@@ -127,6 +129,17 @@ export const topics: Topic[] = [
         ],
       },
     ],
+  },
+  {
+    slug: "emotional-regulation",
+    navLabel: "What even is emotional regulation?",
+    pageTitle: "What even is emotional regulation?",
+    seoTitle: "Emotional Regulation | The Butterfly Effect",
+    metaDescription: "",
+    cardDescription: "",
+    canonical: `${SITE_URL}/blog/topics/emotional-regulation`,
+    introParagraphs: [],
+    groups: [],
   },
 ];
 

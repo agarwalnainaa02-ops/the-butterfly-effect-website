@@ -394,7 +394,7 @@ export default function Home({ latestPosts }) {
 
               <p style={{ marginBottom: "1.5rem" }}>
                 <Link
-                  href="/topics/getting-married"
+                  href="/blog/topics/getting-married"
                   style={{
                     fontFamily: "'EB Garamond', serif",
                     fontSize: "0.9rem",

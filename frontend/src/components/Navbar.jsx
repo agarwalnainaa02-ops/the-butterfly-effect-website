@@ -9,7 +9,6 @@ const NAV_LINKS = [
   { label: "Fees & Booking", href: "/fees-and-booking" },
   { label: "FAQ", href: "/faq" },
   { label: "Blog", href: "/blog" },
-  { label: "Getting married?", href: "/topics/getting-married" },
 ];
 
 const Navbar = ({ visible = true }) => {
