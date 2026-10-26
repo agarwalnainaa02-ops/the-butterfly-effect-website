@@ -310,6 +310,11 @@ export default function ParentsSacrificeAndFamilyGuilt() {
               Tuesday.
             </p>
             <p>Patterns are learned over time. Changing them can take time, too.</p>
+            <p>
+              If you also find yourself explaining every decision, you may recognise yourself
+              in{" "}
+              <Link href="/blog/why-do-i-keep-explaining-myself-to-my-parents">Why Do I Keep Explaining Myself to My Parents?</Link>
+            </p>
 
             <h2>
               You can understand your parents without becoming responsible for every feeling they
@@ -457,6 +462,10 @@ export default function ParentsSacrificeAndFamilyGuilt() {
               they&rsquo;ve done for you.
             </p>
             <p>It&rsquo;s part of becoming an adult.</p>
+            <p>
+              For more on telling your own wants apart from inherited expectations, see{" "}
+              <Link href="/blog/family-pressure-and-identity">Family Pressure and Identity: How Do You Know What You Actually Want?</Link>
+            </p>
             <p>
               If you&rsquo;re trying to understand where family expectations end and your own
               identity begins, therapy can offer space to explore that tension without reducing

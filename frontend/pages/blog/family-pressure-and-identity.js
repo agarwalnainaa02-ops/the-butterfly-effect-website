@@ -51,7 +51,7 @@ export default function FamilyPressureAndIdentity() {
   return (
     <>
       <Head>
-        <title>Family Pressure and Identity: What Do You Want? | Naina Agarwal</title>
+        <title>Family Pressure and Identity: What Do You Want?</title>
         <meta
           name="description"
           content="Growing up with family expectations can make it hard to know what you want. Here is what psychology says about identity, autonomy and conditional approval."
@@ -62,7 +62,7 @@ export default function FamilyPressureAndIdentity() {
         <meta property="og:type" content="article" />
         <meta
           property="og:title"
-          content="Family Pressure and Identity: What Do You Want? | Naina Agarwal"
+          content="Family Pressure and Identity: What Do You Want?"
         />
         <meta
           property="og:description"
@@ -79,7 +79,7 @@ export default function FamilyPressureAndIdentity() {
         <meta name="twitter:card" content="summary_large_image" />
         <meta
           name="twitter:title"
-          content="Family Pressure and Identity: What Do You Want? | Naina Agarwal"
+          content="Family Pressure and Identity: What Do You Want?"
         />
         <meta
           name="twitter:description"
@@ -512,6 +512,11 @@ export default function FamilyPressureAndIdentity() {
               And learning to distinguish between them can be an important part of developing a
               stronger sense of identity.
             </p>
+            <p>
+              If guilt about what your parents have done for you is part of this, there&rsquo;s
+              more in{" "}
+              <Link href="/blog/parents-sacrifice-and-family-guilt">When Your Parents&rsquo; Sacrifice Becomes Your Responsibility</Link>.
+            </p>
 
             <h2>5. Independence doesn&rsquo;t have to mean rejecting your family</h2>
 
@@ -655,6 +660,11 @@ export default function FamilyPressureAndIdentity() {
               It&rsquo;s to understand how decisions are actually made, whose preferences carry
               the most weight, and who bears the cost when people disagree.
             </p>
+            <p>
+              For more on how family values are defined, and what they ask of the people inside
+              a family, see{" "}
+              <Link href="/blog/does-your-course-teach-you-family-values">Does your course teach you family values?</Link>
+            </p>
 
             <h2>7. So, how do you figure out what you actually want?</h2>
 
@@ -681,6 +691,10 @@ export default function FamilyPressureAndIdentity() {
             <p>
               Neither answer automatically tells you whether a choice is right for you. But
               noticing the difference can help you identify where exploration might be useful.
+            </p>
+            <p>
+              If you also find yourself justifying every choice, you may recognise yourself in{" "}
+              <Link href="/blog/why-do-i-keep-explaining-myself-to-my-parents">Why Do I Keep Explaining Myself to My Parents?</Link>
             </p>
 
             <h3>Ask yourself what you would choose if disagreement were allowed.</h3>

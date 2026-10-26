@@ -56,6 +56,16 @@ export default function BlogPost({ postData }) {
     inLanguage: "en-IN",
   };
 
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL },
+      { "@type": "ListItem", position: 2, name: "Blog", item: `${SITE_URL}/blog` },
+      { "@type": "ListItem", position: 3, name: postData.title, item: postUrl },
+    ],
+  };
+
   return (
     <>
       <Head>
@@ -86,6 +96,7 @@ export default function BlogPost({ postData }) {
 
         {/* JSON-LD */}
         <JsonLd data={blogPostingSchema} />
+        <JsonLd data={breadcrumbSchema} />
       </Head>
 
       <div style={{ minHeight: "100vh", backgroundColor: "var(--tbe-cream)", overflowX: "hidden" }}>

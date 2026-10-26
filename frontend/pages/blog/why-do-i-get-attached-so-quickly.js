@@ -299,6 +299,11 @@ export default function WhyDoIGetAttachedSoQuickly() {
               Learning to separate those two experiences can make relationships feel less
               destabilising.
             </p>
+            <p>
+              This comes up in arranged marriage too, where being chosen can feel like relief.
+              See{" "}
+              <Link href="/blog/questions-to-ask-yourself-before-marriage">Questions You Should Ask Yourself Before Getting Married</Link>.
+            </p>
 
             <h2>3. Uncertainty might be making you more preoccupied with them</h2>
 

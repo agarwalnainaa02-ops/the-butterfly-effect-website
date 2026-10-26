@@ -514,6 +514,13 @@ export default function FamilyValues() {
             </p>
             <p>Maybe it&rsquo;s:</p>
             <p>What do these values require of me?</p>
+            <p>
+              If you&rsquo;re wondering which of your wants are really yours,{" "}
+              <Link href="/blog/family-pressure-and-identity">Family Pressure and Identity: How Do You Know What You Actually Want?</Link>{" "}
+              goes deeper. And if the weight of what your parents have given up is part of it,{" "}
+              <Link href="/blog/parents-sacrifice-and-family-guilt">When Your Parents&rsquo; Sacrifice Becomes Your Responsibility</Link>{" "}
+              may help.
+            </p>
           </motion.div>
 
           {/* Sources */}

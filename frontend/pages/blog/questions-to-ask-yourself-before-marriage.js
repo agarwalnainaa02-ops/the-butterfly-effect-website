@@ -317,6 +317,11 @@ export default function QuestionsToAskBeforeMarriage() {
             </p>
             <p>And you don&rsquo;t have to reject them either.</p>
             <p>You are allowed to take the time to work out what you feel.</p>
+            <p>
+              If you tend to get attached to people quickly,{" "}
+              <Link href="/blog/why-do-i-get-attached-so-quickly">Why Do I Get Attached to People So Quickly?</Link>{" "}
+              might also help.
+            </p>
 
             <h2>3. What does a good marriage actually look like to me?</h2>
 
@@ -402,6 +407,11 @@ export default function QuestionsToAskBeforeMarriage() {
             </p>
             <p>
               You do need room to decide which of them you genuinely want to carry forward.
+            </p>
+            <p>
+              If you&rsquo;re worried you&rsquo;re asking for too much,{" "}
+              <Link href="/blog/things-its-okay-to-want-in-marriage">Things That Are Okay to Want When Considering Marriage</Link>{" "}
+              is worth a read.
             </p>
 
             <h2>5. What am I unwilling to give up about myself?</h2>
@@ -685,6 +695,10 @@ export default function QuestionsToAskBeforeMarriage() {
               considering how to protect your autonomy and safety.
             </p>
             <p>A decision isn&rsquo;t fully yours if you&rsquo;re not allowed to choose otherwise.</p>
+            <p>
+              If family approval is making this harder to untangle, see{" "}
+              <Link href="/blog/arranged-marriage-family-approval">Your Parents Approve. But Do You?</Link>
+            </p>
 
             <h2>Before you go, remember this</h2>
 
@@ -713,6 +727,11 @@ export default function QuestionsToAskBeforeMarriage() {
             </p>
             <p>Because you&rsquo;re not merely being evaluated for a role in someone else&rsquo;s family.</p>
             <p>You&rsquo;re choosing the person with whom you may build a life of your own.</p>
+            <p>
+              When you&rsquo;re ready to talk to the other person,{" "}
+              <Link href="/blog/questions-to-ask-partner-before-marriage">Questions You Should Ask Your Potential Partner Before Getting Married</Link>{" "}
+              has a list for that conversation.
+            </p>
             {/* TODO: link to the Indian families service page and the relationships service page once they are live. */}
           </motion.div>
 

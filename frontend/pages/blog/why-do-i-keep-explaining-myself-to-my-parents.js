@@ -320,6 +320,11 @@ export default function WhyDoIKeepExplainingMyselfToMyParents() {
             </p>
             <p>You&rsquo;re looking for certainty that they won&rsquo;t be upset.</p>
             <p>But sometimes, that certainty isn&rsquo;t available.</p>
+            <p>
+              That need for certainty often comes with a sense of debt.{" "}
+              <Link href="/blog/parents-sacrifice-and-family-guilt">When Your Parents&rsquo; Sacrifice Becomes Your Responsibility</Link>{" "}
+              looks at where that feeling comes from.
+            </p>
 
             <h2>
               4. Your brain may be trying to solve an emotional problem with more information
@@ -399,6 +404,10 @@ export default function WhyDoIKeepExplainingMyselfToMyParents() {
             <p>
               The answer might help you understand why a relatively ordinary decision can
               require so much emotional energy.
+            </p>
+            <p>
+              If you&rsquo;re also unsure which of your preferences are really yours, see{" "}
+              <Link href="/blog/family-pressure-and-identity">Family Pressure and Identity: How Do You Know What You Actually Want?</Link>
             </p>
 
             <h2>6. How do you stop overexplaining?</h2>

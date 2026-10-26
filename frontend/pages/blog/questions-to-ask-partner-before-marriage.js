@@ -231,6 +231,11 @@ export default function QuestionsToAskPartnerBeforeMarriage() {
               every answer right. It&rsquo;s to understand each other honestly.
             </p>
             <p>Here are questions worth making room for before you decide.</p>
+            <p>
+              If you haven&rsquo;t yet, it can help to start with{" "}
+              <Link href="/blog/questions-to-ask-yourself-before-marriage">the questions to ask yourself</Link>{" "}
+              first.
+            </p>
             {/* TODO: once /blog/questions-to-ask-yourself-before-marriage is live, add a one-line link to it near the start of this post. Also link the Indian families and relationships service pages once live. */}
 
             <h2>1. What does marriage mean to you?</h2>
@@ -400,6 +405,10 @@ export default function QuestionsToAskPartnerBeforeMarriage() {
               Also, don&rsquo;t stop at a reassuring answer. Ask for an example of how
               they&rsquo;ve handled a difficult family disagreement before, if they&rsquo;re
               comfortable sharing.
+            </p>
+            <p>
+              There&rsquo;s more on this in{" "}
+              <Link href="/blog/marriage-in-laws-family-boundaries">You&rsquo;re Not Just Marrying a Person. You&rsquo;re Negotiating a Family System.</Link>
             </p>
 
             <h2>5. How do you handle conflict when you&rsquo;re upset?</h2>
@@ -619,6 +628,10 @@ export default function QuestionsToAskPartnerBeforeMarriage() {
             <p>
               Look for someone who can talk realistically about uncertainty, responsibility,
               and asking for help.
+            </p>
+            <p>
+              For a closer look at therapy, medication and privacy, see{" "}
+              <Link href="/blog/mental-health-and-marriage">Mental Health and Marriage: What Do You Actually Need to Discuss?</Link>
             </p>
 
             <h2>10. What do you believe about gender roles?</h2>

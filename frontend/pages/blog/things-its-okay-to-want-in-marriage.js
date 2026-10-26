@@ -414,6 +414,10 @@ export default function ThingsItsOkayToWantInMarriage() {
             <p>You can want a partner who participates in the work of your shared life.</p>
             <p>That&rsquo;s not an extravagant demand.</p>
             <p>That&rsquo;s a conversation about how the two of you intend to live.</p>
+            <p>
+              For more on where our ideas of a &lsquo;good spouse&rsquo; come from, see{" "}
+              <Link href="/blog/good-wife-good-husband-expectations">What Does Being a Good Wife&mdash;or a Good Husband&mdash;Actually Mean to You?</Link>
+            </p>
 
             <h2>6. You&rsquo;re allowed to want financial honesty</h2>
 
@@ -482,6 +486,10 @@ export default function ThingsItsOkayToWantInMarriage() {
             <p>
               Respecting your family doesn&rsquo;t mean every family member gets a vote on
               every decision in your marriage.
+            </p>
+            <p>
+              More on this in{" "}
+              <Link href="/blog/marriage-in-laws-family-boundaries">You&rsquo;re Not Just Marrying a Person. You&rsquo;re Negotiating a Family System.</Link>
             </p>
 
             <h2>8. You&rsquo;re allowed to want someone who can apologise</h2>
@@ -693,6 +701,10 @@ export default function ThingsItsOkayToWantInMarriage() {
             </p>
             <p>You don&rsquo;t need to have every answer.</p>
             <p>You need the freedom to ask the questions.</p>
+            <p>
+              And when you&rsquo;re ready to ask them, here are{" "}
+              <Link href="/blog/questions-to-ask-partner-before-marriage">questions to ask your potential partner</Link>.
+            </p>
 
             <hr
               style={{
