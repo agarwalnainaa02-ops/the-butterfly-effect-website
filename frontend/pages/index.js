@@ -392,6 +392,23 @@ export default function Home({ latestPosts }) {
                 </h2>
               </motion.div>
 
+              <p style={{ marginBottom: "1.5rem" }}>
+                <Link
+                  href="/topics/getting-married"
+                  style={{
+                    fontFamily: "'EB Garamond', serif",
+                    fontSize: "0.9rem",
+                    letterSpacing: "0.18em",
+                    color: "var(--tbe-warm-brown)",
+                    textDecoration: "none",
+                    borderBottom: "1px solid rgba(121, 2, 8, 0.35)",
+                    paddingBottom: "2px",
+                  }}
+                >
+                  Thinking about marriage? Start here →
+                </Link>
+              </p>
+
               <ul className="space-y-0 list-none p-0" style={{ borderTop: "1px solid rgba(47,35,35,0.14)" }}>
                 {latestPosts.map((post, i) => (
                   <motion.li

@@ -162,8 +162,54 @@ export default function BlogIndex({ allPostsData }) {
         {/* Post list */}
         <section className="max-w-4xl mx-auto px-6 md:px-12 pb-32">
           <div
-            className="w-full mb-16"
+            className="w-full mb-10"
             style={{ height: "1px", background: "rgba(47,35,35,0.14)" }}
+          />
+
+          {/* Browse by topic chip row */}
+          <div className="mb-10 flex flex-wrap items-center gap-3">
+            <span
+              style={{
+                fontFamily: "'EB Garamond', serif",
+                fontSize: "0.75rem",
+                letterSpacing: "0.28em",
+                textTransform: "uppercase",
+                color: "var(--tbe-dark-brown)",
+                opacity: 0.5,
+              }}
+            >
+              Browse by topic
+            </span>
+            <Link
+              href="/topics/getting-married"
+              style={{
+                fontFamily: "'EB Garamond', serif",
+                fontSize: "0.82rem",
+                letterSpacing: "0.14em",
+                color: "var(--tbe-deep-maroon)",
+                border: "1px solid rgba(121, 2, 8, 0.35)",
+                borderRadius: "999px",
+                padding: "0.3rem 0.9rem",
+                textDecoration: "none",
+                whiteSpace: "nowrap",
+                transition: "background-color 0.3s, border-color 0.3s",
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.backgroundColor = "rgba(121,2,8,0.06)";
+                e.currentTarget.style.borderColor = "rgba(121,2,8,0.6)";
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.backgroundColor = "transparent";
+                e.currentTarget.style.borderColor = "rgba(121,2,8,0.35)";
+              }}
+            >
+              Getting married?
+            </Link>
+          </div>
+
+          <div
+            className="w-full mb-16"
+            style={{ height: "1px", background: "rgba(47,35,35,0.08)" }}
           />
 
           <ul className="space-y-16 list-none p-0">

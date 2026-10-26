@@ -180,6 +180,25 @@ export default function QuestionsToAskPartnerBeforeMarriage() {
             By Naina Agarwal &middot; Published 26 October 2026
           </motion.p>
 
+          {/* Topic hub tag */}
+          <p style={{ marginBottom: "2rem", marginTop: "-1.5rem" }}>
+            <Link
+              href="/topics/getting-married"
+              style={{
+                fontFamily: "'EB Garamond', serif",
+                fontSize: "0.78rem",
+                letterSpacing: "0.18em",
+                color: "var(--tbe-warm-brown)",
+                opacity: 0.72,
+                textDecoration: "none",
+                borderBottom: "1px solid rgba(121,2,8,0.3)",
+                paddingBottom: "1px",
+              }}
+            >
+              Part of: Getting married? →
+            </Link>
+          </p>
+
           {/* Divider */}
           <motion.div
             initial={{ scaleX: 0 }}
