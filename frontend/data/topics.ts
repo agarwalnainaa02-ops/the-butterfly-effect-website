@@ -30,7 +30,7 @@ export const topics: Topic[] = [
     navLabel: "Getting married?",
     pageTitle: "Getting married?",
     seoTitle:
-      "Getting Married? Arranged Marriage, Family & Relationship Questions | The Butterfly Effect",
+      "Getting Married? Arranged Marriage | The Butterfly Effect",
     metaDescription:
       "Thinking about marriage, in an arranged or love marriage? Reflections on what you want, what to talk about, and how family expectations fit in.",
     cardDescription: "Arranged marriage, family expectations, and what you actually want.",
