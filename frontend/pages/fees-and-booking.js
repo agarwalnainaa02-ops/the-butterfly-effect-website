@@ -81,7 +81,7 @@ export default function FeesAndBooking() {
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1.2, delay: 0.3, ease: "easeOut" }}
-              className="eyebrow mb-8"
+              className="eyebrow-body mb-8"
             >
               Mental Health Practitioner — Naina Agarwal
             </motion.p>
@@ -99,7 +99,7 @@ export default function FeesAndBooking() {
           {/* ── Sessions block ── */}
           <section className="max-w-5xl mx-auto px-6 md:px-12 py-12 md:py-16">
             <div className="text-center mb-14">
-              <p className="eyebrow mb-6">Online therapy and counselling sessions across India</p>
+              <p className="eyebrow-body mb-6">Online therapy and counselling sessions across India</p>
               <h2 className="h-display" style={{ fontSize: "clamp(1.8rem, 3.6vw, 2.6rem)" }}>
                 Simple, transparent, no surprises.
               </h2>
@@ -116,7 +116,7 @@ export default function FeesAndBooking() {
                   className="grid grid-cols-12 gap-6 py-7 md:py-9 items-baseline"
                   style={{ borderTop: "1px solid rgba(47, 35, 35, 0.14)" }}
                 >
-                  <dt className="col-span-12 md:col-span-4 eyebrow" style={{ opacity: 0.85 }}>
+                  <dt className="col-span-12 md:col-span-4 eyebrow-body" style={{ opacity: 0.85 }}>
                     {f.k}
                   </dt>
                   <dd className="col-span-12 md:col-span-8">

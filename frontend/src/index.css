@@ -102,7 +102,7 @@ body::before {
 ================================================================ */
 .font-display { font-family: var(--font-body), 'EB Garamond', 'Noto Serif Devanagari', serif; font-weight: 400; letter-spacing: -0.01em; }
 .font-serif-body { font-family: var(--font-body), 'EB Garamond', serif; }
-.font-hand { font-family: var(--font-script), 'Caveat', cursive; font-style: italic; }
+.font-hand { font-family: var(--font-script), 'Oooh Baby', cursive; font-style: italic; }
 
 .h-display {
   font-family: var(--font-body), 'EB Garamond', 'Noto Serif Devanagari', serif;
@@ -112,14 +112,31 @@ body::before {
   color: var(--tbe-dark-wine);
 }
 
-/* Script / handwritten labels above headings — Caveat at +22% size for legibility */
+/* Script / handwritten labels above headings — Oooh Baby */
 .eyebrow,
 .script-label {
-  font-family: var(--font-script), 'Caveat', cursive;
+  font-family: var(--font-script), 'Oooh Baby', cursive;
   font-style: normal;
-  font-size: 1.28rem;
-  letter-spacing: 0.06em;
+  font-size: 1.45rem;
+  letter-spacing: 0;
   text-transform: none;
+  line-height: 1.2;
+  color: var(--tbe-deep-maroon);
+}
+
+@media (max-width: 390px) {
+  .eyebrow,
+  .script-label {
+    font-size: 1.4rem;
+  }
+}
+
+.eyebrow-body {
+  font-family: var(--font-body), 'EB Garamond', serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 1.28rem;
+  letter-spacing: 0.04em;
   color: var(--tbe-warm-brown);
   opacity: 0.75;
 }

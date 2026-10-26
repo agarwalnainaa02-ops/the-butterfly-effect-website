@@ -63,7 +63,7 @@ export default function HowIWorkPage() {
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1.2, delay: 0.3, ease: "easeOut" }}
-              className="eyebrow mb-8"
+              className="eyebrow-body mb-8"
             >
               Mental Health Practitioner — Naina Agarwal
             </motion.p>

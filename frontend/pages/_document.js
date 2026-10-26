@@ -1,9 +1,9 @@
 import { Html, Head, Main, NextScript } from "next/document";
-import { ebGaramond, caveat } from "../lib/fonts";
+import { ebGaramond, ooohBaby } from "../lib/fonts";
 
 export default function Document() {
   return (
-    <Html lang="en-IN" className={`${ebGaramond.variable} ${caveat.variable}`}>
+    <Html lang="en-IN" className={`${ebGaramond.variable} ${ooohBaby.variable}`}>
       <Head>
         {/* Favicon */}
         <link rel="icon" href="/logo.svg" type="image/svg+xml" />

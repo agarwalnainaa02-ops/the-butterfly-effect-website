@@ -85,7 +85,7 @@ const WhatToExpect = () => {
                   className="absolute left-0 top-[1.85rem] w-[18px] h-[18px] rounded-full"
                   style={{ background: "var(--tbe-cream)", border: "1px solid rgba(121, 2, 8, 0.55)" }}
                 />
-                <p className="eyebrow mb-1">{e.label}</p>
+                <p className="eyebrow-body mb-1">{e.label}</p>
                 <p className="font-display text-xl md:text-2xl leading-snug" style={{ color: "var(--tbe-dark-wine)" }}>
                   {e.text}
                 </p>
@@ -110,7 +110,7 @@ const WhatToExpect = () => {
               className="text-left w-full"
               style={{ background: "transparent", border: "none", cursor: "pointer", padding: 0 }}
             >
-              <p className="eyebrow mb-1">{whatCounts.label}</p>
+              <p className="eyebrow-body mb-1">{whatCounts.label}</p>
               <p
                 className="font-display text-xl md:text-2xl leading-snug transition-colors duration-500"
                 style={{ color: countsOpen ? "var(--tbe-deep-maroon)" : "var(--tbe-dark-wine)" }}
@@ -165,7 +165,7 @@ const WhatToExpect = () => {
       {/* Fees & practicalities */}
       <div id="fees" className="mt-24 md:mt-32 max-w-5xl mx-auto" data-testid="fees-block">
         <div className="text-center mb-14">
-          <p className="eyebrow mb-6">Online therapy and counselling sessions across India</p>
+          <p className="eyebrow-body mb-6">Online therapy and counselling sessions across India</p>
           <h3 className="h-display" style={{ fontSize: "clamp(1.8rem, 3.6vw, 2.6rem)" }}>
             Simple, transparent, no surprises.
           </h3>
@@ -178,7 +178,7 @@ const WhatToExpect = () => {
               className="grid grid-cols-12 gap-6 py-7 md:py-9 items-baseline"
               style={{ borderTop: "1px solid rgba(47, 35, 35, 0.14)" }}
             >
-              <dt className="col-span-12 md:col-span-4 eyebrow" style={{ opacity: 0.85 }}>
+              <dt className="col-span-12 md:col-span-4 eyebrow-body" style={{ opacity: 0.85 }}>
                 {f.k}
               </dt>
               <dd className="col-span-12 md:col-span-8">

@@ -1,7 +1,7 @@
 import "../src/index.css";
 import "../src/App.css";
 import Script from "next/script";
-import { ebGaramond, caveat } from "../lib/fonts";
+import { ebGaramond, ooohBaby } from "../lib/fonts";
 
 // GA4 — replace "GA_MEASUREMENT_ID" with your real Measurement ID (format: G-XXXXXXXXXX).
 // Find it: Google Analytics → Admin → Data Streams → your web stream → Measurement ID.
@@ -32,4 +32,4 @@ export default function App({ Component, pageProps }) {
 }
 
 // Export fonts so _document.js can apply the variable classes to <Html>
-export { ebGaramond, caveat };
+export { ebGaramond, ooohBaby };

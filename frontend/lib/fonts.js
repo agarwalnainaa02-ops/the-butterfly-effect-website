@@ -1,4 +1,4 @@
-import { EB_Garamond, Caveat } from "next/font/google";
+import { EB_Garamond, Oooh_Baby } from "next/font/google";
 
 export const ebGaramond = EB_Garamond({
   subsets: ["latin"],
@@ -8,9 +8,9 @@ export const ebGaramond = EB_Garamond({
   display: "swap",
 });
 
-export const caveat = Caveat({
+export const ooohBaby = Oooh_Baby({
   subsets: ["latin"],
-  weight: ["400", "500"],
+  weight: ["400"],
   variable: "--font-script",
   display: "swap",
 });

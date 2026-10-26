@@ -61,7 +61,7 @@ const Hero = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.4, delay: 0.4, ease: "easeOut" }}
-          className="eyebrow mb-10"
+          className="eyebrow-body mb-10"
           data-testid="hero-eyebrow"
         >
           Mental Health Practitioner — Naina Agarwal

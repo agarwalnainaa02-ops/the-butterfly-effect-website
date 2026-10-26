@@ -57,7 +57,7 @@ const AreasOfWork = () => {
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <div className="grid grid-cols-12 gap-y-12 mb-16 md:mb-20">
           <div className="col-span-12 md:col-span-5">
-            <p className="eyebrow mb-8">Therapy and counselling for anxiety, overthinking, relationships and burnout</p>
+            <p className="eyebrow-body mb-8">Therapy and counselling for anxiety, overthinking, relationships and burnout</p>
             <h2
               className="h-display"
               style={{ fontSize: "clamp(2rem, 4.6vw, 3.6rem)" }}

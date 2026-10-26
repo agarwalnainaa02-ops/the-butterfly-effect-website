@@ -343,7 +343,7 @@ export default function Home({ latestPosts }) {
                     className="flex gap-8 py-5 items-baseline"
                     style={{ borderTop: "1px solid rgba(47,35,35,0.12)" }}
                   >
-                    <dt className="eyebrow w-32 shrink-0" style={{ opacity: 0.8 }}>{f.k}</dt>
+                    <dt className="eyebrow-body w-32 shrink-0" style={{ opacity: 0.8 }}>{f.k}</dt>
                     <dd
                       className="font-display text-lg md:text-xl"
                       style={{ color: "var(--tbe-dark-wine)" }}
