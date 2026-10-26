@@ -250,7 +250,11 @@ export default function QuestionsToAskPartnerBeforeMarriage() {
               <Link href="/blog/questions-to-ask-yourself-before-marriage">the questions to ask yourself</Link>{" "}
               first.
             </p>
-            {/* TODO: once /blog/questions-to-ask-yourself-before-marriage is live, add a one-line link to it near the start of this post. Also link the Indian families and relationships service pages once live. */}
+            <p>
+              If these patterns feel familiar,{" "}
+              <Link href="/therapy-for-relationship-issues">therapy for relationship issues</Link>{" "}
+              may be worth exploring.
+            </p>
 
             <h2>1. What does marriage mean to you?</h2>
 

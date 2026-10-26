@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Link from "next/link";
 import { motion } from "framer-motion";
 import Navbar from "../src/components/Navbar";
 import Footer from "../src/components/Footer";
@@ -75,6 +76,28 @@ export default function HowIWorkPage() {
             >
               How I work
             </motion.h1>
+            <motion.p
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 1.2, delay: 1.0 }}
+              style={{
+                fontFamily: "'EB Garamond', serif",
+                fontSize: "clamp(1rem, 2vw, 1.15rem)",
+                color: "var(--tbe-dark-brown)",
+                opacity: 0.75,
+                marginTop: "1.5rem",
+              }}
+            >
+              If you&rsquo;re working through difficulties in relationships specifically,
+              there&rsquo;s a{" "}
+              <Link
+                href="/therapy-for-relationship-issues"
+                style={{ color: "var(--tbe-warm-brown)", textUnderlineOffset: "3px" }}
+              >
+                dedicated page on therapy for relationship issues
+              </Link>
+              .
+            </motion.p>
           </section>
 
           {/* ── Full HowIWork section ── */}

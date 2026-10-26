@@ -245,7 +245,10 @@ export default function MentalHealthAndMarriage() {
               not a measure of someone&rsquo;s worth or automatic suitability for marriage.
             </p>
             <p>So, what should you actually discuss with a potential partner?</p>
-            {/* TODO: once the marriage posts are live, add one-line contextual links to the other marriage posts. Also link the relationships service page once live. */}
+            <p>
+              If the relationship side of this feels relevant, you can read more about{" "}
+              <Link href="/therapy-for-relationship-issues">therapy for relationship issues</Link>.
+            </p>
 
             <h2>
               1. Having a mental health condition doesn&rsquo;t tell someone everything

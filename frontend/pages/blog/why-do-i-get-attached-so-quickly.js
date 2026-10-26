@@ -595,13 +595,14 @@ export default function WhyDoIGetAttachedSoQuickly() {
               You can stay open to connection while giving yourself enough time to figure out
               whether that connection is right for you.
             </p>
-            {/*
-              TODO: once the relationships and attachment therapy page is live, add this sentence
-              after the last paragraph, linking the phrase 'relationships and attachment therapy
-              page' to that page: If you would like support in understanding your relationship
-              patterns, you can explore The Butterfly Effect's relationships and attachment
-              therapy page.
-            */}
+            <p>
+              If you would like support in understanding your relationship patterns, you
+              can explore The Butterfly Effect&rsquo;s{" "}
+              <Link href="/therapy-for-relationship-issues">
+                relationships and attachment therapy page
+              </Link>
+              .
+            </p>
           </motion.div>
 
           {/* Sources */}

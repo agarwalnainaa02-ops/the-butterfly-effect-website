@@ -746,7 +746,11 @@ export default function QuestionsToAskBeforeMarriage() {
               <Link href="/blog/questions-to-ask-partner-before-marriage">Questions You Should Ask Your Potential Partner Before Getting Married</Link>{" "}
               has a list for that conversation.
             </p>
-            {/* TODO: link to the Indian families service page and the relationships service page once they are live. */}
+            <p>
+              If you&rsquo;d like support working through what you want in a relationship,
+              you can read more about{" "}
+              <Link href="/therapy-for-relationship-issues">therapy for relationship issues</Link>.
+            </p>
           </motion.div>
 
           {/* Safety note */}

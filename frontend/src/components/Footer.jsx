@@ -162,6 +162,11 @@ const Footer = () => {
                   Anxiety &amp; Overthinking Therapy
                 </Link>
               </li>
+              <li>
+                <Link href="/therapy-for-relationship-issues" style={{ color: "rgba(243, 231, 209, 0.92)" }} className="hover:underline underline-offset-4">
+                  Therapy for Relationship Issues
+                </Link>
+              </li>
             </ul>
           </div>
         </div>

@@ -255,7 +255,10 @@ export default function ThingsItsOkayToWantInMarriage() {
               people look compatible on paper.
             </p>
             <p>So, let&rsquo;s talk about things you&rsquo;re allowed to want.</p>
-            {/* TODO: once /blog/questions-to-ask-yourself-before-marriage and /blog/questions-to-ask-partner-before-marriage are live, add one-line contextual links to both. Also link the Indian families and relationships service pages once live. */}
+            <p>
+              If these patterns feel familiar, you can read more about{" "}
+              <Link href="/therapy-for-relationship-issues">therapy for relationship issues</Link>.
+            </p>
 
             <h2>1. You&rsquo;re allowed to want to be attracted to your partner</h2>
 

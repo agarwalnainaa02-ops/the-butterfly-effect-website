@@ -152,6 +152,15 @@ const AreasOfWork = () => {
                       Read more →
                     </Link>
                   )}
+                  {i === 3 && (
+                    <Link
+                      href="/therapy-for-relationship-issues"
+                      className="text-sm mt-3 inline-block transition-colors duration-300"
+                      style={{ color: "var(--tbe-warm-brown)", textUnderlineOffset: "3px" }}
+                    >
+                      Read more →
+                    </Link>
+                  )}
                 </div>
               </motion.div>
             );
